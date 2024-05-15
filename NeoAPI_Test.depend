@@ -1,0 +1,105 @@
+# depslib dependency file v1.0
+1715788627 source:/home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/main.cpp
+	<iostream>
+	"neoapi/neoapi.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi.hpp
+	"neoapi_common.hpp"
+	"neoapi_camera.hpp"
+	"neoapi_camera_info.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_image_converter.hpp"
+	"neoapi_image.hpp"
+	"neoapi_trace.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_common.hpp
+	<string.h>
+	<cstddef>
+	<cstdint>
+	<iostream>
+	"neoapi/neoapi.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_camera.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_event.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_featureaccess.hpp
+	"neoapi_common.hpp"
+	"neoapi_feature.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_feature.hpp
+	"neoapi_common.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_event.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_camera_info.hpp
+	"neoapi_common.hpp"
+	"neoapi_camera.hpp"
+	"neoapi_event.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_image_converter.hpp
+	<string>
+	<memory>
+	"neoapi_common.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_image.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_image_converter.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/neoapi/neoapi_trace.hpp
+	"neoapi_common.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi.hpp
+	"neoapi_common.hpp"
+	"neoapi_camera.hpp"
+	"neoapi_camera_info.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_image_converter.hpp"
+	"neoapi_image.hpp"
+	"neoapi_trace.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_common.hpp
+	<string.h>
+	<cstddef>
+	<cstdint>
+	<iostream>
+	"neoapi/neoapi.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_camera.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_event.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_featureaccess.hpp
+	"neoapi_common.hpp"
+	"neoapi_feature.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_feature.hpp
+	"neoapi_common.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_event.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_camera_info.hpp
+	"neoapi_common.hpp"
+	"neoapi_camera.hpp"
+	"neoapi_event.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_image_converter.hpp
+	<string>
+	<memory>
+	"neoapi_common.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_image.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_image_converter.hpp"
+
+1692945216 /home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/include/neoapi/neoapi_trace.hpp
+	"neoapi_common.hpp"
+
