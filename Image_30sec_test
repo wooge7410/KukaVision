@@ -1,0 +1,45 @@
+#include <iostream>
+#include <chrono>
+#include <thread>
+#include "neoapi/neoapi.hpp"
+
+using namespace NeoAPI;
+using std::cout;
+
+int main() {
+    Cam camera = Cam();
+
+    try {
+        camera.Connect("192.169.2.101");
+    } catch (NoAccessException& e) {
+        cout << e.GetDescription() << "\n";
+        return -1; // Termina el programa si hay un error de conexión
+    }
+
+    if (camera.IsConnected()) {
+        cout << "Camera Connected! \n";
+        cout << "Is Streaming: " << camera.IsStreaming() << "\n\n";
+        cout << "Trigger Mode: " << camera.f().TriggerMode.GetString() << "\n\n";
+
+        camera.f().TriggerMode = TriggerMode::On;
+
+        for (int i = 0; i < 30; ++i) {
+            camera.f().TriggerSoftware.Execute();
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+            Image img = camera.GetImage();
+            cout << "Image Received. ID: " << img.GetImageID() << "\n";
+            cout << "Width: " << img.GetWidth() << "\t Height: " << img.GetHeight() << "\n";
+
+            std::string filename = "image_" + std::to_string(i) + ".jpg";
+            img.Save(filename.c_str());
+
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+
+        cout << "Finished capturing 30 images.\n";
+    }
+
+    return 1;
+}
