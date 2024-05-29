@@ -13,15 +13,15 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include" />
-					<Add directory="lib" />
 					<Add directory="/usr/include/opencv4" />
+					<Add directory="lib" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="lib/libneoapi_cpp.so.1.3.1" />
-					<Add directory="include" />
 					<Add directory="lib" />
 					<Add directory="/usr/include/opencv4" />
+					<Add directory="include" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -31,15 +31,31 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="lib" />
+					<Add directory="/usr/include/opencv4" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="lib/libneoapi_cpp.so.1.3.1" />
+					<Add directory="lib" />
+					<Add directory="/usr/include/opencv4" />
+					<Add directory="include" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="include" />
+			<Add directory="lib" />
+			<Add directory="/usr/include/opencv4" />
 		</Compiler>
+		<Linker>
+			<Add library="lib/libneoapi_cpp.so.1.3.1" />
+			<Add directory="include" />
+			<Add directory="lib" />
+			<Add directory="/usr/include/opencv4" />
+		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

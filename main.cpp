@@ -53,6 +53,7 @@ int main() {
     vector<string> commandList;
     CamInfoList& connectedCameras = CamInfoList::Get();
     Cam camera = Cam();
+    bool isIndex = false;
 
     while (true) {
         commandList.clear();
@@ -97,8 +98,33 @@ int main() {
             } else if (commandList[0] == "connect") {
                 if (commandList.size() == 2) {
                     try{
-                        cout << "Connecting to \"" << commandList[1] << '"' << endl;
-                        camera.Connect(NeoString(commandList[1].c_str()));
+                        isIndex = true;
+                        for (int i = 0; i < commandList[1].size(); i++) {
+                            if (!isdigit(commandList[1][i])) isIndex = false;
+                        }
+                        if (isIndex) {
+                            int index = atoi(commandList[1].c_str());
+                            if ((int)connectedCameras.size() - 1 >= index) {
+                                cout << "Connecting to  Camera Number \"" << commandList[1] << "\" (" << connectedCameras[index].GetSerialNumber() << " / " << connectedCameras[index].GetGevIpAddress() << ")"  << endl;
+                                camera.Connect(connectedCameras[index].GetGevIpAddress());
+                            } else if (connectedCameras.size() == 0) {
+                                cout << "Searching Cameras...\n";
+                                connectedCameras.Refresh();
+                                if ((int)connectedCameras.size() - 1 >= index) {
+                                    cout << "Connecting to  Camera Number \"" << commandList[1] << "\" (" << connectedCameras[index].GetSerialNumber() << " / " << connectedCameras[index].GetGevIpAddress() << ")"  << endl;
+                                    camera.Connect(connectedCameras[index].GetGevIpAddress());
+                                } else if(connectedCameras.size() == 0){
+                                    cout << "No Cameras found!\n";
+                                } else {
+                                    // TODO (RenkoSt): Index out of bounds
+                                }
+                            } else {
+                                // TODO (RenkoSt): Index out of bounds
+                            }
+                        } else {
+                            cout << "Connecting to \"" << commandList[1] << '"' << endl;
+                            camera.Connect(NeoString(commandList[1].c_str()));
+                        }
                         if (camera.IsConnected()) cout << "Connection SUCCESSFULL!" << endl;
                         else  cout << "Connection UNSUCCESFULL!" << endl;
 
@@ -123,19 +149,22 @@ int main() {
                         else  cout << "Disconnection SUCCESFULL!" << endl;
                     }
                 } //TODO (RenkoSt): Wrong Argument Length
-            } else if (commandList[0] == "get_featurelist") {
-                if (commandList.size() == 1) {
-                    if (camera.IsConnected()) {
-                        cout << "Camera Features: " << endl;
-                        for (Feature feature : camera.GetFeatureList()) {
-                            cout << feature.GetName() << endl;
-                            cout << feature.GetDescription() << endl << endl;
-                        }
-                    } // TODO (Renko St): Not connected Exception
+            } else if (commandList[0] == "get") {
+                if (commandList.size() == 2) {
+                    if (commandList[1] == "featurelist") {
+                        if (camera.IsConnected()) {
+                            cout << "Camera Features: " << endl;
+                            for (Feature feature : camera.GetFeatureList()) {
+                                cout << feature.GetName() << endl;
+                                cout << feature.GetDescription() << endl << endl;
+                            }
+                        } // TODO (Renko St): Not connected Exception
+                    }
                 }// TODO (RenkoSt): Wrong Argument Length
 
             } else if (commandList[0] == "exit") {
                 if (camera.IsConnected()) {
+                    cout << "Disconnecting from Camera...";
                     camera.Disconnect();
                 }
                 return 1;
