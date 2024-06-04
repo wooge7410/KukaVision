@@ -192,12 +192,13 @@ int main() {
                         for (Feature ts : camera.f().TriggerSelector.GetEnumValueList()) {
                             if (commandList[1] == neoStringToLowerString(ts.GetName())) {
                                 try {
-                                    camera.f().TriggerSelector = ts.data_; // TODO
+                                    ts.SetInt(1);
+                                    //camera.f().TriggerSelector = CTriggerSelector(camera, ts.GetName()); // TODO
                                     cout << "[updated] " << camera.f().TriggerSelector.GetDisplayName()  << ": " << camera.f().TriggerSelector.GetString();
                                 } catch(FeatureAccessException e) {
                                     cout << "TriggerSelector kann nicht Gesetzt werden: \n";
                                     cout << e.GetDescription();
-                                } catch(Exception e) {
+                                } catch(exception e) {
                                     cout << "TriggerSelector kann nicht Gesetzt werden: Unbekannter Fehler";
                                 }
                                 found = true;
