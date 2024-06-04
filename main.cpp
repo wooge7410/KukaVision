@@ -45,7 +45,7 @@ void outputHelpString() {
     // TODO (RenkoSt): List-Command
 }
 
-string neoStringToLowerString(NeoString ns) {
+string neoStringToLower(NeoString ns) {
     string out = "";
     string ns_cstr = ns.c_str();
     for (int i = 0; i < ns.length(); i++) {
@@ -55,6 +55,14 @@ string neoStringToLowerString(NeoString ns) {
     return out;
 }
 
+string stringToLower(string ns) {
+    string out = "";
+    for (int i = 0; i < ns.length(); i++) {
+        out += tolower(ns[i]);
+    }
+
+    return out;
+}
 
 int main() {
     string input;
@@ -188,24 +196,39 @@ int main() {
                     if (commandList.size() == 1) {
                         cout << camera.f().TriggerSelector.GetDisplayName()  << ": " << camera.f().TriggerSelector.GetString();
                     } else if(commandList.size() == 2) {
-                        bool found = false;
-                        for (Feature ts : camera.f().TriggerSelector.GetEnumValueList()) {
-                            if (commandList[1] == neoStringToLowerString(ts.GetName())) {
-                                try {
-                                    ts.SetInt(1);
-                                    //camera.f().TriggerSelector = CTriggerSelector(camera, ts.GetName()); // TODO
+                            TriggerSelector selector;
+
+                            bool found = true;
+
+                            if (stringToLower(commandList[1]) == "acquisitionactive") selector = TriggerSelector::AcquisitionActive;
+                            else if (stringToLower(commandList[1]) == "acquisitionend") selector = TriggerSelector::AcquisitionEnd;
+                            else if (stringToLower(commandList[1]) == "acquisitionstart") selector = TriggerSelector::AcquisitionStart;
+                            else if (stringToLower(commandList[1]) == "exposureactive") selector = TriggerSelector::ExposureActive;
+                            else if (stringToLower(commandList[1]) == "exposureend") selector = TriggerSelector::ExposureEnd;
+                            else if (stringToLower(commandList[1]) == "exposurestart") selector = TriggerSelector::ExposureStart;
+                            else if (stringToLower(commandList[1]) == "frameactive") selector = TriggerSelector::FrameActive;
+                            else if (stringToLower(commandList[1]) == "frameburstactive") selector = TriggerSelector::FrameBurstActive;
+                            else if (stringToLower(commandList[1]) == "frameburstend") selector = TriggerSelector::FrameBurstEnd;
+                            else if (stringToLower(commandList[1]) == "frameburststart") selector = TriggerSelector::FrameBurstStart;
+                            else if (stringToLower(commandList[1]) == "frameend") selector = TriggerSelector::FrameEnd;
+                            else if (stringToLower(commandList[1]) == "framestart") selector = TriggerSelector::FrameStart;
+                            else if (stringToLower(commandList[1]) == "linestart") selector = TriggerSelector::LineStart;
+                            else if (stringToLower(commandList[1]) == "multislopeexposurelimit1") selector = TriggerSelector::MultiSlopeExposureLimit1;
+                            else found = false;
+
+                            try {
+                                if (!found) cout << "TriggerSelector  \"" << commandList[1] << "\" nicht verfügbar!";
+                                else {
+                                    camera.f().TriggerSelector = selector;
                                     cout << "[updated] " << camera.f().TriggerSelector.GetDisplayName()  << ": " << camera.f().TriggerSelector.GetString();
-                                } catch(FeatureAccessException e) {
-                                    cout << "TriggerSelector kann nicht Gesetzt werden: \n";
-                                    cout << e.GetDescription();
-                                } catch(exception e) {
-                                    cout << "TriggerSelector kann nicht Gesetzt werden: Unbekannter Fehler";
                                 }
-                                found = true;
-                                break;
+                            } catch(FeatureAccessException e) {
+                                cout << "TriggerSelector kann nicht Gesetzt werden: \n";
+                                cout << e.GetDescription();
+                            } catch(exception e) {
+                                cout << "TriggerSelector kann nicht Gesetzt werden: Unbekannter Fehler";
                             }
-                        }
-                        if (not found) cout << "TriggerSelector  \"" << commandList[1] << "\" nicht verfügbar!";
+                            cout << endl;
                     } else {
                         cout << "Invalid number of arguments.\n\n";
                         cout << "Usage (Show Current Value): TriggerSelector \n";
