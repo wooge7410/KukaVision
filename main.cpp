@@ -45,6 +45,15 @@ void outputHelpString() {
     // TODO (RenkoSt): List-Command
 }
 
+string neoStringToLowerString(NeoString ns) {
+    string out = "";
+    string ns_cstr = ns.c_str();
+    for (int i = 0; i < ns.length(); i++) {
+        out += tolower(ns_cstr[i]);
+    }
+
+    return out;
+}
 
 
 int main() {
@@ -92,8 +101,8 @@ int main() {
                         cout << '|' << getPaddingforCenter(to_string(i), 6, ' ') << '|' << getPaddingforCenter((string)connectedCameras[i].GetSerialNumber(), 20, ' ') << '|' << getPaddingforCenter((string)connectedCameras[i].GetGevIpAddress(), 20, ' ') << '|' << getPaddingforCenter((string)connectedCameras[i].GetGevMACAddress(), 20, ' ') << '|' << endl;
                     }
                 } else {
-                    cout << "Invalid number of arguments.";
-                    // TODO (RenkoST): Command Usage
+                    cout << "Invalid number of arguments.\n";
+                    cout << "Usage: list";
                 }
             } else if (commandList[0] == "connect") {
                 if (commandList.size() == 2) {
@@ -116,10 +125,10 @@ int main() {
                                 } else if(connectedCameras.size() == 0){
                                     cout << "No Cameras found!\n";
                                 } else {
-                                    // TODO (RenkoSt): Index out of bounds
+                                    cout << "List-Index exceeds the number of found devices!";
                                 }
                             } else {
-                                // TODO (RenkoSt): Index out of bounds
+                                cout << "List-Index exceeds the number of found devices!";
                             }
                         } else {
                             cout << "Connecting to \"" << commandList[1] << '"' << endl;
@@ -137,8 +146,9 @@ int main() {
                         cout << "Unknown Error";
                     }
                 } else {
-                    cout << "Invalid number of arguments.";
-                    // TODO (RenkoSt): Command Usage
+                    cout << "Invalid number of arguments.\n";
+                    cout << "Usage: connect [Identifier]\n";
+                    cout << "[Identifier] can be the IP-Address, the Serial-Number or the list-Index.";
                 }
             } else if (commandList[0] == "disconnect") {
                 if (commandList.size() == 1) {
@@ -148,7 +158,10 @@ int main() {
                         if (camera.IsConnected()) cout << "Disconnection UNSUCCESSFULL!" << endl;
                         else  cout << "Disconnection SUCCESFULL!" << endl;
                     }
-                } //TODO (RenkoSt): Wrong Argument Length
+                } else {
+                    cout << "Invalid number of arguments.\n";
+                    cout << "Usage: disconnect";
+                }
             } else if (commandList[0] == "get") {
                 if (commandList.size() == 2) {
                     if (commandList[1] == "featurelist") {
@@ -158,9 +171,54 @@ int main() {
                                 cout << feature.GetName() << endl;
                                 cout << feature.GetDescription() << endl << endl;
                             }
-                        } // TODO (Renko St): Not connected Exception
+                        } else {
+                            cout << "Not connected to a camera!";
+                            cout << "Please use the \"connect\"-Command to connect a camera.";
+                        }
                     }
-                }// TODO (RenkoSt): Wrong Argument Length
+                } else {
+                    cout << "Invalid number of arguments.\n";
+                    cout << "Usage: get [Identifier]\n";
+                    cout << "[Identifier] can be\n";
+                    cout << "\t FeatureList";
+                }
+
+            } else if (commandList[0] == "triggerselector") {
+                if(camera.IsConnected()) {
+                    if (commandList.size() == 1) {
+                        cout << camera.f().TriggerSelector.GetDisplayName()  << ": " << camera.f().TriggerSelector.GetString();
+                    } else if(commandList.size() == 2) {
+                        bool found = false;
+                        for (Feature ts : camera.f().TriggerSelector.GetEnumValueList()) {
+                            if (commandList[1] == neoStringToLowerString(ts.GetName())) {
+                                try {
+                                    camera.f().TriggerSelector = ts.data_; // TODO
+                                    cout << "[updated] " << camera.f().TriggerSelector.GetDisplayName()  << ": " << camera.f().TriggerSelector.GetString();
+                                } catch(FeatureAccessException e) {
+                                    cout << "TriggerSelector kann nicht Gesetzt werden: \n";
+                                    cout << e.GetDescription();
+                                } catch(Exception e) {
+                                    cout << "TriggerSelector kann nicht Gesetzt werden: Unbekannter Fehler";
+                                }
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (not found) cout << "TriggerSelector  \"" << commandList[1] << "\" nicht verfügbar!";
+                    } else {
+                        cout << "Invalid number of arguments.\n\n";
+                        cout << "Usage (Show Current Value): TriggerSelector \n";
+                        cout << "Usage (Set Value): TriggerSelector [Trigger Type]\n";
+                        cout << "[Trigger Type] can be\n";
+
+                        for (Feature ts : camera.f().TriggerSelector.GetEnumValueList()) {
+                            cout << "\t" << ts.GetName();
+                        }
+                    }
+                } else {
+                    cout << "Not connected to a camera!";
+                    cout << "Please use the \"connect\"-Command to connect a camera.";
+                }
 
             } else if (commandList[0] == "exit") {
                 if (camera.IsConnected()) {
