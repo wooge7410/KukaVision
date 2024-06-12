@@ -22,6 +22,7 @@ visual driven grasping
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - apt install qttools5-dev-tools build-essential libgl1-mesa-dev
 
 =======
@@ -39,3 +40,6 @@ visual driven grasping
 =======
 - apt install qttools5-dev-tools build-essential libgl1-mesa-dev qtcreator
 >>>>>>> d9e5f5b (init)
+=======
+- apt install qttools5-dev-tools build-essential libgl1-mesa-dev
+>>>>>>> 5d74e5d (Update README.md)
