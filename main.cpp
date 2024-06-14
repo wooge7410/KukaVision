@@ -10,33 +10,7 @@
 
 using namespace std;
 
-int main() {
-
-    /**
-    * AF_INET := iBuffer - '0'domain (IPv4)
-    * SOCK_STREAM := type (sequenced, reliable, bidirectional, bytestreams)
-    * 0 := protocol (unspecified)
-    **/
-    int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
-
-    /*
-    sockaddr_in serverAddress;
-    serverAddress.sin_family = AF_INET; // IPv4
-    serverAddress.sin_port = htons(54600); // Port in correct byte-order
-
-    serverAddress.sin_addr.s_addr = INADDR_ANY; //listenes to any input
-    */
-
-    // to specify an ipaddress
-
-    const char* svrIP = "192.168.41.64";
-    sockaddr_in serverAddress;
-    serverAddress.sin_family = AF_INET; // IPv4
-    inet_pton(AF_INET, svrIP, &serverAddress.sin_addr);
-    serverAddress.sin_port = htons(54600); // Port in correct byte-order
-
-
-    while (connect(clientSocket, (struct sockaddr*)&serverAddress, sizeof(serverAddress)) < 0) cout << "connecting... \n";
+void receive(int &clientSocket){
 
     char buffer[BUFFERSIZE] = { 0 };
 
@@ -77,7 +51,53 @@ int main() {
 
     }
 
+}
 
+void send(int &clientSocket) {
+    float positions[6] = {750.0f, 31.0f, 600.0f, 15.0f, 0.0f, 0.0f};
+    char buffer[BUFFERSIZE];
+    for (int i = 0; i < 6; i++) {
+        float invEnd = positions[i];
+        memcpy(&buffer[i*4], &invEnd, sizeof(positions[i]));    //Falsche reihenfolge?
+
+    }
+    cout << "Waiting \n";
+    sleep(10);
+    send(clientSocket, buffer, sizeof(buffer), 0);
+    cout << "sent \n";
+    sleep(20);
+}
+
+int main() {
+
+    /**
+    * AF_INET := iBuffer - '0'domain (IPv4)
+    * SOCK_STREAM := type (sequenced, reliable, bidirectional, bytestreams)
+    * 0 := protocol (unspecified)
+    **/
+    int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
+
+    /*
+    sockaddr_in serverAddress;
+    serverAddress.sin_family = AF_INET; // IPv4
+    serverAddress.sin_port = htons(54600); // Port in correct byte-order
+
+    serverAddress.sin_addr.s_addr = INADDR_ANY; //listenes to any input
+    */
+
+    // to specify an ipaddress
+
+    const char* svrIP = "192.168.41.64";
+    sockaddr_in serverAddress;
+    serverAddress.sin_family = AF_INET; // IPv4
+    inet_pton(AF_INET, svrIP, &serverAddress.sin_addr);
+    serverAddress.sin_port = htons(54600); // Port in correct byte-order
+
+
+    while (connect(clientSocket, (struct sockaddr*)&serverAddress, sizeof(serverAddress)) < 0) cout << "connecting... \n";
+
+    //receive(clientSocket);
+    send(clientSocket);
 
     return 0;
 }

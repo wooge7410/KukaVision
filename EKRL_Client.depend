@@ -1,5 +1,14 @@
 # depslib dependency file v1.0
-1718379588 source:/home/kukavision/KukaVision/repo/KukaVision/EKRL_Client/main.cpp
+1718385025 source:/home/kukavision/KukaVision/repo/KukaVision/EKRL_Client/main.cpp
+	<sys/socket.h>
+	<netinet/in.h>
+	<iostream>
+	<unistd.h>
+	<arpa/inet.h>
+	<bitset>
+	<cstring>
+
+1718379987 source:/home/kukavision/KukaVision/repo/KukaVision/EKRL_Client/send.cpp
 	<sys/socket.h>
 	<netinet/in.h>
 	<iostream>
