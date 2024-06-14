@@ -3,6 +3,8 @@
 #include <iostream>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include <bitset>
+#include <cstring>
 
 #define BUFFERSIZE 64
 
@@ -11,7 +13,7 @@ using namespace std;
 int main() {
 
     /**
-    * AF_INET := domain (IPv4)
+    * AF_INET := iBuffer - '0'domain (IPv4)
     * SOCK_STREAM := type (sequenced, reliable, bidirectional, bytestreams)
     * 0 := protocol (unspecified)
     **/
@@ -43,7 +45,36 @@ int main() {
     if (n < 0 ) {
         cout << "Error!";
     } else {
-        cout << buffer;
+        cout << buffer << endl;
+        for (int i = 0; i < BUFFERSIZE; i++) {
+             bitset<8> x(buffer[i]);
+             cout << x << endl;
+        }
+
+        char strPart[2];
+        int intPart;
+        float floatPart;
+
+        for(int i = 0; i < 2; i++) {
+            strPart[i] = buffer[i];
+        }
+
+        char iBuffer[4];
+        for(int i = 0; i < 4; i++) {
+            iBuffer[i] = buffer[i+2];
+        }
+
+        memcpy(&intPart, &iBuffer, sizeof(intPart));
+
+        char fBuffer[4];
+        for (int i = 0; i < 4; i++) {
+            fBuffer[i] = buffer[i + 6];
+         }
+        //floatPart = *(float*)fBuffer;
+        //doublePart = *(double*)dBuffer;
+        memcpy(&floatPart, &fBuffer, sizeof(floatPart));
+        cout << "String Part: " << strPart << endl << "Int Part: " << intPart << endl << "Float Part: " << floatPart;
+
     }
 
 
