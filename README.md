@@ -15,5 +15,9 @@ visual driven grasping
 
 # GUI-Framework
 - QT5
+<<<<<<< HEAD
 - apt install qttools5-dev-tools build-essential libgl1-mesa-dev
 
+=======
+- apt install qttools5-dev-tools build-essential libgl1-mesa-dev qtcreator
+>>>>>>> 6667ab4 (Update README.md)
