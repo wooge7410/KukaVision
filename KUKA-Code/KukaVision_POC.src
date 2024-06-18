@@ -1,0 +1,104 @@
+&ACCESS RV
+&REL 1
+&PARAM DISKPATH = KRC:\R1\Program
+&PARAM SensorITMASK = *
+&PARAM TEMPLATE = KRC:\R1\TP\EthernetKRL
+DEF  KukaVision_POC ( )
+;FOLD Declaration
+   INT i
+   DECL EKI_STATUS RET
+   FRAME positionBuffer
+   INT OFFSET
+   CHAR Bytes[64]
+;ENDFOLD (Declaration)
+;FOLD INI;%{PE}
+  ;FOLD BASISTECH INI
+    GLOBAL INTERRUPT DECL 3 WHEN $STOPMESS==TRUE DO IR_STOPM ( )
+    INTERRUPT ON 3 
+    BAS (#INITMOV,0 )
+  ;ENDFOLD (BASISTECH INI)
+  ;FOLD USER INI
+    ;Make your modifications here
+
+  ;ENDFOLD (USER INI)
+  ;ENDFOLD (INI)
+  
+;FOLD Initialize sample data
+   FOR i=1 TO (64)  
+      Bytes[i]=0
+   ENDFOR   
+;ENDFOLD (Initialize sample data)
+
+
+;FOLD SPTP HOME Vel=100 % DEFAULT ;%{PE}
+;FOLD Parameters ;%{h}
+;Params IlfProvider=kukaroboter.basistech.inlineforms.movement.spline; Kuka.IsGlobalPoint=False; Kuka.PointName=HOME; Kuka.BlendingEnabled=False; Kuka.MoveDataPtpName=DEFAULT; Kuka.VelocityPtp=100; Kuka.VelocityFieldEnabled=True; Kuka.CurrentCDSetIndex=0; Kuka.MovementParameterFieldEnabled=True; IlfCommand=SPTP
+;ENDFOLD
+SPTP XHOME WITH $VEL_AXIS[1] = SVEL_JOINT(100.0), $TOOL = STOOL2(FHOME), $BASE = SBASE(FHOME.BASE_NO), $IPO_MODE = SIPO_MODE(FHOME.IPO_FRAME), $LOAD = SLOAD(FHOME.TOOL_NO), $ACC_AXIS[1] = SACC_JOINT(PDEFAULT), $APO = SAPO_PTP(PDEFAULT), $GEAR_JERK[1] = SGEAR_JERK(PDEFAULT), $COLLMON_TOL_PRO[1] = USE_CM_PRO_VALUES(0)
+;ENDFOLD
+
+
+RET=EKI_Init("KukaVision")
+RET=EKI_Open("KukaVision")
+
+; wait until server is conntected
+wait for $FLAG[1]
+
+WHILE TRUE
+   
+;Send Confirmation after returning into home position
+OFFSET = 0
+FOR i=1 TO (64)  
+   Bytes[i]=0
+ENDFOR 
+CAST_TO(Bytes[], OFFSET, TRUE)
+RET = EKI_Send("KukaVision",Bytes[])
+
+positionBuffer.X = $POS_ACT_MES.X
+positionBuffer.Y = $POS_ACT_MES.Y
+positionBuffer.Z = $POS_ACT_MES.Z
+positionBuffer.A = $POS_ACT_MES.A
+positionBuffer.B = $POS_ACT_MES.B
+positionBuffer.C = $POS_ACT_MES.C
+
+;Send current position
+OFFSET = 0
+FOR i=1 TO (64)  
+   Bytes[i]=0
+ENDFOR 
+CAST_TO(Bytes[], OFFSET, positionBuffer.X,positionBuffer.Y,positionBuffer.Z,positionBuffer.A,positionBuffer.B,positionBuffer.C)
+RET = EKI_Send("KukaVision",Bytes[])
+
+$FLAG[2] = FALSE
+;Waiting for new position
+WAIT FOR $FLAG[2]
+RET=EKI_GetString("KukaVision","Buffer",Bytes[])
+$FLAG[2]=FALSE
+
+OFFSET=0
+CAST_FROM(Bytes[],OFFSET,positionBuffer.X,positionBuffer.Y,positionBuffer.Z,positionBuffer.A,positionBuffer.B,positionBuffer.C)
+
+;Send Confirmation
+OFFSET = 0
+FOR i=1 TO (64)  
+   Bytes[i]=0
+ENDFOR 
+CAST_TO(Bytes[], OFFSET, TRUE)
+RET = EKI_Send("KukaVision",Bytes[])
+
+
+SLIN positionBuffer
+
+
+ENDWHILE
+
+
+;FOLD SPTP HOME Vel=100 % DEFAULT ;%{PE}
+;FOLD Parameters ;%{h}
+;Params IlfProvider=kukaroboter.basistech.inlineforms.movement.spline; Kuka.IsGlobalPoint=False; Kuka.PointName=HOME; Kuka.BlendingEnabled=False; Kuka.MoveDataPtpName=DEFAULT; Kuka.VelocityPtp=100; Kuka.VelocityFieldEnabled=True; Kuka.CurrentCDSetIndex=0; Kuka.MovementParameterFieldEnabled=True; IlfCommand=SPTP
+;ENDFOLD
+SPTP XHOME WITH $VEL_AXIS[1] = SVEL_JOINT(100.0), $TOOL = STOOL2(FHOME), $BASE = SBASE(FHOME.BASE_NO), $IPO_MODE = SIPO_MODE(FHOME.IPO_FRAME), $LOAD = SLOAD(FHOME.TOOL_NO), $ACC_AXIS[1] = SACC_JOINT(PDEFAULT), $APO = SAPO_PTP(PDEFAULT), $GEAR_JERK[1] = SGEAR_JERK(PDEFAULT), $COLLMON_TOL_PRO[1] = USE_CM_PRO_VALUES(0)
+;ENDFOLD
+
+END
+
