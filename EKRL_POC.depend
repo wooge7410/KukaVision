@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1718706864 source:/home/kukavision/KukaVision/repo/KukaVision/EKRL_POC/main.cpp
+	<sys/socket.h>
+	<netinet/in.h>
+	<iostream>
+	<unistd.h>
+	<arpa/inet.h>
+	<bitset>
+	<cstring>
+
