@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>KukaVision visual driven grasping</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="MainMenu">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
      <horstretch>0</horstretch>
@@ -49,26 +49,23 @@
         <string>Camera-View</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="1">
+         <widget class="QLabel" name="CameraViewHeadline">
+          <property name="text">
+           <string>Filters</string>
+          </property>
+         </widget>
+        </item>
         <item row="1" column="0" rowspan="2">
          <widget class="QLabel" name="LiveCameraView">
           <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap resource="Desktop/UI_Image.png">:/newPrefix/example.png</pixmap>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/example.png&quot; width=&quot;800&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>Filters</string>
           </property>
          </widget>
         </item>
@@ -87,7 +84,7 @@
            <number>10</number>
           </property>
           <item>
-           <widget class="QCheckBox" name="checkBox">
+           <widget class="QCheckBox" name="Checking">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -103,21 +100,21 @@
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBox_2">
+           <widget class="QCheckBox" name="Outlines">
             <property name="text">
              <string>Outlines</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBox_3">
+           <widget class="QCheckBox" name="Coordinates">
             <property name="text">
              <string>Coordinates</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="SaveImage">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -182,7 +179,7 @@
            <number>10</number>
           </property>
           <item row="0" column="0">
-           <widget class="QLabel" name="label_6">
+           <widget class="QLabel" name="RobotOptions">
             <property name="text">
              <string>Robot-Options</string>
             </property>
@@ -202,49 +199,49 @@
            </spacer>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="label_7">
+           <widget class="QLabel" name="IPLabel">
             <property name="text">
              <string>IP</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEdit"/>
+           <widget class="QLineEdit" name="IP"/>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="label_8">
+           <widget class="QLabel" name="PortLabel">
             <property name="text">
              <string>Port</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="lineEdit_2"/>
+           <widget class="QLineEdit" name="Port"/>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="label_9">
+           <widget class="QLabel" name="ZOffsetLabel">
             <property name="text">
              <string>Z-Offset</string>
             </property>
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="lineEdit_3"/>
+           <widget class="QLineEdit" name="ZOffset"/>
           </item>
           <item row="4" column="0">
-           <widget class="QLabel" name="label_10">
+           <widget class="QLabel" name="ZOffsetFinalLabel">
             <property name="text">
              <string>Z-Offset Final</string>
             </property>
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QLineEdit" name="lineEdit_4"/>
+           <widget class="QLineEdit" name="ZOffsetFinal"/>
           </item>
          </layout>
         </item>
         <item row="1" column="0">
-         <layout class="QFormLayout" name="formLayout_2">
+         <layout class="QFormLayout" name="CameraOptions">
           <property name="topMargin">
            <number>20</number>
           </property>
@@ -252,35 +249,35 @@
            <number>10</number>
           </property>
           <item row="0" column="0">
-           <widget class="QLabel" name="label_11">
+           <widget class="QLabel" name="CameraOptionsLabel">
             <property name="text">
              <string>Camera-Options</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="label_12">
+           <widget class="QLabel" name="CameraIPLabel">
             <property name="text">
              <string>IP</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="label_13">
+           <widget class="QLabel" name="CameraPortLabel">
             <property name="text">
              <string>Port</string>
             </property>
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="label_14">
+           <widget class="QLabel" name="ExposureLabel">
             <property name="text">
              <string>Exposure</string>
             </property>
            </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QCheckBox" name="checkBox_5">
+           <widget class="QCheckBox" name="TriggerOn">
             <property name="text">
              <string>Trigger on</string>
             </property>
@@ -294,23 +291,23 @@
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QLabel" name="label_16">
+           <widget class="QLabel" name="FPSLiveViewLabel">
             <property name="text">
              <string>FPS for Live-View</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEdit_5"/>
+           <widget class="QLineEdit" name="CameraIP"/>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="lineEdit_6"/>
+           <widget class="QLineEdit" name="CameraPort"/>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="lineEdit_7"/>
+           <widget class="QLineEdit" name="Exposure"/>
           </item>
           <item row="4" column="1">
-           <widget class="QLineEdit" name="lineEdit_8"/>
+           <widget class="QLineEdit" name="FPSLiveView"/>
           </item>
           <item row="6" column="0">
            <spacer name="verticalSpacer">
@@ -341,7 +338,7 @@
          </layout>
         </item>
         <item row="1" column="1">
-         <layout class="QVBoxLayout" name="verticalLayout_3">
+         <layout class="QVBoxLayout" name="CameraOptions2">
           <property name="leftMargin">
            <number>10</number>
           </property>
@@ -352,7 +349,7 @@
            <number>10</number>
           </property>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="FindCamera">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -371,7 +368,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_17">
+           <widget class="QLabel" name="FindCameraLabel">
             <property name="text">
              <string>Find the IP and Port of Cameras in the network</string>
             </property>
@@ -388,14 +385,14 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_19">
+           <widget class="QLabel" name="DataSavePathLabel">
             <property name="text">
              <string>Imagedata save path</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_9"/>
+           <widget class="QLineEdit" name="DataSavePath"/>
           </item>
           <item>
            <spacer name="verticalSpacer_5">
@@ -439,14 +436,14 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_4">
         <item row="1" column="1">
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="StartProgramHeadline">
           <property name="text">
            <string>Status</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0" rowspan="2">
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="ProgramImage">
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/example.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -467,7 +464,7 @@
            <number>10</number>
           </property>
           <item>
-           <widget class="QCheckBox" name="checkBox_4">
+           <widget class="QCheckBox" name="SafetyCheck">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -477,28 +474,28 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_5">
+           <widget class="QLabel" name="CoordinateLabel">
             <property name="text">
              <string>Coordinates</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_18">
+           <widget class="QLabel" name="CoordinateShowLabel">
             <property name="text">
              <string>X Y Z A B C</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="GetCoordinates">
             <property name="text">
              <string>Get Coordinates</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="StartRobot">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -546,7 +543,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab">
+      <widget class="QWidget" name="MoreInfo">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
@@ -558,7 +555,7 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_7">
         <item row="0" column="0">
-         <widget class="QTextBrowser" name="textBrowser"/>
+         <widget class="QTextBrowser" name="Console"/>
         </item>
        </layout>
       </widget>
@@ -612,6 +609,7 @@
  </widget>
  <resources>
   <include location="Desktop/UI_Image.png"/>
+  <include location=".designer/backup/Desktop/UI_Image.png"/>
  </resources>
  <connections/>
 </ui>
