@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Example_UI_Project" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Example_UI_Project" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fPIC" />
+					<Add option="-g" />
+				</Compiler>
+				<ExtraCommands>
+					<Add before="uic -o ui_mainwindow.h  MainWindow.ui" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Example_UI_Project" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/ActiveQt" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCLucene" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtConcurrent" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtDeclarative" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtDesigner" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtDesignerComponents" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtHelp" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtMultimedia" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtMultimediaQuick_p" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtMultimediaWidgets" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtNetwork" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtOpenGL" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtOpenGLExtensions" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtPlatformSupport" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtPrintSupport" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtQml" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtQuick" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtQuickParticles" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtQuickTest" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtScript" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtScriptTools" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtSensors" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtSerialPort" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtSql" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtSvg" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtTest" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtUiTools" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtV8" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWebKit" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWebKitWidgets" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtXml" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtXmlPatterns" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtZlib" />
+		</Compiler>
+		<Linker>
+			<Add library="Qt5Core" />
+			<Add library="Qt5Gui" />
+			<Add library="Qt5Widgets" />
+			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
+		</Linker>
+		<Unit filename="example.png" />
+		<Unit filename="main.cpp" />
+		<Unit filename="ui_mainwindow.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
