@@ -81,8 +81,8 @@
 			<Add library="Qt5Widgets" />
 			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
 		</Linker>
-		<Unit filename="../include/FindCameraDialog.h" />
-		<Unit filename="../src/FindCameraDialog.cpp" />
+		<Unit filename="../../include/FindCameraDialog.h" />
+		<Unit filename="../../src/FindCameraDialog.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
