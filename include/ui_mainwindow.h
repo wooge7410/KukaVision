@@ -686,7 +686,7 @@ public:
         GetCoordinates->setText(QCoreApplication::translate("MainWindow", "Get Coordinates", nullptr));
         StartRobot->setText(QCoreApplication::translate("MainWindow", "Start Robot", nullptr));
         TimestampLabelProgram->setText(QCoreApplication::translate("MainWindow", "Timestamp", nullptr));
-        ProgramImage->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\"../../ui/example.png\" width=\"1200\" /></p></body></html>", nullptr));
+        ProgramImage->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\"example.png\" width=\"1200\" /></p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Start_Program), QCoreApplication::translate("MainWindow", "Start Program", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuAbout->setTitle(QCoreApplication::translate("MainWindow", "About", nullptr));

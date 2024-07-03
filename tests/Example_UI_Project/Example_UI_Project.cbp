@@ -14,9 +14,13 @@
 				<Compiler>
 					<Add option="-fPIC" />
 					<Add option="-g" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/Example_UI_Project/include" />
 				</Compiler>
+				<Linker>
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/Example_UI_Project/include" />
+				</Linker>
 				<ExtraCommands>
-					<Add before="uic -o ui_mainwindow.h  MainWindow.ui" />
+					<Add before="uic -o ../../include/ui_mainwindow.h ../../ui/MainWindow.ui" />
 				</ExtraCommands>
 			</Target>
 			<Target title="Release">
