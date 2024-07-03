@@ -3,7 +3,7 @@
 	"ui_mainwindow.h"
 	<QtWidgets/QApplication>
 
-1719398696 /home/kukavision/KukaVision/repo/KukaVision/Example_UI_Project/ui_mainwindow.h
+1719992342 /home/kukavision/KukaVision/repo/KukaVision/Example_UI_Project/ui_mainwindow.h
 	<QtCore/QVariant>
 	<QtWidgets/QAction>
 	<QtWidgets/QApplication>
@@ -923,4 +923,30 @@
 
 1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QWidget
 	"qwidget.h"
+
+1719396790 source:/home/kukavision/KukaVision/repo/KukaVision/Example_UI_Project/tests/Example_UI_Project/main.cpp
+	"ui_mainwindow.h"
+	<QtWidgets/QApplication>
+
+1720001140 /home/kukavision/KukaVision/repo/KukaVision/Example_UI_Project/include/ui_mainwindow.h
+	<QtCore/QVariant>
+	<QtWidgets/QAction>
+	<QtWidgets/QApplication>
+	<QtWidgets/QCheckBox>
+	<QtWidgets/QDockWidget>
+	<QtWidgets/QFormLayout>
+	<QtWidgets/QFrame>
+	<QtWidgets/QGridLayout>
+	<QtWidgets/QLabel>
+	<QtWidgets/QLineEdit>
+	<QtWidgets/QMainWindow>
+	<QtWidgets/QMenu>
+	<QtWidgets/QMenuBar>
+	<QtWidgets/QPushButton>
+	<QtWidgets/QSpacerItem>
+	<QtWidgets/QStatusBar>
+	<QtWidgets/QTabWidget>
+	<QtWidgets/QTextBrowser>
+	<QtWidgets/QVBoxLayout>
+	<QtWidgets/QWidget>
 

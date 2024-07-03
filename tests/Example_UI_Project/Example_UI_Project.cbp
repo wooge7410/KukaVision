@@ -78,9 +78,9 @@
 			<Add library="Qt5Widgets" />
 			<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
 		</Linker>
-		<Unit filename="example.png" />
+		<Unit filename="../../include/ui_mainwindow.h" />
+		<Unit filename="../../ui/example.png" />
 		<Unit filename="main.cpp" />
-		<Unit filename="ui_mainwindow.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
