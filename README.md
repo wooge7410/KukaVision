@@ -1,2 +1,0 @@
-# KukaVision
-visual driven grasping
