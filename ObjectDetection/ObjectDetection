@@ -1,0 +1,82 @@
+#include <opencv2/opencv.hpp>
+#include <iostream>
+#include <math.h>
+
+using namespace cv;
+using namespace std;
+
+// Función para calcular la distancia entre dos puntos
+double distance(Point a, Point b) {
+    return sqrt(pow(b.x - a.x, 2) + pow(b.y - a.y, 2));
+}
+
+// Función para verificar si un contorno es un cuadrado
+bool isSquare(vector<Point>& contour, double& sideLength) {
+    // Aproximar el contorno a un polígono
+    vector<Point> poly;
+    approxPolyDP(contour, poly, 3, true);
+
+    // Verificar si el polígono tiene 4 lados
+    if (poly.size() == 4) {
+        double d1 = distance(poly[0], poly[1]);
+        double d2 = distance(poly[1], poly[2]);
+        double d3 = distance(poly[2], poly[3]);
+        double d4 = distance(poly[3], poly[0]);
+        // Verificar si los lados son aproximadamente iguales y el contorno es convexo
+        if (fabs(d1 - d2) < 10 && fabs(d2 - d3) < 10 && fabs(d3 - d4) < 10 && fabs(d4 - d1) < 10 && isContourConvex(poly)) {
+            sideLength = d1;
+            return true;
+        }
+    }
+    return false;
+}
+
+int main() {
+    // Cargar la imagen
+    Mat image = imread("/home/kukavision/Downloads/NeoAPI_TestImage.bmp");
+    if (image.empty()) {
+        cout << "Could not open or find the image.\n";
+        return -1;
+    }
+
+    // Convertir a escala de grises
+    Mat gray;
+    cvtColor(image, gray, COLOR_BGR2GRAY);
+
+    // Umbral para detectar objetos blancos
+    Mat thresh;
+    threshold(gray, thresh, 100, 255, THRESH_BINARY);
+
+    // Encontrar contornos
+    vector<vector<Point>> contours;
+    findContours(thresh, contours, RETR_LIST, CHAIN_APPROX_SIMPLE);
+
+    // Dibujar contornos y centro
+    for (auto& contour : contours) {
+        double sideLength;
+        if (isSquare(contour, sideLength)) {
+            // Dibujar el contorno
+            drawContours(image, vector<vector<Point>>{contour}, -1, Scalar(0, 255, 0), 2);
+
+            // Calcular el centro del contorno
+            Moments m = moments(contour);
+            int cx = int(m.m10 / m.m00);
+            int cy = int(m.m01 / m.m00);
+
+            // Dibujar el centro
+            circle(image, Point(cx, cy), 5, Scalar(255, 0, 0), -1);
+
+            // Dibujar líneas del sistema de coordenadas desde el centro
+            line(image, Point(cx, cy), Point(cx + 50, cy), Scalar(0, 0, 255), 2);
+            line(image, Point(cx, cy), Point(cx, cy + 50), Scalar(0, 255, 0), 2);
+
+            cout << "Square found with side length " << sideLength << " pixels and center in (" << cx << ", " << cy << ")." << endl;
+        }
+    }
+
+    // Mostrar la imagen con los contornos dibujados
+    imshow("Detected Squares", image);
+    waitKey(0);
+    return 0;
+}
+
