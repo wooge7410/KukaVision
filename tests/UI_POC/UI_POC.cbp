@@ -44,7 +44,7 @@
 		</Compiler>
 		<Unit filename="../../include/KukaVisionUIExtension.h" />
 		<Unit filename="../../include/KukaVisionUIV1.h" />
-		<Unit filename="../../src/KukaVisionUIExtensionV1.cpp" />
+		<Unit filename="../../src/KukaVisionUIExtension.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

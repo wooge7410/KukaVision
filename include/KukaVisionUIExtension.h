@@ -48,28 +48,22 @@ RobotOptions GetRobotOptions(Ui::MainWindow& Ui_MainWindow);
 CameraOptions GetCameraOptions(Ui::MainWindow& Ui_MainWindow);
 
 //Initialize the Option page with values from the code
-bool InitOptionspage(Ui::MainWindow& Ui_MainWindow);
+void InitOptionspage(Ui::MainWindow& Ui_MainWindow);
 
 //Opens the Folder Dialog to select a Savepath for an Image
-bool OpenFolderDialogImageData(Ui::MainWindow& Ui_MainWindow);
+void OpenFolderDialogImageData(Ui::MainWindow& Ui_MainWindow);
 
 //Opens the FindCameraDialog to select an IP from a list of Cameras from the Network
-bool OpenFindCameraDialog(Ui::MainWindow& Ui_MainWindow);
-
-//Updates the Picture, Timestamp and Fps-Counter in the LiveView
-bool RefreshCameraLiveWiew(Ui::MainWindow& Ui_MainWindow);
+void OpenFindCameraDialog(Ui::MainWindow& Ui_MainWindow);
 
 //Saves the most recent Image in the path given in the options
-bool SaveImageFromLiveView(Ui::MainWindow& Ui_MainWindow);
-
-//Updates the picture and Timestamp in the Start Program
-bool RefreshProgramScreen(Ui::MainWindow& Ui_MainWindow);
+void SaveImageFromLiveView(Ui::MainWindow& Ui_MainWindow);
 
 //Calculates the Coordinates of the latest Image via OpenCV and displays them on the screen
-bool GetCoordinates(Ui::MainWindow& Ui_MainWindow);
+void GetCoordinates(Ui::MainWindow& Ui_MainWindow);
 
 //Starting a cycle of the robot griping an object
-bool StartProgram(Ui::MainWindow& Ui_MainWindow);
+void StartProgram(Ui::MainWindow& Ui_MainWindow);
 
 //Opens the Project-Info
-bool OpenProjectInfo(Ui::MainWindow& Ui_MainWindow);
+void OpenProjectInfo(Ui::MainWindow& Ui_MainWindow);
