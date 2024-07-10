@@ -5,6 +5,7 @@
 		<Option title="UI_POC" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="include/" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/UI_POC" prefix_auto="1" extension_auto="1" />
@@ -12,8 +13,18 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-fPIC" />
 					<Add option="-g" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/GuiPOC/include" />
 				</Compiler>
+				<Linker>
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so" />
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/GuiPOC/include" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/UI_POC" prefix_auto="1" extension_auto="1" />
@@ -31,6 +42,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../../include/KukaVisionUIExtension.h" />
+		<Unit filename="../../include/KukaVisionUIV1.h" />
+		<Unit filename="../../src/KukaVisionUIExtensionV1.cpp" />
+		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
