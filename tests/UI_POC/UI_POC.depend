@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1720603154 source:/home/kukavision/KukaVision/repo/KukaVision/GuiPOC/tests/UI_POC/main.cpp
+1720605644 source:/home/kukavision/KukaVision/repo/KukaVision/GuiPOC/tests/UI_POC/main.cpp
 	"KukaVisionUIV1.h"
 	"KukaVisionUIExtensionV1"
 	<QtWidgets/QApplication>
 	<string>
 
-1720005982 /home/kukavision/KukaVision/repo/KukaVision/GuiPOC/include/KukaVisionUIV1.h
+1720605644 /home/kukavision/KukaVision/repo/KukaVision/GuiPOC/include/KukaVisionUIV1.h
 	<QtCore/QVariant>
 	<QtWidgets/QAction>
 	<QtWidgets/QApplication>
@@ -931,4 +931,16 @@
 	"qwidget.h"
 
 1720603850 /home/kukavision/KukaVision/repo/KukaVision/GuiPOC/include/KukaVisionUIExtensionV1
+
+1720607065 source:/home/kukavision/KukaVision/repo/KukaVision/GuiPOC/src/KukaVisionUIExtensionV1.cpp
+	"KukaVisionUIExtension.h"
+	"KukaVisionUIV1.h"
+	<iostream>
+
+1720606403 /home/kukavision/KukaVision/repo/KukaVision/GuiPOC/include/KukaVisionUIExtension.h
+	"KukaVisionUIV1.h"
+	<QtCore/QString>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QString
+	"qstring.h"
 

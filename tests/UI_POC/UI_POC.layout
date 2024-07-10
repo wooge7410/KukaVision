@@ -2,6 +2,7 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="../../include/KukaVisionUIV1.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="777" topLine="0" />
@@ -15,11 +16,30 @@
 	<File name="../../src/KukaVisionUIExtension.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2512" topLine="43" />
+=======
+	<File name="../../src/KukaVisionUIExtensionV1.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2125" topLine="48" />
+>>>>>>> 39e58f9 (Fixes & connect POC)
 		</Cursor>
 	</File>
 	<File name="../../include/KukaVisionUIExtension.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="147" topLine="21" />
+=======
+			<Cursor1 position="1997" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="../../include/KukaVisionUIV1.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="18" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="354" topLine="0" />
+>>>>>>> 39e58f9 (Fixes & connect POC)
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

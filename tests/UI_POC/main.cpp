@@ -1,6 +1,6 @@
 
 #include "KukaVisionUIV1.h"
-#include "KukaVisionUIExtensionV1"
+#include "KukaVisionUIExtension.h"
 #include <QtWidgets/QApplication>
 #include <string>
 int main(int argc, char *argv[])
@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
     QMainWindow widget;
     Ui::MainWindow ui;
     ui.setupUi(&widget);
+    QObject::connect(ui.tabWidget, &QTabWidget::currentChanged, [&] {OpenFolderDialogImageData(ui);});
     widget.show();
     return a.exec();
 }
