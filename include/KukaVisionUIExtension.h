@@ -9,33 +9,33 @@
 //All RobotOptions
 struct RobotOptions
 {
-QString RobotIP;
-int Port;
-int Zoffset;
-int Zoffsetfinal;
-int WorkAreaXmin;
-int WorkAreaXmax;
-int WorkAreaYmin;
-int WorkAreaYmax;
-int WorkAreaZmin;
-int WorkAreaZmax;
+    QString RobotIP;
+    int Port;
+    int Zoffset;
+    int Zoffsetfinal;
+    int WorkAreaXmin;
+    int WorkAreaXmax;
+    int WorkAreaYmin;
+    int WorkAreaYmax;
+    int WorkAreaZmin;
+    int WorkAreaZmax;
 };
 
 //All CameraOptions
 struct CameraOptions
 {
-QString CameraIP;
-float Exposure;
-int FPSforLiveView;
-int Bining;
-int Gain;
-bool FlipImage;
+    QString CameraIP;
+    float Exposure;
+    int FPSforLiveView;
+    int Bining;
+    int Gain;
+    bool FlipImage;
 };
 
 struct Options
 {
-RobotOptions robOptions;
-CameraOptions camOptions;
+    RobotOptions robOptions;
+    CameraOptions camOptions;
 };
 
 // Geting all Options out of the UI
