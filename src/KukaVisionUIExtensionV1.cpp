@@ -1,8 +1,11 @@
 #include "KukaVisionUIExtension.h"
 #include "KukaVisionUIV1.h"
 #include <iostream>
+
+//TODO when Robot-Program is running, the Options Page needs to be disabled
+
 // Geting all Options out of the UI
-Options GetAllOptions(Ui::MainWindow &Ui_MainWindow)
+Options GetAllOptions(Ui::MainWindow &Ui_MainWindow) //TODO remove
 {
     Options ret;
     ret.robOptions = GetRobotOptions(Ui_MainWindow);
@@ -43,7 +46,7 @@ CameraOptions GetCameraOptions(Ui::MainWindow& Ui_MainWindow)
 }
 
 //Initialize the Option page with values from the code
-bool InitOptionspage(Ui::MainWindow& Ui_MainWindow, Options InitValue)
+bool InitOptionspage(Ui::MainWindow& Ui_MainWindow, Options InitValue) //TODO Beim Programmstart -> in eigene Datei
 {
     Ui_MainWindow.IP->setText("");
     Ui_MainWindow.Port->setText("");
@@ -58,45 +61,45 @@ bool InitOptionspage(Ui::MainWindow& Ui_MainWindow, Options InitValue)
 }
 
 //Opens the Folder Dialog to select a Savepath for an Image
-bool OpenFolderDialogImageData(Ui::MainWindow& Ui_MainWindow)
+void OpenFolderDialogImageData(Ui::MainWindow& Ui_MainWindow) //TODO wird vom Event gecallt -> void
 {
     std::cout << "Test\n";
 }
 
 //Opens the FindCameraDialog to select an IP from a list of Cameras from the Network
-bool OpenFindCameraDialog(Ui::MainWindow& Ui_MainWindow)
+bool OpenFindCameraDialog(Ui::MainWindow& Ui_MainWindow) //TODO wird vom Event gecallt -> void
 {
 
 }
 
 //Updates the Picture, Timestamp and Fps-Counter in the LiveView
-bool RefreshCameraLiveWiew(Ui::MainWindow& Ui_MainWindow)
+bool RefreshCameraLiveWiew(Ui::MainWindow& Ui_MainWindow)   // TODO remove
 {
     Ui_MainWindow.LiveCameraView->text(); //Input new Picture here
 }
 
 //Saves the most recent Image in the path given in the options
-bool SaveImageFromLiveView(Ui::MainWindow& Ui_MainWindow)
+bool SaveImageFromLiveView(Ui::MainWindow& Ui_MainWindow)   //TODO wird vom Event gecallt -> void
 {
 //Filestream to save the Image
 }
 
 //Updates the picture and Timestamp in the Start Program
-bool RefreshProgramScreen(Ui::MainWindow& Ui_MainWindow)
+bool RefreshProgramScreen(Ui::MainWindow& Ui_MainWindow) //TODO remove
 {
 //Same as
 }
 
 //Calculates the Coordinates of the latest Image via OpenCV and displays them on the screen
-bool GetCoordinates(Ui::MainWindow& Ui_MainWindow);
+bool GetCoordinates(Ui::MainWindow& Ui_MainWindow); //TODO wird vom Event gecallt -> void
 
 //Starting a cycle of the robot griping an object
-bool StartProgram(Ui::MainWindow& Ui_MainWindow);
+bool StartProgram(Ui::MainWindow& Ui_MainWindow); //TODO wird vom Event gecallt -> void
 
 //Opens the Project-Info
-bool OpenProjectInfo(Ui::MainWindow& Ui_MainWindow);
+bool OpenProjectInfo(Ui::MainWindow& Ui_MainWindow); //TODO wird vom Event gecallt -> void
 
-int CheckWorkArea(QString Input)
+int CheckWorkArea(QString Input) //TODO remove
 {
     int ret = 10;
     if (Input.toInt() >= 10)
@@ -105,3 +108,5 @@ int CheckWorkArea(QString Input)
     }
     return ret;
 }
+
+//TODO Input validation

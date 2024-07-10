@@ -36,6 +36,9 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+
+    // TODO Options Struct Object -> holds currently acitve Setting
+
     QAction *actionSave_Image_as;
     QAction *actionExit;
     QAction *actionProject_Infos;

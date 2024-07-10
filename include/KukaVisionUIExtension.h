@@ -9,33 +9,33 @@
 //All RobotOptions
 struct RobotOptions
 {
-QString RobotIP;
-int Port;
-int Zoffset;
-int Zoffsetfinal;
-int WorkAreaXmin;
-int WorkAreaXmax;
-int WorkAreaYmin;
-int WorkAreaYmax;
-int WorkAreaZmin;
-int WorkAreaZmax;
+    QString RobotIP;
+    int Port;
+    int Zoffset;
+    int Zoffsetfinal;
+    int WorkAreaXmin;
+    int WorkAreaXmax;
+    int WorkAreaYmin;
+    int WorkAreaYmax;
+    int WorkAreaZmin;
+    int WorkAreaZmax;
 };
 
 //All CameraOptions
 struct CameraOptions
 {
-QString CameraIP;
-float Exposure;
-int FPSforLiveView;
-int Bining;
-int Gain;
-bool FlipImage;
+    QString CameraIP;
+    float Exposure;
+    int FPSforLiveView;
+    int Bining;
+    int Gain;
+    bool FlipImage;
 };
 
 struct Options
 {
-RobotOptions robOptions;
-CameraOptions camOptions;
+    RobotOptions robOptions;
+    CameraOptions camOptions;
 };
 
 // Geting all Options out of the UI
@@ -51,7 +51,7 @@ CameraOptions GetCameraOptions(Ui::MainWindow& Ui_MainWindow);
 bool InitOptionspage(Ui::MainWindow& Ui_MainWindow);
 
 //Opens the Folder Dialog to select a Savepath for an Image
-bool OpenFolderDialogImageData(Ui::MainWindow& Ui_MainWindow);
+void OpenFolderDialogImageData(Ui::MainWindow& Ui_MainWindow);
 
 //Opens the FindCameraDialog to select an IP from a list of Cameras from the Network
 bool OpenFindCameraDialog(Ui::MainWindow& Ui_MainWindow);
