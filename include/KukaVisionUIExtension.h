@@ -4,12 +4,12 @@
 //Connecting UI and Main Program
 
 //All Options from the Options page
-#include <string>
 #include "KukaVisionUIV1.h"
+#include <QtCore/QString>
 //All RobotOptions
 struct RobotOptions
 {
-std::string RobotIP;
+QString RobotIP;
 int Port;
 int Zoffset;
 int Zoffsetfinal;
@@ -24,7 +24,7 @@ int WorkAreaZmax;
 //All CameraOptions
 struct CameraOptions
 {
-std::string CameraIP;
+QString CameraIP;
 float Exposure;
 int FPSforLiveView;
 int Bining;
@@ -73,3 +73,7 @@ bool StartProgram(Ui::MainWindow& Ui_MainWindow);
 
 //Opens the Project-Info
 bool OpenProjectInfo(Ui::MainWindow& Ui_MainWindow);
+
+
+int CheckWorkArea(QString Input);
+
