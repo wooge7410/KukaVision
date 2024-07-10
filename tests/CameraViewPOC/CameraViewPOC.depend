@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1720004207 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/main.cpp
+1720603875 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/main.cpp
 	"ui_mainwindow.h"
 	<QtWidgets/QApplication>
 
-1720005792 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.h
+1720604507 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.h
 	<QtCore/QVariant>
 	<QtWidgets/QAction>
 	<QtWidgets/QApplication>
@@ -24,6 +24,8 @@
 	<QtWidgets/QTextBrowser>
 	<QtWidgets/QVBoxLayout>
 	<QtWidgets/QWidget>
+	"FindCameraDialog.h"
+	<iostream>
 
 1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QVariant
 	"qvariant.h"
@@ -923,4 +925,188 @@
 
 1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QWidget
 	"qwidget.h"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/FindCameraDialog.h
+	<QtCore/QVariant>
+	<QtWidgets/QApplication>
+	<QtWidgets/QDialog>
+	<QtWidgets/QDialogButtonBox>
+	<QtWidgets/QListWidget>
+	<string>
+	"neoapi/neoapi.hpp"
+	<neoapi/neoapi_camera_info.hpp>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDialog
+	"qdialog.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qdialog.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDialogButtonBox
+	"qdialogbuttonbox.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QListWidget
+	"qlistwidget.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qlistwidget.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qlistview.h>
+	<QtCore/qvariant.h>
+	<QtCore/qvector.h>
+	<QtCore/qitemselectionmodel.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qlistview.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractitemview.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractitemview.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractscrollarea.h>
+	<QtCore/qabstractitemmodel.h>
+	<QtCore/qitemselectionmodel.h>
+	<QtWidgets/qabstractitemdelegate.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qabstractitemmodel.h
+	<QtCore/qvariant.h>
+	<QtCore/qobject.h>
+	<QtCore/qhash.h>
+	<QtCore/qvector.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qitemselectionmodel.h
+	<QtCore/qglobal.h>
+	<QtCore/qset.h>
+	<QtCore/qvector.h>
+	<QtCore/qlist.h>
+	<QtCore/qabstractitemmodel.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qobject.h>
+	<QtWidgets/qstyleoption.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qstyleoption.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qlocale.h>
+	<QtCore/qvariant.h>
+	<QtWidgets/qabstractspinbox.h>
+	<QtGui/qicon.h>
+	<QtGui/qmatrix.h>
+	<QtWidgets/qslider.h>
+	<QtWidgets/qstyle.h>
+	<QtWidgets/qtabbar.h>
+	<QtWidgets/qtabwidget.h>
+	<QtWidgets/qrubberband.h>
+	<QtWidgets/qframe.h>
+	<QtCore/qabstractitemmodel.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractspinbox.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+	<QtGui/qvalidator.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qvalidator.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qstring.h>
+	<QtCore/qregexp.h>
+	<QtCore/qregularexpression.h>
+	<QtCore/qlocale.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qregularexpression.h
+	<QtCore/qglobal.h>
+	<QtCore/qstring.h>
+	<QtCore/qstringlist.h>
+	<QtCore/qshareddata.h>
+	<QtCore/qvariant.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qslider.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractslider.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractslider.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qstyle.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qrect.h>
+	<QtCore/qsize.h>
+	<QtGui/qicon.h>
+	<QtGui/qpixmap.h>
+	<QtGui/qpalette.h>
+	<QtWidgets/qsizepolicy.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qtabbar.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qrubberband.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi.hpp
+	"neoapi_common.hpp"
+	"neoapi_camera.hpp"
+	"neoapi_camera_info.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_image_converter.hpp"
+	"neoapi_image.hpp"
+	"neoapi_trace.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_common.hpp
+	<string.h>
+	<cstddef>
+	<cstdint>
+	<iostream>
+	"neoapi/neoapi.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_camera.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_event.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_featureaccess.hpp
+	"neoapi_common.hpp"
+	"neoapi_feature.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_feature.hpp
+	"neoapi_common.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_event.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_camera_info.hpp
+	"neoapi_common.hpp"
+	"neoapi_camera.hpp"
+	"neoapi_event.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_image_converter.hpp
+	<string>
+	<memory>
+	"neoapi_common.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_image.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_image_converter.hpp"
+
+1720173135 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_trace.hpp
+	"neoapi_common.hpp"
+
+1720600944 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.cpp
+	"ui_mainwindow.h"
+
+1720603343 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/eventHandler.h
+	<QtWidgets/QLineEdit>
+	<iostream>
+
+1720603351 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/eventHandler.cpp
+	"eventHandler.h"
 

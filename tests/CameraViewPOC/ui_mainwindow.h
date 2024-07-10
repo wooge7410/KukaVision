@@ -1,14 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'MainWindow.ui'
+** Form generated from reading UI file 'MainWindowBajaYs.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.3
+** Created by: Qt User Interface Compiler version 5.14.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_MAINWINDOW_H
-#define UI_MAINWINDOW_H
-
+#ifndef MAINWINDOWBAJAYS_H
+#define MAINWINDOWBAJAYS_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -31,9 +30,12 @@
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
+#include "FindCameraDialog.h"
+#include <iostream>
+
 QT_BEGIN_NAMESPACE
 
-class Ui_MainWindow
+class Ui_MainWindow:QMainWindow
 {
 public:
     QAction *actionSave_Image_as;
@@ -132,6 +134,11 @@ public:
     QWidget *dockWidgetContents_2;
     QGridLayout *gridLayout_6;
     QTextBrowser *InfoConsole;
+
+    void onFindCameraClicked() {
+        std::cout << "\nTest\n";
+        CameraIP -> setText("Test");
+    }
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -630,8 +637,13 @@ public:
         QObject::connect(OpenConsoleButton, SIGNAL(clicked()), ConsoleWindow, SLOT(show()));
         QObject::connect(actionOpen_Console, SIGNAL(triggered()), ConsoleWindow, SLOT(show()));
         QObject::connect(actionExit, SIGNAL(triggered()), MainWindow, SLOT(close()));
+        //QObject::connect(FindCamera, SIGNAL(clicked()), this, SLOT(onFindCameraClicked()));
+        //QObject::connect(FindCamera, SIGNAL(clicked()), CameraIP, SLOT(clear()));
 
-        tabWidget->setCurrentIndex(2);
+        QObject::connect(FindCamera, &QPushButton::clicked, this,  [=]() {onFindCameraClicked();});
+
+
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -687,7 +699,7 @@ public:
         GetCoordinates->setText(QCoreApplication::translate("MainWindow", "Get Coordinates", nullptr));
         StartRobot->setText(QCoreApplication::translate("MainWindow", "Start Robot", nullptr));
         TimestampLabelProgram->setText(QCoreApplication::translate("MainWindow", "Timestamp", nullptr));
-        ProgramImage->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\"../../ui/example.png\" width=\"1200\" /></p></body></html>", nullptr));
+        ProgramImage->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\"example.png\" width=\"1200\" /></p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(Start_Program), QCoreApplication::translate("MainWindow", "Start Program", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuAbout->setTitle(QCoreApplication::translate("MainWindow", "About", nullptr));
@@ -703,4 +715,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // UI_MAINWINDOW_H
+#endif // MAINWINDOWBAJAYS_H

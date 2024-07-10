@@ -45,6 +45,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../../include/FindCameraDialog.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="ui_mainwindow.h" />
 		<Extensions />
