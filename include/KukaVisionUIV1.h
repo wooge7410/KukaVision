@@ -725,6 +725,9 @@ public:
 
 };
 
+
+
+
 namespace Ui {
     class MainWindow: public Ui_MainWindow {};
 } // namespace Ui
