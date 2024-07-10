@@ -19,7 +19,7 @@
   <property name="windowTitle">
    <string>KukaVision visual driven grasping</string>
   </property>
-  <widget class="QWidget" name="MainMenu">
+  <widget class="QWidget" name="mainMenuWidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
      <horstretch>0</horstretch>
@@ -36,9 +36,9 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="CameraView">
+      <widget class="QWidget" name="cameraViewWidget">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
@@ -63,7 +63,7 @@
          </spacer>
         </item>
         <item row="1" column="0" rowspan="2">
-         <widget class="QLabel" name="LiveCameraView">
+         <widget class="QLabel" name="liveCameraViewLabel">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
@@ -82,7 +82,7 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <layout class="QVBoxLayout" name="verticalLayout">
+         <layout class="QVBoxLayout" name="cameraViewVerticalLayout">
           <property name="spacing">
            <number>5</number>
           </property>
@@ -96,14 +96,14 @@
            <number>10</number>
           </property>
           <item>
-           <widget class="QCheckBox" name="Coordinates">
+           <widget class="QCheckBox" name="coordinatesCheckBox">
             <property name="text">
              <string>Coordinates</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="Checking">
+           <widget class="QCheckBox" name="checkingCheckBox">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -119,28 +119,28 @@
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="Outlines">
+           <widget class="QCheckBox" name="outlinesCheckBox">
             <property name="text">
              <string>Outlines</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="StartCameraView">
+           <widget class="QPushButton" name="startCameraViewButton">
             <property name="text">
              <string>Start CameraView</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="stoppCameraViewButton">
             <property name="text">
              <string>Stopp CameraView</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="SaveImage">
+           <widget class="QPushButton" name="saveImageButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -172,7 +172,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="cameraViewTimestampLabel">
             <property name="text">
              <string>Timestamp</string>
             </property>
@@ -181,14 +181,14 @@
          </layout>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="CameraViewHeadline">
+         <widget class="QLabel" name="cameraViewHeadlineLabel">
           <property name="text">
            <string>Filters</string>
           </property>
          </widget>
         </item>
         <item row="3" column="0">
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="cameraViewInfoLabel">
           <property name="text">
            <string>Camera-FPS : -- Draw-FPS: --</string>
           </property>
@@ -196,7 +196,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="Options">
+      <widget class="QWidget" name="optionsWidget">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
@@ -213,7 +213,7 @@
            <number>10</number>
           </property>
           <item row="0" column="0">
-           <widget class="QLabel" name="RobotOptions">
+           <widget class="QLabel" name="robotOptionsLabel">
             <property name="text">
              <string>Robot-Options</string>
             </property>
@@ -233,49 +233,49 @@
            </spacer>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="IPLabel">
+           <widget class="QLabel" name="robotIPLabel">
             <property name="text">
              <string>IP</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QLineEdit" name="IP"/>
+           <widget class="QLineEdit" name="robotIPLineEdit"/>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="PortLabel">
+           <widget class="QLabel" name="robotPortLabel">
             <property name="text">
              <string>Port</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="Port"/>
+           <widget class="QLineEdit" name="robotPortLineEdit"/>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="ZOffsetLabel">
+           <widget class="QLabel" name="zOffsetLabel">
             <property name="text">
              <string>Z-Offset</string>
             </property>
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="ZOffset"/>
+           <widget class="QLineEdit" name="zOffsetLneEdit"/>
           </item>
           <item row="4" column="0">
-           <widget class="QLabel" name="ZOffsetFinalLabel">
+           <widget class="QLabel" name="zOffsetFinalLabel">
             <property name="text">
              <string>Z-Offset Final</string>
             </property>
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QLineEdit" name="ZOffsetFinal"/>
+           <widget class="QLineEdit" name="zOffsetFinalLineEdit"/>
           </item>
          </layout>
         </item>
         <item row="2" column="0">
-         <layout class="QFormLayout" name="CameraOptions">
+         <layout class="QFormLayout" name="cameraOptionsLayout">
           <property name="topMargin">
            <number>20</number>
           </property>
@@ -283,7 +283,7 @@
            <number>10</number>
           </property>
           <item row="0" column="0">
-           <widget class="QLabel" name="CameraOptionsLabel">
+           <widget class="QLabel" name="cameraOptionsLabel">
             <property name="text">
              <string>Camera-Options</string>
             </property>
@@ -303,44 +303,44 @@
            </spacer>
           </item>
           <item row="1" column="0">
-           <widget class="QLabel" name="CameraIPLabel">
+           <widget class="QLabel" name="cameraIPLabel">
             <property name="text">
              <string>IP</string>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QLineEdit" name="CameraIP"/>
+           <widget class="QLineEdit" name="cameraIPLineEdit"/>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="ExposureLabel">
+           <widget class="QLabel" name="exposureLabel">
             <property name="text">
              <string>Exposure</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="Exposure"/>
+           <widget class="QLineEdit" name="exposureLineEdit"/>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="FPSLiveViewLabel">
+           <widget class="QLabel" name="fpsLiveViewLabel">
             <property name="text">
              <string>FPS for Live-View</string>
             </property>
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="FPSLiveView"/>
+           <widget class="QLineEdit" name="fpsLiveViewLineEdit"/>
           </item>
           <item row="6" column="0">
-           <widget class="QLabel" name="label_15">
+           <widget class="QLabel" name="emptyCameraOptionsLabel">
             <property name="text">
              <string/>
             </property>
            </widget>
           </item>
           <item row="6" column="1">
-           <widget class="QCheckBox" name="TriggerOn">
+           <widget class="QCheckBox" name="triggerOnCheckBox">
             <property name="text">
              <string>Flip Image </string>
             </property>
@@ -360,29 +360,29 @@
            </spacer>
           </item>
           <item row="4" column="0">
-           <widget class="QLabel" name="BiningLabel">
+           <widget class="QLabel" name="biningLabel">
             <property name="text">
              <string>Bining</string>
             </property>
            </widget>
           </item>
           <item row="5" column="0">
-           <widget class="QLabel" name="label_2">
+           <widget class="QLabel" name="gainLabel">
             <property name="text">
              <string>Gain</string>
             </property>
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QLineEdit" name="BiningValue"/>
+           <widget class="QLineEdit" name="biningValueLineEdit"/>
           </item>
           <item row="5" column="1">
-           <widget class="QLineEdit" name="GainValue"/>
+           <widget class="QLineEdit" name="gainValueLineEdit"/>
           </item>
          </layout>
         </item>
         <item row="2" column="1">
-         <layout class="QGridLayout" name="gridLayout_2">
+         <layout class="QGridLayout" name="cameraOptions2Layout">
           <property name="leftMargin">
            <number>10</number>
           </property>
@@ -393,7 +393,7 @@
            <number>10</number>
           </property>
           <item row="1" column="0" colspan="2">
-           <widget class="QLabel" name="FindCameraLabel">
+           <widget class="QLabel" name="findCameraLabel">
             <property name="text">
              <string>Find the IP and Port of Cameras in the network</string>
             </property>
@@ -416,17 +416,17 @@
            </spacer>
           </item>
           <item row="2" column="0" colspan="2">
-           <widget class="Line" name="line">
+           <widget class="Line" name="dividerCameraOptionsline">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QLineEdit" name="DataSavePath"/>
+           <widget class="QLineEdit" name="dataSavePathLineEdit"/>
           </item>
           <item row="0" column="0">
-           <widget class="QPushButton" name="FindCamera">
+           <widget class="QPushButton" name="findCameraButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -445,7 +445,7 @@
            </widget>
           </item>
           <item row="6" column="0">
-           <widget class="QPushButton" name="OpenConsoleButton">
+           <widget class="QPushButton" name="openConsoleButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -464,14 +464,14 @@
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QPushButton" name="FolderDialogButton">
+           <widget class="QPushButton" name="folderDialogButton">
             <property name="text">
              <string>Folder</string>
             </property>
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="DataSavePathLabel">
+           <widget class="QLabel" name="dataSavePathLabel">
             <property name="text">
              <string>Imagedata save path</string>
             </property>
@@ -493,79 +493,79 @@
          </layout>
         </item>
         <item row="0" column="1" rowspan="2">
-         <layout class="QGridLayout" name="gridLayout">
+         <layout class="QGridLayout" name="workingAreagridLayout">
           <item row="2" column="1">
-           <widget class="QLabel" name="YminLabel">
+           <widget class="QLabel" name="yminLabel">
             <property name="text">
              <string>Y min</string>
             </property>
            </widget>
           </item>
           <item row="3" column="2">
-           <widget class="QLineEdit" name="ZminValue"/>
+           <widget class="QLineEdit" name="zminValueLineEdit"/>
           </item>
           <item row="2" column="3">
-           <widget class="QLabel" name="YmaxLabel">
+           <widget class="QLabel" name="ymaxLabel">
             <property name="text">
              <string>Y max</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLabel" name="WorkingAreaLabel">
+           <widget class="QLabel" name="workingAreaLabel">
             <property name="text">
              <string>Working-Area</string>
             </property>
            </widget>
           </item>
           <item row="1" column="2">
-           <widget class="QLineEdit" name="XminValue"/>
+           <widget class="QLineEdit" name="xminValueLineEdit"/>
           </item>
           <item row="2" column="2">
-           <widget class="QLineEdit" name="YminValue"/>
+           <widget class="QLineEdit" name="yminValueLineEdit"/>
           </item>
           <item row="1" column="1">
-           <widget class="QLabel" name="XminLabel">
+           <widget class="QLabel" name="xminLabel">
             <property name="text">
              <string>X min</string>
             </property>
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLabel" name="ZminLabel">
+           <widget class="QLabel" name="zminLabel">
             <property name="text">
              <string>Z min</string>
             </property>
            </widget>
           </item>
           <item row="3" column="3">
-           <widget class="QLabel" name="ZmaxLabel">
+           <widget class="QLabel" name="zmaxLabel">
             <property name="text">
              <string>Z max</string>
             </property>
            </widget>
           </item>
           <item row="1" column="3">
-           <widget class="QLabel" name="XmaxLabel">
+           <widget class="QLabel" name="xmaxLabel">
             <property name="text">
              <string>X max</string>
             </property>
            </widget>
           </item>
           <item row="1" column="4">
-           <widget class="QLineEdit" name="XmaxValue"/>
+           <widget class="QLineEdit" name="xmaxValueLineEdit"/>
           </item>
           <item row="2" column="4">
-           <widget class="QLineEdit" name="YmaxValue"/>
+           <widget class="QLineEdit" name="ymaxValueLineedit"/>
           </item>
           <item row="3" column="4">
-           <widget class="QLineEdit" name="ZmaxValue"/>
+           <widget class="QLineEdit" name="zmaxValueLineEdit"/>
           </item>
          </layout>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="Start_Program">
+      <widget class="QWidget" name="start_ProgramWidget">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
@@ -591,7 +591,7 @@
            <number>10</number>
           </property>
           <item>
-           <widget class="QCheckBox" name="SafetyCheck">
+           <widget class="QCheckBox" name="safetyCheckCheckBox">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -601,28 +601,28 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="CoordinateLabel">
+           <widget class="QLabel" name="coordinateLabel">
             <property name="text">
              <string>Coordinates</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="CoordinateShowLabel">
+           <widget class="QLabel" name="coordinateShowLabel">
             <property name="text">
              <string>X Y Z A B C</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="GetCoordinates">
+           <widget class="QPushButton" name="getCoordinatesButton">
             <property name="text">
              <string>Get Coordinates</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="StartRobot">
+           <widget class="QPushButton" name="startRobotButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -654,7 +654,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="TimestampLabelProgram">
+           <widget class="QLabel" name="timestampProgramLabel">
             <property name="text">
              <string>Timestamp</string>
             </property>
@@ -663,7 +663,7 @@
          </layout>
         </item>
         <item row="1" column="0" rowspan="2">
-         <widget class="QLabel" name="ProgramImage">
+         <widget class="QLabel" name="programImageLabel">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
             <horstretch>0</horstretch>
@@ -697,7 +697,7 @@
         <item row="0" column="1" rowspan="2">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QLabel" name="StartProgramHeadline">
+           <widget class="QLabel" name="startProgramHeadlineLabel">
             <property name="autoFillBackground">
              <bool>true</bool>
             </property>
@@ -710,7 +710,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="StartProgramStatusColorLabel">
+           <widget class="QLabel" name="startProgramStatusColorLabel">
             <property name="styleSheet">
              <string notr="true">
 background-color: rgb(224, 27, 36);</string>
@@ -766,7 +766,7 @@ background-color: rgb(224, 27, 36);</string>
    <addaction name="menuView"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QDockWidget" name="ConsoleWindow">
+  <widget class="QDockWidget" name="consoleWindowDockWidget">
    <property name="enabled">
     <bool>true</bool>
    </property>
@@ -785,7 +785,7 @@ background-color: rgb(224, 27, 36);</string>
    <widget class="QWidget" name="dockWidgetContents_2">
     <layout class="QGridLayout" name="gridLayout_6">
      <item row="0" column="0">
-      <widget class="QTextBrowser" name="InfoConsole">
+      <widget class="QTextBrowser" name="infoConsoleTextBrowser">
        <property name="placeholderText">
         <string>Example-Text</string>
        </property>
@@ -820,9 +820,9 @@ background-color: rgb(224, 27, 36);</string>
  </resources>
  <connections>
   <connection>
-   <sender>OpenConsoleButton</sender>
+   <sender>openConsoleButton</sender>
    <signal>clicked()</signal>
-   <receiver>ConsoleWindow</receiver>
+   <receiver>consoleWindowDockWidget</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -838,7 +838,7 @@ background-color: rgb(224, 27, 36);</string>
   <connection>
    <sender>actionOpen_Console</sender>
    <signal>triggered()</signal>
-   <receiver>ConsoleWindow</receiver>
+   <receiver>consoleWindowDockWidget</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
