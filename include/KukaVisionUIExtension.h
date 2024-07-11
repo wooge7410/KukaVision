@@ -4,38 +4,38 @@
 //Connecting UI and Main Program
 
 //All Options from the Options page
-#include <string>
 #include "KukaVisionUIV1.h"
+#include <QtCore/QString>
 //All RobotOptions
 struct RobotOptions
 {
-std::string RobotIP;
-int Port;
-int Zoffset;
-int Zoffsetfinal;
-int WorkAreaXmin;
-int WorkAreaXmax;
-int WorkAreaYmin;
-int WorkAreaYmax;
-int WorkAreaZmin;
-int WorkAreaZmax;
+    QString RobotIP;
+    int Port;
+    int Zoffset;
+    int Zoffsetfinal;
+    int WorkAreaXmin;
+    int WorkAreaXmax;
+    int WorkAreaYmin;
+    int WorkAreaYmax;
+    int WorkAreaZmin;
+    int WorkAreaZmax;
 };
 
 //All CameraOptions
 struct CameraOptions
 {
-std::string CameraIP;
-float Exposure;
-int FPSforLiveView;
-int Bining;
-int Gain;
-bool FlipImage;
+    QString CameraIP;
+    float Exposure;
+    int FPSforLiveView;
+    int Bining;
+    int Gain;
+    bool FlipImage;
 };
 
 struct Options
 {
-RobotOptions robOptions;
-CameraOptions camOptions;
+    RobotOptions robOptions;
+    CameraOptions camOptions;
 };
 
 // Geting all Options out of the UI
@@ -66,4 +66,6 @@ void GetCoordinates(Ui::MainWindow& Ui_MainWindow);
 void StartProgram(Ui::MainWindow& Ui_MainWindow);
 
 //Opens the Project-Info
+
 void OpenProjectInfo(Ui::MainWindow& Ui_MainWindow);
+
