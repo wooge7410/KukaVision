@@ -3,6 +3,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <QtWidgets/QFileDialog>
+#include <QtWidgets/QMessageBox>
 
 //TODO when Robot-Program is running, the Options Page needs to be disabled
 
@@ -53,6 +54,7 @@ void UpdateOptions(Ui::MainWindow& Ui_MainWindow, Options& currentOptions)
 {
     //No Input verification at the moment
     currentOptions.robOptions.RobotIP = Ui_MainWindow.robotIPLineEdit->text().toStdString();
+    CheckInput(Ui_MainWindow.robotPortLineEdit->text());
     currentOptions.robOptions.Port = Ui_MainWindow.robotPortLineEdit->text().toInt();
     currentOptions.robOptions.Zoffset =Ui_MainWindow.zOffsetLneEdit->text().toInt();
     currentOptions.robOptions.Zoffsetfinal = Ui_MainWindow.zOffsetFinalLineEdit->text().toInt();
@@ -102,49 +104,72 @@ void OpenFolderDialogImageData(Ui::MainWindow& Ui_MainWindow) //TODO wird vom Ev
 //Opens the FindCameraDialog to select an IP from a list of Cameras from the Network
 void OpenFindCameraDialog(Ui::MainWindow& Ui_MainWindow) //TODO wird vom Event gecallt -> void
 {
-
+    std::cout << "Open the Camera Dialog\n";
 }
 
 //Saves the most recent Image in the path given in the options
 void SaveImageFromLiveView(Ui::MainWindow& Ui_MainWindow)   //TODO wird vom Event gecallt -> void
 {
+    std::cout << "SaveImageButton\n";
 //Filestream to save the Image
 }
 
 //Calculates the Coordinates of the latest Image via OpenCV and displays them on the screen
-void GetCoordinates(Ui::MainWindow& Ui_MainWindow); //TODO wird vom Event gecallt -> void
+void GetCoordinates(Ui::MainWindow& Ui_MainWindow)
+{
+    std::cout << "GetCoordinatesButton\n";
+} //TODO wird vom Event gecallt -> void
 
 //Starting a cycle of the robot griping an object
-void StartProgram(Ui::MainWindow& Ui_MainWindow); //TODO wird vom Event gecallt -> void
+void StartProgram(Ui::MainWindow& Ui_MainWindow)
+{
+    std::cout << "StartProgramButton\n";
+    Ui_MainWindow.startProgramStatusColorLabel->setText("Running");
+    Ui_MainWindow.startProgramStatusColorLabel->setStyleSheet(QString::fromUtf8("\n" "background-color: rgb(51,102,0);"));
+} //TODO wird vom Event gecallt -> void
 
 //Opens the Project-Info
-void OpenProjectInfo(Ui::MainWindow& Ui_MainWindow); //TODO wird vom Event gecallt -> void
+void OpenProjectInfo(Ui::MainWindow& Ui_MainWindow)
+{
+    std::cout << "ProjectInfoButton\n";
+} //TODO wird vom Event gecallt -> void
 
 
-void CheckInput(QString& inputdata)
+void CheckInput(QString inputdata)
 {
 int temp = 0;
 
-/*try
+try
 {
-if inputdata.isNull()
-{
-throw invalid_argument("No Inputdata !");
-}
-else
-{
+    if (inputdata.isNull())
+    {
+        throw std::invalid_argument("No Inputdata !");
+    }
+    else
+        {
 
-temp = inputdata.toInt();
-//}
-if temp < 1
-{
-throw out_of_range("Input is out of range! Input Value is to low.");
-}
-if temp > 1000
-{
-throw out_of_range("Input is out of range! Input Value is to high.");
-}
-}
-*/
+        temp = inputdata.toInt();
+        }//Inputrange may needs to be adjusted
+        if (temp < 1)
+        {
+            throw std::out_of_range("Input is out of range! Input Value is to low.");
+        }
+        if (temp > 1000)
+        {
+            throw std::out_of_range("Input is out of range! Input Value is to high.");
+        }
+    }
+    catch(std::invalid_argument& e)
+    {
+    std::cout<<"Invalid Input!"<<std::endl;
+    std::cout<< e.what()<<std::endl;
+    QMessageBox();
+    }
+    catch(std::out_of_range& e)//Maybe using a message Box
+    {
+    std::cout<<"Invalid Input"<<std::endl;
+    std::cout<< e.what()<<std::endl;
+
+    }
 }
 
