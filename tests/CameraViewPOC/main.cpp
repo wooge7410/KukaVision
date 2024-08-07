@@ -1,7 +1,10 @@
 
 #include "ui_mainwindow.h"
+#include "CameraStream.h"
 
 #include <QtWidgets/QApplication>
+
+#include <future>
 
 
 int main(int argc, char *argv[])
@@ -10,10 +13,12 @@ int main(int argc, char *argv[])
     QMainWindow widget;
     Ui::MainWindow ui;
     ui.setupUi(&widget);
-    ui.CameraIP->setText("Test1");
-    ui.CameraIP->setText("Test2");
 
     widget.show();
+
+    CameraStream cs("192.168.41.65");
+
+    std::future<void> f = std::async(&CameraStream::acquisitionLoop, &cs, ui.LiveCameraView);
 
 
     return a.exec();
