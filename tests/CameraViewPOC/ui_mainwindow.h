@@ -31,6 +31,7 @@
 #include <QtWidgets/QWidget>
 
 #include "FindCameraDialog.h"
+#include "CameraStream.h"
 #include <iostream>
 
 QT_BEGIN_NAMESPACE
@@ -136,8 +137,20 @@ public:
     QTextBrowser *InfoConsole;
 
     void onFindCameraClicked() {
-        std::cout << "\nTest\n";
-        CameraIP -> setText("Test");
+        FindCameraDialog fcd;
+        CameraIP -> setText(QString::fromStdString(fcd.selectedIP));
+        cout << "\n1\n";
+        CameraStream cs(fcd.selectedIP);
+        cout << cs.camera.IsConnected() << endl;
+        cout << "2\n";
+        //std::thread thread_obj(&CameraStream::acquisitionLoop, &cs, LiveCameraView);
+        //thread_obj.detach();
+
+
+
+        //cs.acquisitionLoop(LiveCameraView);
+        //cs.startAcquisition(LiveCameraView);
+        cout << "3\n";
     }
 
     void setupUi(QMainWindow *MainWindow)
@@ -640,7 +653,7 @@ public:
         //QObject::connect(FindCamera, SIGNAL(clicked()), this, SLOT(onFindCameraClicked()));
         //QObject::connect(FindCamera, SIGNAL(clicked()), CameraIP, SLOT(clear()));
 
-        QObject::connect(FindCamera, &QPushButton::clicked, this,  [=]() {onFindCameraClicked();});
+        QObject::connect(FindCamera, &QPushButton::clicked, this,  [&]() {onFindCameraClicked();});
 
 
         tabWidget->setCurrentIndex(1);
