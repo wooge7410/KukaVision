@@ -136,22 +136,7 @@ public:
     QGridLayout *gridLayout_6;
     QTextBrowser *InfoConsole;
 
-    void onFindCameraClicked() {
-        FindCameraDialog fcd;
-        CameraIP -> setText(QString::fromStdString(fcd.selectedIP));
-        cout << "\n1\n";
-        CameraStream cs(fcd.selectedIP);
-        cout << cs.camera.IsConnected() << endl;
-        cout << "2\n";
-        //std::thread thread_obj(&CameraStream::acquisitionLoop, &cs, LiveCameraView);
-        //thread_obj.detach();
-
-
-
-        //cs.acquisitionLoop(LiveCameraView);
-        //cs.startAcquisition(LiveCameraView);
-        cout << "3\n";
-    }
+    void onFindCameraClicked();
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -654,7 +639,7 @@ public:
         //QObject::connect(FindCamera, SIGNAL(clicked()), CameraIP, SLOT(clear()));
 
         QObject::connect(FindCamera, &QPushButton::clicked, this,  [&]() {onFindCameraClicked();});
-
+        //QObject::connect(MainWindow, &QMainWindow::destroyed, this, [&]() {runCameraStream = false;});
 
         tabWidget->setCurrentIndex(1);
 
@@ -719,6 +704,13 @@ public:
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
         ConsoleWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Console", nullptr));
     } // retranslateUi
+
+    bool runCameraStream;
+
+
+private:
+    std::future<int> f;
+
 
 };
 

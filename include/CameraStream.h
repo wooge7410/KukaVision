@@ -22,7 +22,7 @@ class CameraStream
 {
     public:
         CameraStream(string identifier);
-        int startAcquisition(QLabel *view);
+        int startAcquisition(QLabel *view, bool *run);
         void acquisitionLoop(QLabel *view);
         int stopAcquisition();
         int acquisitionStatus();
