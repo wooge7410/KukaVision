@@ -711,7 +711,8 @@ public:
 
 
 private:
-    std::future<int> f;
+    std::future<void> f;
+    CameraStream *cs;
 
 
 };

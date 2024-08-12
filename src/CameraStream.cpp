@@ -8,7 +8,9 @@ CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConn
 
     camera.f().TriggerMode = TriggerMode::Off;
     camera.f().AcquisitionMode.Set(AcquisitionMode::Continuous);
-    camera.f().AcquisitionStart;
+    camera.f().ExposureAuto.Set(ExposureAuto::Continuous);
+    camera.f().AcquisitionFrameRateEnable.Set(true);
+    camera.f().AcquisitionFrameRate.Set(1000);
 
     type = CV_8U;
     isColor = true;
@@ -24,55 +26,47 @@ CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConn
     } else {
         throw "Invalid Pixel Format";
     }
-    cout << camera.IsConnected()<< endl;
+    cout << "Conncted: " << camera.IsConnected() << endl;
 
+    camera.f().AcquisitionStart;
 
     width = camera.f().Width;
     height = camera.f().Height;
 
+    cout << "Test" << endl;
+
 }
 
 
-void CameraStream::acquisitionLoop(QLabel *view) {
+void CameraStream::acquisitionLoop(QLabel *view, bool *run) {
     cout << "Thread Start\n";
-    cout << camera.IsConnected()<< endl;
+    cout << "Connected: " << camera.IsConnected()<< endl;
+    cout << "Run: " << *run << endl;
 
-
-    camera.f().TriggerMode = TriggerMode::Off;
-    camera.f().AcquisitionMode.Set(AcquisitionMode::Continuous);
-    camera.f().AcquisitionStart;
-
-
-    for (int count = 0; count < 10000; count++) {
+    while (*run) {
         Image image;
         do {
-            camera.f().AcquisitionStart;
             image = camera.GetImage();
-            //cout << image.IsEmpty()<< "," << width << "," << height << endl;
-            //cout << camera.IsConnected()<< endl;
         } while (image.IsEmpty());
         latestImage = Mat(Size(width, height), type, image.GetImageData(), Mat::AUTO_STEP);
 
+        QImage img = QImage(latestImage.data, latestImage.cols, latestImage.rows, latestImage.step, QImage::Format_Grayscale8).copy();
+        QPixmap pixmap = QPixmap::fromImage(img);
+        //QPixmap pixmap = QPixmap::fromImage(matToQImage(latestImage));
+        view->setPixmap(pixmap);
 
-        if (count % 1 == 0) {
-            QImage img = QImage(latestImage.data, latestImage.cols, latestImage.rows, latestImage.step, QImage::Format_Grayscale8).copy();
-            QPixmap pixmap = QPixmap::fromImage(img);
-            //QPixmap pixmap = QPixmap::fromImage(matToQImage(latestImage));
-            view->setPixmap(pixmap);
-        }
     }
     cout << "Thread End \n";
 }
 
 
-int CameraStream::startAcquisition(QLabel *view, bool *run) {
+void CameraStream::startAcquisition(QLabel *view, bool *run) {
     int i = 0;
     while(*run) {
         cout << i << endl;
         i++;
         cout << *run << endl;
     }
-    return 0;
 }
 
 
