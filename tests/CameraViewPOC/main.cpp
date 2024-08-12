@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     widget.show();
 
-    CameraStream cs("192.168.41.65");
+    //CameraStream cs("192.168.41.65");
 
     //QObject::connect(a, &QApplication::aboutToQuit, a, [&]() {ui.runCameraStream = false;});
     QObject::connect(&a, &QApplication::aboutToQuit, &a, [&]() {ui.runCameraStream = false;});

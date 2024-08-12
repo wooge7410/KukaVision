@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1723425976 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/main.cpp
+1723447796 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/main.cpp
 	"ui_mainwindow.h"
 	"CameraStream.h"
 	<QtWidgets/QApplication>
 	<QtCore/QObject>
 	<future>
 
-1723425355 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.h
+1723456197 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.h
 	<QtCore/QVariant>
 	<QtWidgets/QAction>
 	<QtWidgets/QApplication>
@@ -930,7 +930,7 @@
 1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QWidget
 	"qwidget.h"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/FindCameraDialog.h
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/FindCameraDialog.h
 	<QtCore/QVariant>
 	<QtWidgets/QApplication>
 	<QtWidgets/QDialog>
@@ -1054,7 +1054,7 @@
 	<QtWidgets/qtwidgetsglobal.h>
 	<QtWidgets/qwidget.h>
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi.hpp
 	"neoapi_common.hpp"
 	"neoapi_camera.hpp"
 	"neoapi_camera_info.hpp"
@@ -1063,48 +1063,48 @@
 	"neoapi_image.hpp"
 	"neoapi_trace.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_common.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_common.hpp
 	<string.h>
 	<cstddef>
 	<cstdint>
 	<iostream>
 	"neoapi/neoapi.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_camera.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_camera.hpp
 	"neoapi_common.hpp"
 	"neoapi_featureaccess.hpp"
 	"neoapi_event.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_featureaccess.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_featureaccess.hpp
 	"neoapi_common.hpp"
 	"neoapi_feature.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_feature.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_feature.hpp
 	"neoapi_common.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_event.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_event.hpp
 	"neoapi_common.hpp"
 	"neoapi_featureaccess.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_camera_info.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_camera_info.hpp
 	"neoapi_common.hpp"
 	"neoapi_camera.hpp"
 	"neoapi_event.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_image_converter.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_image_converter.hpp
 	<string>
 	<memory>
 	"neoapi_common.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_image.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_image.hpp
 	"neoapi_common.hpp"
 	"neoapi_featureaccess.hpp"
 	"neoapi_image_converter.hpp"
 
-1723023651 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_trace.hpp
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_trace.hpp
 	"neoapi_common.hpp"
 
-1723422646 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.cpp
+1723453635 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.cpp
 	"ui_mainwindow.h"
 
 1720603343 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/eventHandler.h
@@ -1114,13 +1114,13 @@
 1720603351 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/eventHandler.cpp
 	"eventHandler.h"
 
-1723023651 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/FindCameraDialog.cpp
+1720003952 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/FindCameraDialog.cpp
 	"FindCameraDialog.h"
 
-1723422636 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/CameraStream.cpp
+1723456110 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/CameraStream.cpp
 	"CameraStream.h"
 
-1723422636 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/CameraStream.h
+1723456167 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/CameraStream.h
 	<string.h>
 	"neoapi/neoapi.hpp"
 	<opencv2/opencv.hpp>
@@ -1750,4 +1750,46 @@
 
 1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
 	"qobject.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QGraphicsView
+	"qgraphicsview.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qgraphicsview.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qmetatype.h>
+	<QtGui/qpainter.h>
+	<QtWidgets/qscrollarea.h>
+	<QtWidgets/qgraphicsscene.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpainter.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qrect.h>
+	<QtCore/qpoint.h>
+	<QtCore/qscopedpointer.h>
+	<QtGui/qpixmap.h>
+	<QtGui/qimage.h>
+	<QtGui/qtextoption.h>
+	<QtGui/qpolygon.h>
+	<QtGui/qpen.h>
+	<QtGui/qbrush.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qtransform.h>
+	<QtGui/qfontinfo.h>
+	<QtGui/qfontmetrics.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qscrollarea.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractscrollarea.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qgraphicsscene.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+	<QtGui/qbrush.h>
+	<QtGui/qfont.h>
+	<QtGui/qtransform.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qpen.h>
 
