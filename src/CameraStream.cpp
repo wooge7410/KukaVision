@@ -10,7 +10,7 @@ CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConn
     camera.f().AcquisitionMode.Set(AcquisitionMode::Continuous);
     camera.f().ExposureAuto.Set(ExposureAuto::Continuous);
     camera.f().AcquisitionFrameRateEnable.Set(true);
-    camera.f().AcquisitionFrameRate.Set(1000);
+    camera.f().AcquisitionFrameRate.Set(5);
 
     type = CV_8U;
     isColor = true;
@@ -42,19 +42,24 @@ void CameraStream::acquisitionLoop(QLabel *view, bool *run) {
     cout << "Thread Start\n";
     cout << "Connected: " << camera.IsConnected()<< endl;
     cout << "Run: " << *run << endl;
+    Image image;
+    QImage img;
+    QPixmap pixmap;
 
     while (*run) {
-        Image image;
-        do {
+
+        image = camera.GetImage();
+        /*while (image.IsEmpty()) {
             image = camera.GetImage();
-        } while (image.IsEmpty());
-        latestImage = Mat(Size(width, height), type, image.GetImageData(), Mat::AUTO_STEP);
-
-        QImage img = QImage(latestImage.data, latestImage.cols, latestImage.rows, latestImage.step, QImage::Format_Grayscale8).copy();
-        QPixmap pixmap = QPixmap::fromImage(img);
-        //QPixmap pixmap = QPixmap::fromImage(matToQImage(latestImage));
-        view->setPixmap(pixmap);
-
+            usleep(10000);
+        }*/
+        if (!image.IsEmpty()) {            latestImage = Mat(Size(width, height), type, image.GetImageData(), Mat::AUTO_STEP);
+            img = QImage(latestImage.data, latestImage.cols, latestImage.rows, latestImage.step, QImage::Format_Grayscale8).copy();
+            pixmap = QPixmap::fromImage(img);
+            //QPixmap pixmap = QPixmap::fromImage(matToQImage(latestImage));
+            view->setPixmap(pixmap);
+            view->show();
+        }
     }
     cout << "Thread End \n";
 }

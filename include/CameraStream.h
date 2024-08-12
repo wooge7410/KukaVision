@@ -12,6 +12,8 @@
 
 #include <thread>
 #include <future>
+#include <unistd.h>
+
 
 using namespace std;
 using namespace NeoAPI;
