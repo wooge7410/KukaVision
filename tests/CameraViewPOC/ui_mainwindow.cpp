@@ -10,3 +10,4 @@ void Ui_MainWindow::onFindCameraClicked() {
 
     f = std::async(&CameraStream::acquisitionLoop, cs, LiveCameraView, &runCameraStream);
 }
+

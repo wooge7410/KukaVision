@@ -13,7 +13,13 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include" />
 				</Compiler>
+				<Linker>
+					<Add library="/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/lib/libneoapi_cpp.so" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/lib" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/BaumerStream" prefix_auto="1" extension_auto="1" />
@@ -31,6 +37,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

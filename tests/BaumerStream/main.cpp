@@ -1,7 +1,9 @@
 
 #include <string.h>
+#include <iostream>
 #include "neoapi/neoapi.hpp"
 
+/*
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/core.hpp>
@@ -10,12 +12,22 @@
 #include <QtGui/QImage>
 
 #include <future>
-
+*/
 using namespace NeoAPI;
 using namespace std;
-using namespace cv;
+//using namespace cv;
 
+int main() {
+    Cam camera = Cam();
+    camera.Connect("192.168.41.65");
 
+    while(true) {
+        cout << "Loop "<< endl;
+    };
+    return 0;
+}
+
+/*
 int type;
 bool isColor;
 int width;

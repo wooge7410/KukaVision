@@ -28,6 +28,7 @@
 					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_core.so" />
 					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_highgui.so" />
 					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so" />
 					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/" />
 					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include" />
 					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/lib" />
@@ -59,6 +60,7 @@
 		<Unit filename="../../src/CameraStream.cpp" />
 		<Unit filename="../../src/FindCameraDialog.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="ui_mainwindow.cpp" />
 		<Unit filename="ui_mainwindow.h" />
 		<Extensions />
 	</Project>

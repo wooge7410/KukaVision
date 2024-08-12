@@ -6,7 +6,7 @@
 	<QtCore/QObject>
 	<future>
 
-1723459817 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.h
+1723472986 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.h
 	<QtCore/QVariant>
 	<QtWidgets/QAction>
 	<QtWidgets/QApplication>
@@ -30,6 +30,11 @@
 	"FindCameraDialog.h"
 	"CameraStream.h"
 	<iostream>
+	<opencv2/opencv.hpp>
+	<opencv2/highgui.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/core.hpp>
+	<string.h>
 
 1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QVariant
 	"qvariant.h"
@@ -1104,7 +1109,7 @@
 1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_trace.hpp
 	"neoapi_common.hpp"
 
-1723459817 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.cpp
+1723472700 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.cpp
 	"ui_mainwindow.h"
 
 1720603343 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/eventHandler.h
@@ -1117,10 +1122,10 @@
 1720003952 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/FindCameraDialog.cpp
 	"FindCameraDialog.h"
 
-1723464162 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/CameraStream.cpp
+1723471811 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/CameraStream.cpp
 	"CameraStream.h"
 
-1723461615 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/CameraStream.h
+1723470350 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/CameraStream.h
 	<string.h>
 	"neoapi/neoapi.hpp"
 	<opencv2/opencv.hpp>
@@ -1793,4 +1798,7 @@
 	<QtGui/qtransform.h>
 	<QtGui/qmatrix.h>
 	<QtGui/qpen.h>
+
+1633794506 /usr/include/opencv4/opencv2/highgui/highgui.hpp
+	"opencv2/highgui.hpp"
 

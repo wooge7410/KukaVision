@@ -24,12 +24,9 @@ class CameraStream
 {
     public:
         CameraStream(string identifier);
-        void startAcquisition(QLabel *view, bool *run);
         void acquisitionLoop(QLabel *view, bool *run);
-        int stopAcquisition();
-        int acquisitionStatus();
 
-        Cam camera;
+        Cam camera = Cam();
         Mat latestImage;
         time_t latestImageTimestamp;
         float bufferRate;

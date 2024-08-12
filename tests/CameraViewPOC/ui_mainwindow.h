@@ -34,7 +34,16 @@
 #include "CameraStream.h"
 #include <iostream>
 
+#include <opencv2/opencv.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core.hpp>
+#include <string.h>
+
 QT_BEGIN_NAMESPACE
+
+using namespace std;
+using namespace cv;
 
 class Ui_MainWindow:QMainWindow
 {
@@ -639,6 +648,7 @@ public:
         //QObject::connect(FindCamera, SIGNAL(clicked()), CameraIP, SLOT(clear()));
 
         QObject::connect(FindCamera, &QPushButton::clicked, this,  [&]() {onFindCameraClicked();});
+        QObject::connect(SaveImage, &QPushButton::clicked, this,  [&]() {imwrite("./1.png", cs->latestImage);});
         //QObject::connect(MainWindow, &QMainWindow::destroyed, this, [&]() {runCameraStream = false;});
 
         tabWidget->setCurrentIndex(1);
