@@ -1,6 +1,7 @@
 #include "CameraStream.h"
 
 CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConnectedException
+
     while(!camera.IsConnected()) {
         camera.Connect(NeoString(identifier.c_str()));
     }
@@ -28,6 +29,7 @@ CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConn
 
     width = camera.f().Width;
     height = camera.f().Height;
+
 }
 
 
@@ -63,7 +65,13 @@ void CameraStream::acquisitionLoop(QLabel *view) {
 }
 
 
-int CameraStream::startAcquisition(QLabel *view) {
+int CameraStream::startAcquisition(QLabel *view, bool *run) {
+    int i = 0;
+    while(*run) {
+        cout << i << endl;
+        i++;
+        cout << *run << endl;
+    }
     return 0;
 }
 
