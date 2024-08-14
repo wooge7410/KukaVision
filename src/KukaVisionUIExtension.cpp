@@ -1,6 +1,8 @@
 #include "KukaVisionUIExtension.h"
 #include "KukaVisionUIV1.h"
 #include <iostream>
+#include <fstream>
+#include <iomanip>
 #include <stdexcept>
 #include <QtWidgets/QFileDialog>
 #include <QtWidgets/QMessageBox>
@@ -64,31 +66,33 @@ void UpdateOptions(Ui::MainWindow& Ui_MainWindow, Options& currentOptions)
     currentOptions.robOptions.WorkAreaYmin = Ui_MainWindow.yminValueLineEdit->text().toInt();
     currentOptions.robOptions.WorkAreaZmax = Ui_MainWindow.zmaxValueLineEdit->text().toInt();
     currentOptions.robOptions.WorkAreaZmin = Ui_MainWindow.zminValueLineEdit->text().toInt();
-    currentOptions.camOptions.CameraIP = Ui_MainWindow.cameraIPLineEdit->text().toInt();
+    currentOptions.camOptions.CameraIP = Ui_MainWindow.cameraIPLineEdit->text().toStdString();
     currentOptions.camOptions.Bining = Ui_MainWindow.biningValueLineEdit->text().toInt();
     currentOptions.camOptions.FPSforLiveView = Ui_MainWindow.fpsLiveViewLineEdit->text().toInt();
     currentOptions.camOptions.Gain = Ui_MainWindow.gainValueLineEdit->text().toInt();
-    currentOptions.camOptions.Exposure = Ui_MainWindow.exposureLineEdit->text().toFloat();
+    currentOptions.camOptions.Exposure = Ui_MainWindow.exposureLineEdit->text().toInt();
+
+    SaveOptionsToBinaryFile(currentOptions);
 }
 
 //Initialize the Option page with values from the code
-void InitOptionspage(Ui::MainWindow& Ui_MainWindow) //TODO Beim Programmstart -> in eigene Datei
+void InitOptionspage(Ui::MainWindow& Ui_MainWindow ,Options currentOptions) //TODO Beim Programmstart -> in eigene Datei
 {
-    Ui_MainWindow.robotIPLineEdit->setText("123");
-    Ui_MainWindow.robotPortLineEdit->setText("123");
-    Ui_MainWindow.zOffsetLneEdit->setText("123");
-    Ui_MainWindow.zOffsetFinalLineEdit->setText("123");
-    Ui_MainWindow.xminValueLineEdit->setText("123");
-    Ui_MainWindow.xmaxValueLineEdit->setText("123");
-    Ui_MainWindow.yminValueLineEdit->setText("123");
-    Ui_MainWindow.ymaxValueLineedit->setText("123");
-    Ui_MainWindow.zminValueLineEdit->setText("123");
-    Ui_MainWindow.zmaxValueLineEdit->setText("123");
-    Ui_MainWindow.cameraIPLineEdit->setText("123");
-    Ui_MainWindow.exposureLineEdit->setText("123");
-    Ui_MainWindow.gainValueLineEdit->setText("123");
-    Ui_MainWindow.biningValueLineEdit->setText("123");
-    Ui_MainWindow.fpsLiveViewLineEdit->setText("123");
+    Ui_MainWindow.robotIPLineEdit->setText(QString::fromStdString(currentOptions.robOptions.RobotIP));
+    Ui_MainWindow.robotPortLineEdit->setText(QString::number(currentOptions.robOptions.Port));
+    Ui_MainWindow.zOffsetLneEdit->setText(QString::number(currentOptions.robOptions.Zoffset));
+    Ui_MainWindow.zOffsetFinalLineEdit->setText(QString::number(currentOptions.robOptions.Zoffsetfinal));
+    Ui_MainWindow.xminValueLineEdit->setText(QString::number(currentOptions.robOptions.WorkAreaXmin));
+    Ui_MainWindow.xmaxValueLineEdit->setText(QString::number(currentOptions.robOptions.WorkAreaXmax));
+    Ui_MainWindow.yminValueLineEdit->setText(QString::number(currentOptions.robOptions.WorkAreaYmin));
+    Ui_MainWindow.ymaxValueLineedit->setText(QString::number(currentOptions.robOptions.WorkAreaYmax));
+    Ui_MainWindow.zminValueLineEdit->setText(QString::number(currentOptions.robOptions.WorkAreaZmin));
+    Ui_MainWindow.zmaxValueLineEdit->setText(QString::number(currentOptions.robOptions.WorkAreaZmax));
+    Ui_MainWindow.cameraIPLineEdit->setText(QString::fromStdString(currentOptions.camOptions.CameraIP));
+    Ui_MainWindow.exposureLineEdit->setText(QString::number(currentOptions.camOptions.Exposure));
+    Ui_MainWindow.gainValueLineEdit->setText(QString::number(currentOptions.camOptions.Gain));
+    Ui_MainWindow.biningValueLineEdit->setText(QString::number(currentOptions.camOptions.Bining));
+    Ui_MainWindow.fpsLiveViewLineEdit->setText(QString::number(currentOptions.camOptions.FPSforLiveView));
 
 }
 
@@ -135,6 +139,71 @@ void OpenProjectInfo(Ui::MainWindow& Ui_MainWindow)
 } //TODO wird vom Event gecallt -> void
 
 
+//Save Options in a binary File
+void SaveOptionsToBinaryFile(Options& currentOptions)
+{
+
+std::ofstream ziel;
+ziel.open("Options.dat",std::ios::out);
+if(ziel.is_open())
+{
+ziel << currentOptions.robOptions.RobotIP << ";";
+ziel << currentOptions.robOptions.Port << ";";
+ziel << currentOptions.robOptions.Zoffset << ";";
+ziel << currentOptions.robOptions.Zoffsetfinal << ";";
+ziel << currentOptions.robOptions.WorkAreaXmax << ";";
+ziel << currentOptions.robOptions.WorkAreaXmin << ";";
+ziel << currentOptions.robOptions.WorkAreaYmax << ";";
+ziel << currentOptions.robOptions.WorkAreaYmin << ";";
+ziel << currentOptions.robOptions.WorkAreaZmax << ";";
+ziel << currentOptions.robOptions.WorkAreaZmin << ";";
+
+ziel << currentOptions.camOptions.CameraIP << ";";
+ziel << currentOptions.camOptions.Bining << ";";
+ziel << currentOptions.camOptions.Exposure << ";";
+ziel << currentOptions.camOptions.FPSforLiveView << ";";
+ziel << currentOptions.camOptions.Gain << ";";
+ziel << currentOptions.camOptions.FlipImage << "#";
+}
+ziel.close();
+}
+
+//Read Options from a binary File
+void ReadOptionsFromBinaryFile(Options& currentOptions)
+{
+std::string readIn ;
+std::ifstream source;
+source.open("Options.dat",std::ios::in);
+if(source.is_open())
+{
+    source >> readIn;
+}
+
+source.close();
+
+std::string delimiter = ";";
+
+
+std::vector<std::string> InputData = split(readIn,delimiter);
+
+    currentOptions.robOptions.RobotIP = InputData[0];
+    currentOptions.robOptions.Port = std::stoi(InputData[1]);
+    currentOptions.robOptions.Zoffset = std::stoi(InputData[2]);
+    currentOptions.robOptions.Zoffsetfinal = std::stoi(InputData[3]);
+    currentOptions.robOptions.WorkAreaXmax = std::stoi(InputData[4]);
+    currentOptions.robOptions.WorkAreaXmin = std::stoi(InputData[5]);
+    currentOptions.robOptions.WorkAreaYmax = std::stoi(InputData[6]);
+    currentOptions.robOptions.WorkAreaYmin = std::stoi(InputData[7]);
+    currentOptions.robOptions.WorkAreaZmax = std::stoi(InputData[8]);
+    currentOptions.robOptions.WorkAreaZmin = std::stoi(InputData[9]);
+    currentOptions.camOptions.CameraIP = InputData[10];
+    currentOptions.camOptions.Bining = std::stoi(InputData[11]);
+    currentOptions.camOptions.FPSforLiveView = std::stoi(InputData[13]);
+    currentOptions.camOptions.Gain = std::stoi(InputData[14]);
+    currentOptions.camOptions.Exposure = std::stoi(InputData[12]);
+}
+
+
 void CheckInput(QString inputdata)
 {
 int temp = 0;
@@ -171,5 +240,20 @@ try
     std::cout<< e.what()<<std::endl;
 
     }
+}
+
+std::vector<std::string> split(std::string readIN, const std::string& delimiter)
+{
+    std::vector<std::string> tokens;
+    size_t pos = 0;
+    std::string token;
+    while ((pos = readIN.find(delimiter)) != std::string::npos)
+    {
+        token = readIN.substr(0,pos);
+        tokens.push_back(token);
+        readIN.erase(0,pos + delimiter.length());
+    }
+    tokens.push_back(readIN);
+    return tokens;
 }
 
