@@ -27,7 +27,7 @@ int WorkAreaZmax;
 struct CameraOptions
 {
 std::string CameraIP;
-float Exposure;
+int Exposure;
 int FPSforLiveView;
 int Bining;
 int Gain;
@@ -53,7 +53,7 @@ CameraOptions GetCameraOptions(Ui::MainWindow& Ui_MainWindow);
 void UpdateOptions(Ui::MainWindow& Ui_MainWindow, Options& currentOptions);
 
 //Initialize the Option page with values from the code
-void InitOptionspage(Ui::MainWindow& Ui_MainWindow);
+void InitOptionspage(Ui::MainWindow& Ui_MainWindow,Options currentOptions);
 
 //Opens the Folder Dialog to select a Savepath for an Image
 void OpenFolderDialogImageData(Ui::MainWindow& Ui_MainWindow);
@@ -73,7 +73,15 @@ void StartProgram(Ui::MainWindow& Ui_MainWindow);
 //Opens the Project-Info
 void OpenProjectInfo(Ui::MainWindow& Ui_MainWindow);
 
+//Save Options in a binary File
+void SaveOptionsToBinaryFile(Options& currentOptions);
+
+//Read Options from a binary File
+void ReadOptionsFromBinaryFile(Options& currentOptions);
+
 //Inputverification
 void CheckInput(QString inputdata);
 
+//Spliting Inputdata-String
+std::vector<std::string> split(std::string readIN, const std::string& delimiter);
 
