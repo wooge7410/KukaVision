@@ -3,6 +3,7 @@
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<File name="../../include/KukaVisionUIV1.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="777" topLine="0" />
@@ -52,6 +53,27 @@
 =======
 			<Cursor1 position="319" topLine="0" />
 >>>>>>> cf657de (TODOs)
+=======
+	<File name="main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1427" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../../include/MainWindow.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="776" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="../../src/MainWindow.cpp" open="1" top="1" tabpos="4" split="1" active="2" splitpos="635" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3576" topLine="9" />
+			<Cursor2 position="2726" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../../include/MainWindowUI.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3675" topLine="82" />
+>>>>>>> 8d7c9eb (GuiExtension as child of Ui::MainWindow & Storing Settins as JSON. WIPgit add -A!)
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
