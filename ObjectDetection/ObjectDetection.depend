@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1720379923 source:/home/kukavision/Documents/ObjectDetection/main.cpp
+1723727058 source:/home/kukavision/Documents/ObjectDetection/main.cpp
 	<opencv2/opencv.hpp>
 	<iostream>
+	"object_detection.h"
 
 1633794506 /usr/include/opencv4/opencv2/opencv.hpp
 	"opencv2/opencv_modules.hpp"
@@ -614,4 +615,23 @@
 
 1633794506 /usr/include/opencv4/opencv2/video/background_segm.hpp
 	"opencv2/core.hpp"
+
+1723664553 /home/kukavision/Documents/ObjectDetection/ObjectDetails.h
+	<opencv2/opencv.hpp>
+
+1722979175 source:/home/kukavision/Documents/ObjectDetection/Secondary.cpp
+	"ObjectDetails.h"
+	<iostream>
+
+1723727027 source:/home/kukavision/Documents/ObjectDetection/object_detection.cpp
+	"object_detection.h"
+	<iostream>
+	<cmath>
+
+1723661390 /home/kukavision/Documents/ObjectDetection/object_detection.h
+	<opencv2/opencv.hpp>
+	"ObjectDetails.h"
+
+1723661390 source:/home/kukavision/Documents/ObjectDetection/ObjectDetails.cpp
+	"ObjectDetails.h"
 

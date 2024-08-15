@@ -37,7 +37,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ObjectDetails.cpp" />
+		<Unit filename="ObjectDetails.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="object_detection.cpp" />
+		<Unit filename="object_detection.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
