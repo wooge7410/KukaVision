@@ -26,6 +26,11 @@ using namespace NeoAPI;
 
 QT_BEGIN_NAMESPACE
 
+
+/**
+* \brief QT-Generatred Desogm for FindCamera Dialog
+*
+**/
 class Ui_Dialog
 {
 public:
@@ -61,18 +66,28 @@ public:
 };
 
 
-// Class for FindCameraDialog
+/*
+* Find Camera Dialog
+* \brief Dialog for searching and selecting Baumer Cameras
+*/
 class FindCameraDialog {
    public:
-        string selectedIP;  // Returns a String of the IP of the selected Camera
+        string selectedIP;  // String of the IP of the selected Camera. Is Empty in case of error
         QDialog dialog;
         Ui_Dialog ui;       // UI-Design
 
         /**
+        * \brief Conversion from NeoString to QString
         * \param NeoString nString : NeoString to be converted
         * \return QString
-         */
-        QString neoStringToQString(NeoString nString);  //Function for converting a NeoString to QString
+        **/
+        QString neoStringToQString(NeoString nString);
+
+
+        /**
+        * FindCameraDialog-Constructor
+        * \brief Displays Dialog, searches for connected Cameras and saves selected IP-Address in "selectedIP". Stores empty String in Case of an Error
+        **/
         FindCameraDialog(); // Constructor
 };
 

@@ -32,10 +32,11 @@ FindCameraDialog::FindCameraDialog() {
 
 
 /**
+* \brief Conversion from NeoString to QString
 * \param NeoString nString : NeoString to be converted
 * \return QString
- */
+**/
 QString FindCameraDialog::neoStringToQString(NeoString nString) {
-    return QString::fromLocal8Bit(nString.c_str());
+    return QString::fromStdString(fcd.selectedIP);
 }
 
