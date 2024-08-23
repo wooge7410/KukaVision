@@ -18,17 +18,17 @@ class MainWindow : public Ui::MainWindow
 {
 public:
     MainWindow(QMainWindow *parent);
+    json options_JSON;
+    void SaveOptionsInJSON(json& currentOptions);
+    void GetAllOptions_JSON(json &options);
 
-//private:
+private:
     QMainWindow *windowParent;
 
-    json options_JSON;
     json optionLimits;
 
+    int lastTabIndex;
 
-
-
-    void GetAllOptions_JSON(json &options);
 
     json GetRobotOptions_JSON();
 
@@ -62,7 +62,8 @@ public:
     void OpenProjectInfo();
 
 
-    void SaveOptionsInJSON(json& currentOptions);
+    void tabChange();
+
 
     void ReadOptionsFromJSON(json& currentOptions);
 

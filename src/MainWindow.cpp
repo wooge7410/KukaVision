@@ -4,6 +4,12 @@
 MainWindow::MainWindow(QMainWindow *parent) {
     windowParent = parent;
     setupUi(parent);
+    lastTabIndex = tabWidget -> currentIndex();
+
+    ReadOptionsFromJSON(options_JSON);
+    InitOptionspage(options_JSON);
+
+    QObject::connect(tabWidget, &QTabWidget::currentChanged, [&] {tabChange();});
 }
 
 
@@ -14,8 +20,8 @@ json MainWindow::GetRobotOptions_JSON() {
     json robotOptions_JSON;
     robotOptions_JSON["IP_Address"] = robotIPLineEdit->text().toStdString();
     robotOptions_JSON["Port"] = robotPortLineEdit->text().toInt();
-    robotOptions_JSON["Gripping_Height"] = zOffsetLneEdit->text().toStdString();
-    robotOptions_JSON["Travel_Height"] = zOffsetFinalLineEdit->text().toStdString();
+    robotOptions_JSON["Gripping_Height"] = zOffsetLneEdit->text().toInt();
+    robotOptions_JSON["Travel_Height"] = zOffsetFinalLineEdit->text().toInt();
     robotOptions_JSON["X_Min"] = xminValueLineEdit->text().toInt();
     robotOptions_JSON["X_Max"] = xmaxValueLineEdit->text().toInt();
     robotOptions_JSON["Y_Min"] = yminValueLineEdit->text().toInt();
@@ -37,10 +43,13 @@ json MainWindow::GetCameraOptions_JSON() {
 }
 
 void MainWindow::GetAllOptions_JSON(json& options) {
+    cout << "CamOpts\n";
     options["Camera"] = GetCameraOptions_JSON();
+    cout << "RobOpts\n";
     options["Robot"] = GetRobotOptions_JSON();
     cout << "Validating\n";
     validateOptions(options);
+    cout << "Validated\n";
 }
 
 
@@ -55,11 +64,13 @@ void MainWindow::validateOptions(json& options) {
         {
             for (auto& [skey, sval] : optionLimits[key].items())
             {
-                if (options[key][skey] < optionLimits[key][skey]["min"]) {
+                cout << key << "|" << skey << endl;
+                if ((int) options[key][skey] < optionLimits[key][skey]["min"]) {
                     valid = false;
                     ShowParameterErrorMessage(skey + " must be over  " + to_string(optionLimits[key][skey]["min"]));
-                } else if (options[key][skey] > optionLimits[key][skey]["max"]) {
+                } else if ((int) options[key][skey] > optionLimits[key][skey]["max"]) {
                     valid = false;
+                    cout << options[key][skey] << endl;
                     ShowParameterErrorMessage(skey + " must be under " + to_string(optionLimits[key][skey]["max"]));
                 }
             }
@@ -95,20 +106,24 @@ bool MainWindow::validateIPString(string ipAddress) {
 //TODO Rename Function
 void MainWindow::InitOptionspage(json &options)  //TODO Beim Programmstart -> in eigene Datei
 {
-    robotIPLineEdit->setText(QString::fromStdString(options["Robot"]["IP_Address"]));
-    robotPortLineEdit->setText(QString::number(options["Robot"]["Port"]));
-    zOffsetLneEdit->setText(QString::number(options["Robot"]["Gripping_Height"]));
-    zOffsetFinalLineEdit->setText(QString::number(options["Robot"]["Travel_Height"]));
-    xminValueLineEdit->setText(QString::number(options["Robot"]["X_Min"]));
-    xmaxValueLineEdit->setText(QString::number(options["Robot"]["X_Max"]));
-    yminValueLineEdit->setText(QString::number(options["Robot"]["Y_Min"]));
-    ymaxValueLineedit->setText(QString::number(options["Robot"]["Y_Max"]));
-    zminValueLineEdit->setText(QString::number(options["Robot"]["Z_Min"]));
-    zmaxValueLineEdit->setText(QString::number(options["Robot"]["Z_Max"]));
-    cameraIPLineEdit->setText(QString::fromStdString(options["Camera"]["IP_Address"]));
-    gainValueLineEdit->setText(QString::number(options["Camera"]["Gain"]));
-    biningValueLineEdit->setText(QString::number(options["Camera"]["Binning"]));
-    fpsLiveViewLineEdit->setText(QString::number(options["Camera"]["AcquisitionFramerate"]));
+    try {
+        robotIPLineEdit->setText(QString::fromStdString(options["Robot"]["IP_Address"]));
+        robotPortLineEdit->setText(QString::number((int) options["Robot"]["Port"]));
+        zOffsetLneEdit->setText(QString::number((int) options["Robot"]["Gripping_Height"]));
+        zOffsetFinalLineEdit->setText(QString::number((int) options["Robot"]["Travel_Height"]));
+        xminValueLineEdit->setText(QString::number((int) options["Robot"]["X_Min"]));
+        xmaxValueLineEdit->setText(QString::number((int) options["Robot"]["X_Max"]));
+        yminValueLineEdit->setText(QString::number((int) options["Robot"]["Y_Min"]));
+        ymaxValueLineedit->setText(QString::number((int) options["Robot"]["Y_Max"]));
+        zminValueLineEdit->setText(QString::number((int) options["Robot"]["Z_Min"]));
+        zmaxValueLineEdit->setText(QString::number((int) options["Robot"]["Z_Max"]));
+        cameraIPLineEdit->setText(QString::fromStdString(options["Camera"]["IP_Address"]));
+        gainValueLineEdit->setText(QString::number((int) options["Camera"]["Gain"]));
+        biningValueLineEdit->setText(QString::number((int) options["Camera"]["Binning"]));
+        fpsLiveViewLineEdit->setText(QString::number((int) options["Camera"]["Acquisition_Framerate"]));
+    } catch (exception e) {
+        cout << "Could not Initialize Options Page\n";
+    }
 }
 
 //Opens the Folder Dialog to select a Savepath for an Image
@@ -152,6 +167,14 @@ void MainWindow::OpenProjectInfo()
 {
     std::cout << "ProjectInfoButton\n";
 } //TODO wird vom Event gecallt -> void
+
+
+void MainWindow::tabChange() {
+    if (lastTabIndex == 1 && tabWidget -> currentIndex() != 1) {
+        GetAllOptions_JSON(options_JSON);
+    }
+    lastTabIndex = tabWidget -> currentIndex();
+}
 
 
 
