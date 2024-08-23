@@ -30,6 +30,11 @@ int main(int argc, char *argv[])
     MainWindow ui(&widget);
     widget.show();
 
+    QObject::connect(&a, &QApplication::aboutToQuit, &a, [&]() {
+        ui.GetAllOptions_JSON(ui.options_JSON);
+        ui.SaveOptionsInJSON(ui.options_JSON);
+    });
+
     //ui.GetAllOptions_JSON(ui.options_JSON);
 
 
