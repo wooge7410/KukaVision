@@ -74,10 +74,10 @@ void StartProgram(Ui::MainWindow& Ui_MainWindow);
 void OpenProjectInfo(Ui::MainWindow& Ui_MainWindow);
 
 //Save Options in a binary File
-void SaveOptionsToBinaryFile(Options& currentOptions);
+void SaveOptionsToFile(Options& currentOptions);
 
 //Read Options from a binary File
-void ReadOptionsFromBinaryFile(Options& currentOptions);
+void ReadOptionsFromFile(Options& currentOptions);
 
 //Inputverification
 void CheckInput(QString inputdata);

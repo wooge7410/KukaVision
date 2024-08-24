@@ -72,7 +72,7 @@ void UpdateOptions(Ui::MainWindow& Ui_MainWindow, Options& currentOptions)
     currentOptions.camOptions.Gain = Ui_MainWindow.gainValueLineEdit->text().toInt();
     currentOptions.camOptions.Exposure = Ui_MainWindow.exposureLineEdit->text().toInt();
 
-    SaveOptionsToBinaryFile(currentOptions);
+    SaveOptionsToFile(currentOptions);
 }
 
 //Initialize the Option page with values from the code
@@ -140,7 +140,7 @@ void OpenProjectInfo(Ui::MainWindow& Ui_MainWindow)
 
 
 //Save Options in a binary File
-void SaveOptionsToBinaryFile(Options& currentOptions)
+void SaveOptionsToFile(Options& currentOptions)
 {
 
 std::ofstream ziel;
@@ -169,7 +169,7 @@ ziel.close();
 }
 
 //Read Options from a binary File
-void ReadOptionsFromBinaryFile(Options& currentOptions)
+void ReadOptionsFromFile(Options& currentOptions)
 {
 std::string readIn ;
 std::ifstream source;
