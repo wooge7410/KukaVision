@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="UI_POC" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/UI_POC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fPIC" />
+					<Add option="-g" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/GuiPOC/include" />
+				</Compiler>
+				<Linker>
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so" />
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/GuiPOC/include" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/UI_POC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../../include/MainWindow.h" />
+		<Unit filename="../../include/MainWindowUI.h" />
+		<Unit filename="../../src/MainWindow.cpp" />
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
