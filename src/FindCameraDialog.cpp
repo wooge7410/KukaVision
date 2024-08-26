@@ -37,6 +37,6 @@ FindCameraDialog::FindCameraDialog() {
 * \return QString
 **/
 QString FindCameraDialog::neoStringToQString(NeoString nString) {
-    return QString::fromStdString(fcd.selectedIP);
+    return QString::fromStdString(nString.c_str());
 }
 
