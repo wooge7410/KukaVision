@@ -9,6 +9,6 @@
 
 // Declaraciones de funciones
 void drawRectAndAxes(cv::Mat& image, ObjectDetails& objectDetails);
-void findAndDrawObjects(const cv::Mat& base, const cv::Mat& test, ObjectDetails& objectDetails);
+cv::Mat findAndDrawObjects(const cv::Mat& base, const cv::Mat& test, ObjectDetails& objectDetails);
 
 #endif // OBJECT_DETECTION_H

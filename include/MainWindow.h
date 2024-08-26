@@ -9,18 +9,24 @@
 #include <QtWidgets/QFileDialog>
 #include <QtWidgets/QMessageBox>
 #include <nlohmann/json.hpp>
+#include "CameraStream.h"
 
 using json = nlohmann::json;
 using namespace std;
-
 
 class MainWindow : public Ui::MainWindow
 {
 public:
     MainWindow(QMainWindow *parent);
     json options_JSON;
+    CameraStream* cameraStream;
+
     void SaveOptionsInJSON(json& currentOptions);
     void GetAllOptions_JSON(json &options);
+
+    void startCameraView();
+
+    void stopCameraView();
 
 private:
     QMainWindow *windowParent;
@@ -28,6 +34,12 @@ private:
     json optionLimits;
 
     int lastTabIndex;
+
+    bool runCameraStream = false;
+
+    std::future<void> f;
+
+    bool cameraConnected = false;
 
 
     json GetRobotOptions_JSON();
@@ -61,7 +73,6 @@ private:
     //Opens the Project-Info
     void OpenProjectInfo();
 
-
     void tabChange();
 
 
@@ -71,6 +82,11 @@ private:
 
 
     void ShowParameterErrorMessage(string text);
+
+
+    void consoleLog(string msg);
+
+    string generateTimestampString();
 
     //Spliting Inputdata-String
     std::vector<std::string> splitString(std::string readIN, const std::string& delimiter);

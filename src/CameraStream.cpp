@@ -1,7 +1,6 @@
 #include "CameraStream.h"
 
 CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConnectedException
-
     while(!camera.IsConnected()) {
         camera.Connect(NeoString(identifier.c_str()));
     }
@@ -22,6 +21,9 @@ CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConn
     camera.f().BinningHorizontal.Set(1);
     camera.f().BinningVertical.Set(1);
 
+    camera.f().GainAuto.Set(GainAuto::Off);
+    camera.f().Gain.Set(1.2);
+
 
 
 
@@ -39,27 +41,23 @@ CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConn
     } else {
         throw "Invalid Pixel Format";
     }
-    cout << "Conncted: " << camera.IsConnected() << endl;
 
     //camera.f().AcquisitionStart;
 
     width = camera.f().Width;
     height = camera.f().Height;
 
-    cout << "Width: " << width << endl;
-    cout << "Height: " << height << endl;
-
 }
 
 
-void CameraStream::acquisitionLoop(QLabel *view, bool *run) {
-    cout << "Thread Start\n";
-    cout << "Connected: " << camera.IsConnected()<< endl;
-    cout << "Run: " << *run << endl;
+void CameraStream::acquisitionLoop(QLabel *view, bool *run, bool outlines, bool coordinates) {
     camera.StartStreaming();
     //Image image;
     //QImage img;
     //QPixmap pixmap;
+    ObjectDetails objectDetails;
+    Mat base = imread("/home/kukavision/KukaVision/repo/KukaVision/main/0B_blank.png", IMREAD_GRAYSCALE);
+    Mat cvIm;
 
     while (*run) {
 
@@ -68,19 +66,40 @@ void CameraStream::acquisitionLoop(QLabel *view, bool *run) {
             image = camera.GetImage();
         }*/
 
-        if (!image.IsEmpty()) {            latestImage = Mat(Size(width, height), type, image.GetImageData(), Mat::AUTO_STEP);
-            QImage img = QImage((uchar*)image.GetImageData(), width, height, QImage::Format_Grayscale8).copy();
-            //img = QImage(latestImage.data, latestImage.cols, latestImage.rows, latestImage.step, QImage::Format_Grayscale8).copy();
+        if (!image.IsEmpty()) {
+            cout << "Image\n";            latestImage = Mat(Size(width, height), type, image.GetImageData(), Mat::AUTO_STEP);
+            cout << "find&draw\n";
+            cvIm = findAndDrawObjects(base, latestImage, objectDetails);
+
+            for (int i = 0; i < 4; ++i) {
+                line(cvIm, objectDetails.getCorner(i), objectDetails.getCorner((i+1)%4), Scalar(25, 173, 255), 3);
+            }
+
+
+            if (objectDetails.isValid()) {
+                cout << "Object Center: (" << objectDetails.getCenter().x << ", " << objectDetails.getCenter().y << ")" << endl;
+                cout << "Object Angle: " << objectDetails.getAngle() << " degrees" << endl;
+                for (int i = 0; i < 4; ++i) {
+                    cout << "Corner " << i << ": (" << objectDetails.getCorner(i).x << ", " << objectDetails.getCorner(i).y << ")" << endl;
+                }
+            } else {
+                cout << "No valid object details available." << endl;
+            }
+
+            QImage img;
+            if (outlines) img = QImage(cvIm.data, cvIm.cols, cvIm.rows, cvIm.step, QImage::Format_BGR888).copy();
+            else img = QImage((uchar*)image.GetImageData(), width, height, QImage::Format_Grayscale8).copy();
             QPixmap pixmap = QPixmap::fromImage(img);
             //QPixmap pixmap = QPixmap::fromImage(matToQImage(latestImage));
             view->setPixmap(pixmap);
             view->show();
+            latestImageTimestamp = time(NULL);
         }
 
         //usleep(10000000);
 
     }
-    cout << "Thread End \n";
-}
+    camera.StopStreaming();
 
+}
 

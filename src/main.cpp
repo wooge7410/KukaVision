@@ -34,7 +34,11 @@ int main(int argc, char *argv[])
     QObject::connect(&a, &QApplication::aboutToQuit, &a, [&]() {
         ui.GetAllOptions_JSON(ui.options_JSON);
         ui.SaveOptionsInJSON(ui.options_JSON);
+        ui.cameraStream -> camera.Disconnect();
     });
+
+    QObject::connect(ui.startCameraViewButton, &QAbstractButton::clicked, [&] {ui.startCameraView();});
+    QObject::connect(ui.stoppCameraViewButton, &QAbstractButton::clicked, [&] {ui.stopCameraView();});
 
     //ui.GetAllOptions_JSON(ui.options_JSON);
 

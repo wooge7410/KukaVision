@@ -14,22 +14,26 @@
 				<Compiler>
 					<Add option="-fPIC" />
 					<Add option="-g" />
-					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/include" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/main/include" />
 					<Add directory="/usr/include/opencv4" />
 					<Add directory="/usr/lib/x86_64-linux-gnu/" />
 					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
 				</Compiler>
 				<Linker>
-					<Add library="/home/kukavision/KukaVision/repo/KukaVision/lib/libneoapi_cpp.so.1.3.1" />
+					<Add library="/home/kukavision/KukaVision/repo/KukaVision/main/lib/libneoapi_cpp.so.1.3.1" />
 					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so" />
 					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so" />
 					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_core.so" />
 					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_highgui.so" />
 					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so" />
 					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so" />
-					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/include" />
-					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/lib" />
-					<Add directory="/usr/include/opencv4&#x0A;/usr/lib/x86_64-linux-gnu/&#x0A;/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include&#x0A;/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/main/include" />
+					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/main/lib" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
+					<Add directory="/usr/include/opencv4" />
+					<Add directory="/usr/lib/x86_64-linux-gnu/" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -63,9 +67,9 @@
 		<Unit filename="include/object_detection.h" />
 		<Unit filename="src/CameraStream.cpp" />
 		<Unit filename="src/FindCameraDialog.cpp" />
-		<Unit filename="src/KukaVision.cpp" />
 		<Unit filename="src/MainWindow.cpp" />
 		<Unit filename="src/ObjectDetails.cpp" />
+		<Unit filename="src/main.cpp" />
 		<Unit filename="src/object_detection.cpp" />
 		<Extensions />
 	</Project>

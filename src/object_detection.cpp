@@ -3,17 +3,24 @@
 using namespace cv;
 using namespace std;
 
-void findAndDrawObjects(const Mat& base, const Mat& test, ObjectDetails& objectDetails) {
+Mat findAndDrawObjects(const Mat& grayBase, const Mat& grayTest, ObjectDetails& objectDetails) {
+    /*
     Mat grayBase, grayTest;
+    cout << "1\n";
     cvtColor(base, grayBase, COLOR_BGR2GRAY);
+    cout << "1\n";
     cvtColor(test, grayTest, COLOR_BGR2GRAY);
+    cout << "1\n";
+    */
+    Mat bgrTest;
+    cvtColor(grayTest, bgrTest, COLOR_GRAY2BGR);
 
     Mat brightAreas;
     threshold(grayTest, brightAreas, 180, 255, THRESH_BINARY);
     vector<vector<Point>> sheetContours;
     findContours(brightAreas, sheetContours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
 
-    Mat output = test.clone();
+    Mat output = bgrTest.clone();
 
     if (!sheetContours.empty()) {
         sort(sheetContours.begin(), sheetContours.end(), [](const vector<Point>& a, const vector<Point>& b) {
@@ -31,7 +38,7 @@ void findAndDrawObjects(const Mat& base, const Mat& test, ObjectDetails& objectD
         if (sheetRect.size.width < sheetRect.size.height) {
             sheetAngle += 90;
         }
-        cout << "Sheet angle with respect to Y-axis: " << sheetAngle << " degrees" << endl;
+        //cout << "Sheet angle with respect to Y-axis: " << sheetAngle << " degrees" << endl;
     }
 
     Mat diff;
@@ -50,6 +57,7 @@ void findAndDrawObjects(const Mat& base, const Mat& test, ObjectDetails& objectD
             rotatedRect.points(rectPoints);
 
             for (int i = 0; i < 4; ++i) {
+                objectDetails.setCorner(i, rectPoints[i]);
                 line(output, rectPoints[i], rectPoints[(i+1)%4], Scalar(0, 255, 0), 2);
                 circle(output, rectPoints[i], 5, Scalar(255, 255, 0), -1);
             }
@@ -69,10 +77,14 @@ void findAndDrawObjects(const Mat& base, const Mat& test, ObjectDetails& objectD
 
             // Imprimir el ángulo más pequeño
             float minAngle = min(angleToXAxis, angleToYAxis);
-            cout << "Object center: (" << center.x << ", " << center.y << ") with minimum angle: " << minAngle << " degrees" << endl;
+            //cout << "Object center: (" << center.x << ", " << center.y << ") with minimum angle: " << minAngle << " degrees" << endl;
+
+            objectDetails.setAngle(minAngle);
+            objectDetails.setCenter(center);
+            objectDetails.setValid(true);
         }
     }
-
-    imshow("Detected Objects", output);
-    waitKey(0);
+    return output;
+    //imshow("Detected Objects", output);
+    //waitKey(0);
 }

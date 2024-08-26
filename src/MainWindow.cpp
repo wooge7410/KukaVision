@@ -9,6 +9,17 @@ MainWindow::MainWindow(QMainWindow *parent) {
     ReadOptionsFromJSON(options_JSON);
     InitOptionspage(options_JSON);
 
+    if(cameraIPLineEdit -> text() != "") {
+        try {
+            cameraStream = new CameraStream(cameraIPLineEdit -> text().toStdString());
+            cameraConnected = true;
+        } catch (NeoAPI::NotConnectedException e) {
+            ShowParameterErrorMessage("Unable to connect to Camera");
+            consoleLog("Error: Unable to connect to Camera");
+            cameraConnected = false;
+        }
+    }
+
     QObject::connect(tabWidget, &QTabWidget::currentChanged, [&] {tabChange();});
 }
 
@@ -43,13 +54,9 @@ json MainWindow::GetCameraOptions_JSON() {
 }
 
 void MainWindow::GetAllOptions_JSON(json& options) {
-    cout << "CamOpts\n";
     options["Camera"] = GetCameraOptions_JSON();
-    cout << "RobOpts\n";
     options["Robot"] = GetRobotOptions_JSON();
-    cout << "Validating\n";
     validateOptions(options);
-    cout << "Validated\n";
 }
 
 
@@ -64,13 +71,11 @@ void MainWindow::validateOptions(json& options) {
         {
             for (auto& [skey, sval] : optionLimits[key].items())
             {
-                cout << key << "|" << skey << endl;
                 if ((int) options[key][skey] < optionLimits[key][skey]["min"]) {
                     valid = false;
                     ShowParameterErrorMessage(skey + " must be over  " + to_string(optionLimits[key][skey]["min"]));
                 } else if ((int) options[key][skey] > optionLimits[key][skey]["max"]) {
                     valid = false;
-                    cout << options[key][skey] << endl;
                     ShowParameterErrorMessage(skey + " must be under " + to_string(optionLimits[key][skey]["max"]));
                 }
             }
@@ -129,7 +134,6 @@ void MainWindow::InitOptionspage(json &options)  //TODO Beim Programmstart -> in
 //Opens the Folder Dialog to select a Savepath for an Image
 void MainWindow::OpenFolderDialogImageData() //TODO wird vom Event gecallt -> void
 {
-    std::cout << "Test\n";
     QString FileName = QFileDialog::getSaveFileName(dataSavePathLineEdit, "Select a path to store Images","C://");
     dataSavePathLineEdit->setText(FileName);
 
@@ -169,9 +173,38 @@ void MainWindow::OpenProjectInfo()
 } //TODO wird vom Event gecallt -> void
 
 
+void MainWindow::startCameraView() {
+    consoleLog("Starting Camera View");
+    if (cameraConnected) {
+        runCameraStream = true;
+        f = std::async(&CameraStream::acquisitionLoop, cameraStream, liveCameraViewLabel, &runCameraStream, outlinesCheckBox -> isChecked(), coordinatesCheckBox -> isChecked());
+    } else {
+        if(cameraIPLineEdit -> text() != "") {
+            try {
+                cameraStream = new CameraStream(cameraIPLineEdit -> text().toStdString());
+                runCameraStream = true;
+                cameraConnected = true;
+                f = std::async(&CameraStream::acquisitionLoop, cameraStream, liveCameraViewLabel, &runCameraStream, outlinesCheckBox -> isChecked(), coordinatesCheckBox -> isChecked());
+            } catch (NeoAPI::NotConnectedException e) {
+                ShowParameterErrorMessage("Unable to connect to Camera");
+                cameraConnected = false;
+            }
+        }
+    }
+}
+
+
+
+void MainWindow::stopCameraView() {
+    runCameraStream = false;
+    consoleLog("Stopping Camera View");
+}
+
+
 void MainWindow::tabChange() {
     if (lastTabIndex == 1 && tabWidget -> currentIndex() != 1) {
         GetAllOptions_JSON(options_JSON);
+        consoleLog("Updated Options");
     }
     lastTabIndex = tabWidget -> currentIndex();
 }
@@ -182,17 +215,20 @@ void MainWindow::tabChange() {
 void MainWindow::SaveOptionsInJSON(json& currentOptions) {
     std::ofstream o("Options.json");
     o << std::setw(4) << currentOptions << std::endl;
+    consoleLog("Saved Options in \"Options.json\"");
 }
 
 void MainWindow::ReadOptionsFromJSON(json& currentOptions) {
     std::ifstream f("Options.json");
     currentOptions = json::parse(f);
+    consoleLog("Read Options from \"Options.json\"");
 }
 
 void MainWindow::ReadLimitsFromJSON(json& optionLimits) {
     std::ifstream f("OptionLimits.json");
     json opt = json::parse(f);
     if(!opt.empty()) optionLimits = opt;
+    consoleLog("ReadLimits from \"OptionLimits.json\"");
 }
 
 
@@ -202,6 +238,22 @@ void MainWindow::ReadLimitsFromJSON(json& optionLimits) {
 void MainWindow::ShowParameterErrorMessage(string text) {
     QMessageBox err(windowParent);
     err.critical(windowParent, "Invalid Parameter", QString::fromStdString(text));
+    consoleLog("ErrorMessage: " + text);
+}
+
+
+void MainWindow::consoleLog(string msg) {
+    infoConsoleTextBrowser -> append(QString::fromStdString("[" + generateTimestampString() + "]  " + msg));
+}
+
+string MainWindow::generateTimestampString() {
+    time_t currentTime = time(NULL);
+
+    char buffer[90];
+    struct tm* timeinfo = localtime(&currentTime);
+    strftime(buffer, sizeof(buffer), "%Y-%m-%d-%H:%M:%S", timeinfo);
+
+    return buffer;
 }
 
 

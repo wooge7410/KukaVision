@@ -2240,7 +2240,7 @@
 1724579646 source:/home/kukavision/KukaVision/repo/KukaVision/src/ObjectDetails.cpp
 	"ObjectDetails.h"
 
-1724663062 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/CameraStream.cpp
+1724687777 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/CameraStream.cpp
 	"CameraStream.h"
 
 1724663062 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/FindCameraDialog.cpp
@@ -2253,16 +2253,16 @@
 	<QtWidgets/QErrorMessage>
 	<string>
 
-1724663062 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/MainWindow.cpp
+1724687793 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/MainWindow.cpp
 	"MainWindow.h"
 
-1724665730 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/object_detection.cpp
+1724686369 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/object_detection.cpp
 	"object_detection.h"
 
 1724663062 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/ObjectDetails.cpp
 	"ObjectDetails.h"
 
-1724663062 /home/kukavision/KukaVision/repo/KukaVision/main/include/CameraStream.h
+1724687123 /home/kukavision/KukaVision/repo/KukaVision/main/include/CameraStream.h
 	<string.h>
 	"neoapi/neoapi.hpp"
 	<opencv2/opencv.hpp>
@@ -2273,6 +2273,8 @@
 	<thread>
 	<future>
 	<unistd.h>
+	<ctime>
+	"object_detection.h"
 
 1723704605 /home/kukavision/KukaVision/repo/KukaVision/main/include/neoapi/neoapi.hpp
 	"neoapi_common.hpp"
@@ -2334,14 +2336,14 @@
 	"neoapi/neoapi.hpp"
 	<neoapi/neoapi_camera_info.hpp>
 
-1724663062 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/main.cpp
+1724676016 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/main.cpp
 	"MainWindow.h"
 	<QtWidgets/QApplication>
 	<QtWidgets/QFileDialog>
 	<QtWidgets/QErrorMessage>
 	<string>
 
-1724663062 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindow.h
+1724675978 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindow.h
 	"MainWindowUI.h"
 	<string>
 	<stdexcept>
@@ -2352,8 +2354,9 @@
 	<QtWidgets/QFileDialog>
 	<QtWidgets/QMessageBox>
 	<nlohmann/json.hpp>
+	"CameraStream.h"
 
-1724663062 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindowUI.h
+1724686916 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindowUI.h
 	<QtCore/QVariant>
 	<QtWidgets/QAction>
 	<QtWidgets/QApplication>
@@ -2811,7 +2814,7 @@
 
 1724663062 /home/kukavision/KukaVision/repo/KukaVision/main/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
-1724665681 /home/kukavision/KukaVision/repo/KukaVision/main/include/object_detection.h
+1724680451 /home/kukavision/KukaVision/repo/KukaVision/main/include/object_detection.h
 	<opencv2/opencv.hpp>
 	"ObjectDetails.h"
 	<iostream>

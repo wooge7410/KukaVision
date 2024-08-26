@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'KukaVisionUIV1FkSYUb.ui'
+** Form generated from reading UI file 'KukaVisionUIV1cPowBg.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.15.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef KUKAVISIONUIV1FKSYUB_H
-#define KUKAVISIONUIV1FKSYUB_H
+#ifndef KUKAVISIONUIV1CPOWBG_H
+#define KUKAVISIONUIV1CPOWBG_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -36,9 +36,6 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-
-    // TODO Options Struct Object -> holds currently acitve Setting
-
     QAction *actionSave_Image_as;
     QAction *actionExit;
     QAction *actionProject_Infos;
@@ -52,7 +49,6 @@ public:
     QLabel *liveCameraViewLabel;
     QVBoxLayout *cameraViewVerticalLayout;
     QCheckBox *coordinatesCheckBox;
-    QCheckBox *checkingCheckBox;
     QCheckBox *outlinesCheckBox;
     QPushButton *startCameraViewButton;
     QPushButton *stoppCameraViewButton;
@@ -74,32 +70,7 @@ public:
     QLineEdit *zOffsetLneEdit;
     QLabel *zOffsetFinalLabel;
     QLineEdit *zOffsetFinalLineEdit;
-    QFormLayout *cameraOptionsLayout;
-    QLabel *cameraOptionsLabel;
-    QSpacerItem *horizontalSpacer_5;
-    QLabel *cameraIPLabel;
-    QLineEdit *cameraIPLineEdit;
-    QLabel *exposureLabel;
-    QLineEdit *exposureLineEdit;
-    QLabel *fpsLiveViewLabel;
-    QLineEdit *fpsLiveViewLineEdit;
-    QLabel *emptyCameraOptionsLabel;
-    QCheckBox *triggerOnCheckBox;
-    QSpacerItem *verticalSpacer;
-    QLabel *biningLabel;
-    QLabel *gainLabel;
-    QLineEdit *biningValueLineEdit;
-    QLineEdit *gainValueLineEdit;
-    QGridLayout *cameraOptions2Layout;
-    QLabel *findCameraLabel;
-    QSpacerItem *verticalSpacer_5;
-    QFrame *dividerCameraOptionsline;
-    QLineEdit *dataSavePathLineEdit;
-    QPushButton *findCameraButton;
-    QPushButton *openConsoleButton;
-    QPushButton *folderDialogButton;
-    QLabel *dataSavePathLabel;
-    QSpacerItem *verticalSpacer_4;
+    QFrame *line_2;
     QGridLayout *workingAreagridLayout;
     QLabel *yminLabel;
     QLineEdit *zminValueLineEdit;
@@ -114,6 +85,31 @@ public:
     QLineEdit *xmaxValueLineEdit;
     QLineEdit *ymaxValueLineedit;
     QLineEdit *zmaxValueLineEdit;
+    QFrame *line;
+    QFormLayout *cameraOptionsLayout;
+    QLabel *cameraOptionsLabel;
+    QSpacerItem *horizontalSpacer_5;
+    QLabel *cameraIPLabel;
+    QLineEdit *cameraIPLineEdit;
+    QLabel *fpsLiveViewLabel;
+    QLineEdit *fpsLiveViewLineEdit;
+    QLabel *biningLabel;
+    QLineEdit *biningValueLineEdit;
+    QLabel *gainLabel;
+    QLineEdit *gainValueLineEdit;
+    QLabel *emptyCameraOptionsLabel;
+    QSpacerItem *verticalSpacer;
+    QGridLayout *cameraOptions2Layout;
+    QLabel *dataSavePathLabel;
+    QSpacerItem *verticalSpacer_6;
+    QLabel *findCameraLabel;
+    QPushButton *findCameraButton;
+    QLineEdit *dataSavePathLineEdit;
+    QSpacerItem *verticalSpacer_5;
+    QFrame *dividerCameraOptionsline;
+    QPushButton *folderDialogButton;
+    QFrame *line_3;
+    QFrame *line_4;
     QWidget *start_ProgramWidget;
     QGridLayout *gridLayout_4;
     QVBoxLayout *verticalLayout_2;
@@ -198,13 +194,6 @@ public:
         coordinatesCheckBox->setObjectName(QString::fromUtf8("coordinatesCheckBox"));
 
         cameraViewVerticalLayout->addWidget(coordinatesCheckBox);
-
-        checkingCheckBox = new QCheckBox(cameraViewWidget);
-        checkingCheckBox->setObjectName(QString::fromUtf8("checkingCheckBox"));
-        checkingCheckBox->setEnabled(true);
-        checkingCheckBox->setMinimumSize(QSize(0, 0));
-
-        cameraViewVerticalLayout->addWidget(checkingCheckBox);
 
         outlinesCheckBox = new QCheckBox(cameraViewWidget);
         outlinesCheckBox->setObjectName(QString::fromUtf8("outlinesCheckBox"));
@@ -300,6 +289,7 @@ public:
 
         zOffsetLneEdit = new QLineEdit(optionsWidget);
         zOffsetLneEdit->setObjectName(QString::fromUtf8("zOffsetLneEdit"));
+        zOffsetLneEdit->setCursorMoveStyle(Qt::LogicalMoveStyle);
 
         formLayout->setWidget(3, QFormLayout::FieldRole, zOffsetLneEdit);
 
@@ -316,142 +306,12 @@ public:
 
         gridLayout_3->addLayout(formLayout, 1, 0, 1, 1);
 
-        cameraOptionsLayout = new QFormLayout();
-        cameraOptionsLayout->setObjectName(QString::fromUtf8("cameraOptionsLayout"));
-        cameraOptionsLayout->setContentsMargins(-1, 20, 10, -1);
-        cameraOptionsLabel = new QLabel(optionsWidget);
-        cameraOptionsLabel->setObjectName(QString::fromUtf8("cameraOptionsLabel"));
+        line_2 = new QFrame(optionsWidget);
+        line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setFrameShape(QFrame::HLine);
+        line_2->setFrameShadow(QFrame::Sunken);
 
-        cameraOptionsLayout->setWidget(0, QFormLayout::LabelRole, cameraOptionsLabel);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        cameraOptionsLayout->setItem(0, QFormLayout::FieldRole, horizontalSpacer_5);
-
-        cameraIPLabel = new QLabel(optionsWidget);
-        cameraIPLabel->setObjectName(QString::fromUtf8("cameraIPLabel"));
-
-        cameraOptionsLayout->setWidget(1, QFormLayout::LabelRole, cameraIPLabel);
-
-        cameraIPLineEdit = new QLineEdit(optionsWidget);
-        cameraIPLineEdit->setObjectName(QString::fromUtf8("cameraIPLineEdit"));
-
-        cameraOptionsLayout->setWidget(1, QFormLayout::FieldRole, cameraIPLineEdit);
-
-        exposureLabel = new QLabel(optionsWidget);
-        exposureLabel->setObjectName(QString::fromUtf8("exposureLabel"));
-
-        cameraOptionsLayout->setWidget(2, QFormLayout::LabelRole, exposureLabel);
-
-        exposureLineEdit = new QLineEdit(optionsWidget);
-        exposureLineEdit->setObjectName(QString::fromUtf8("exposureLineEdit"));
-
-        cameraOptionsLayout->setWidget(2, QFormLayout::FieldRole, exposureLineEdit);
-
-        fpsLiveViewLabel = new QLabel(optionsWidget);
-        fpsLiveViewLabel->setObjectName(QString::fromUtf8("fpsLiveViewLabel"));
-
-        cameraOptionsLayout->setWidget(3, QFormLayout::LabelRole, fpsLiveViewLabel);
-
-        fpsLiveViewLineEdit = new QLineEdit(optionsWidget);
-        fpsLiveViewLineEdit->setObjectName(QString::fromUtf8("fpsLiveViewLineEdit"));
-
-        cameraOptionsLayout->setWidget(3, QFormLayout::FieldRole, fpsLiveViewLineEdit);
-
-        emptyCameraOptionsLabel = new QLabel(optionsWidget);
-        emptyCameraOptionsLabel->setObjectName(QString::fromUtf8("emptyCameraOptionsLabel"));
-
-        cameraOptionsLayout->setWidget(6, QFormLayout::LabelRole, emptyCameraOptionsLabel);
-
-        triggerOnCheckBox = new QCheckBox(optionsWidget);
-        triggerOnCheckBox->setObjectName(QString::fromUtf8("triggerOnCheckBox"));
-
-        cameraOptionsLayout->setWidget(6, QFormLayout::FieldRole, triggerOnCheckBox);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        cameraOptionsLayout->setItem(7, QFormLayout::LabelRole, verticalSpacer);
-
-        biningLabel = new QLabel(optionsWidget);
-        biningLabel->setObjectName(QString::fromUtf8("biningLabel"));
-
-        cameraOptionsLayout->setWidget(4, QFormLayout::LabelRole, biningLabel);
-
-        gainLabel = new QLabel(optionsWidget);
-        gainLabel->setObjectName(QString::fromUtf8("gainLabel"));
-
-        cameraOptionsLayout->setWidget(5, QFormLayout::LabelRole, gainLabel);
-
-        biningValueLineEdit = new QLineEdit(optionsWidget);
-        biningValueLineEdit->setObjectName(QString::fromUtf8("biningValueLineEdit"));
-
-        cameraOptionsLayout->setWidget(4, QFormLayout::FieldRole, biningValueLineEdit);
-
-        gainValueLineEdit = new QLineEdit(optionsWidget);
-        gainValueLineEdit->setObjectName(QString::fromUtf8("gainValueLineEdit"));
-
-        cameraOptionsLayout->setWidget(5, QFormLayout::FieldRole, gainValueLineEdit);
-
-
-        gridLayout_3->addLayout(cameraOptionsLayout, 2, 0, 1, 1);
-
-        cameraOptions2Layout = new QGridLayout();
-        cameraOptions2Layout->setObjectName(QString::fromUtf8("cameraOptions2Layout"));
-        cameraOptions2Layout->setContentsMargins(10, 20, 10, -1);
-        findCameraLabel = new QLabel(optionsWidget);
-        findCameraLabel->setObjectName(QString::fromUtf8("findCameraLabel"));
-        findCameraLabel->setWordWrap(true);
-
-        cameraOptions2Layout->addWidget(findCameraLabel, 1, 0, 1, 2);
-
-        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        cameraOptions2Layout->addItem(verticalSpacer_5, 6, 1, 1, 1);
-
-        dividerCameraOptionsline = new QFrame(optionsWidget);
-        dividerCameraOptionsline->setObjectName(QString::fromUtf8("dividerCameraOptionsline"));
-        dividerCameraOptionsline->setFrameShape(QFrame::HLine);
-        dividerCameraOptionsline->setFrameShadow(QFrame::Sunken);
-
-        cameraOptions2Layout->addWidget(dividerCameraOptionsline, 2, 0, 1, 2);
-
-        dataSavePathLineEdit = new QLineEdit(optionsWidget);
-        dataSavePathLineEdit->setObjectName(QString::fromUtf8("dataSavePathLineEdit"));
-
-        cameraOptions2Layout->addWidget(dataSavePathLineEdit, 4, 0, 1, 1);
-
-        findCameraButton = new QPushButton(optionsWidget);
-        findCameraButton->setObjectName(QString::fromUtf8("findCameraButton"));
-        sizePolicy2.setHeightForWidth(findCameraButton->sizePolicy().hasHeightForWidth());
-        findCameraButton->setSizePolicy(sizePolicy2);
-        findCameraButton->setMinimumSize(QSize(200, 0));
-
-        cameraOptions2Layout->addWidget(findCameraButton, 0, 0, 1, 1);
-
-        openConsoleButton = new QPushButton(optionsWidget);
-        openConsoleButton->setObjectName(QString::fromUtf8("openConsoleButton"));
-        sizePolicy2.setHeightForWidth(openConsoleButton->sizePolicy().hasHeightForWidth());
-        openConsoleButton->setSizePolicy(sizePolicy2);
-        openConsoleButton->setMinimumSize(QSize(200, 0));
-
-        cameraOptions2Layout->addWidget(openConsoleButton, 6, 0, 1, 1);
-
-        folderDialogButton = new QPushButton(optionsWidget);
-        folderDialogButton->setObjectName(QString::fromUtf8("folderDialogButton"));
-
-        cameraOptions2Layout->addWidget(folderDialogButton, 4, 1, 1, 1);
-
-        dataSavePathLabel = new QLabel(optionsWidget);
-        dataSavePathLabel->setObjectName(QString::fromUtf8("dataSavePathLabel"));
-
-        cameraOptions2Layout->addWidget(dataSavePathLabel, 3, 0, 1, 1);
-
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        cameraOptions2Layout->addItem(verticalSpacer_4, 5, 0, 1, 1);
-
-
-        gridLayout_3->addLayout(cameraOptions2Layout, 2, 1, 1, 1);
+        gridLayout_3->addWidget(line_2, 2, 2, 1, 1);
 
         workingAreagridLayout = new QGridLayout();
         workingAreagridLayout->setObjectName(QString::fromUtf8("workingAreagridLayout"));
@@ -521,7 +381,142 @@ public:
         workingAreagridLayout->addWidget(zmaxValueLineEdit, 3, 4, 1, 1);
 
 
-        gridLayout_3->addLayout(workingAreagridLayout, 0, 1, 2, 1);
+        gridLayout_3->addLayout(workingAreagridLayout, 0, 2, 2, 1);
+
+        line = new QFrame(optionsWidget);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_3->addWidget(line, 2, 0, 1, 1);
+
+        cameraOptionsLayout = new QFormLayout();
+        cameraOptionsLayout->setObjectName(QString::fromUtf8("cameraOptionsLayout"));
+        cameraOptionsLayout->setContentsMargins(-1, 20, 10, -1);
+        cameraOptionsLabel = new QLabel(optionsWidget);
+        cameraOptionsLabel->setObjectName(QString::fromUtf8("cameraOptionsLabel"));
+
+        cameraOptionsLayout->setWidget(0, QFormLayout::LabelRole, cameraOptionsLabel);
+
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        cameraOptionsLayout->setItem(0, QFormLayout::FieldRole, horizontalSpacer_5);
+
+        cameraIPLabel = new QLabel(optionsWidget);
+        cameraIPLabel->setObjectName(QString::fromUtf8("cameraIPLabel"));
+
+        cameraOptionsLayout->setWidget(1, QFormLayout::LabelRole, cameraIPLabel);
+
+        cameraIPLineEdit = new QLineEdit(optionsWidget);
+        cameraIPLineEdit->setObjectName(QString::fromUtf8("cameraIPLineEdit"));
+
+        cameraOptionsLayout->setWidget(1, QFormLayout::FieldRole, cameraIPLineEdit);
+
+        fpsLiveViewLabel = new QLabel(optionsWidget);
+        fpsLiveViewLabel->setObjectName(QString::fromUtf8("fpsLiveViewLabel"));
+
+        cameraOptionsLayout->setWidget(2, QFormLayout::LabelRole, fpsLiveViewLabel);
+
+        fpsLiveViewLineEdit = new QLineEdit(optionsWidget);
+        fpsLiveViewLineEdit->setObjectName(QString::fromUtf8("fpsLiveViewLineEdit"));
+
+        cameraOptionsLayout->setWidget(2, QFormLayout::FieldRole, fpsLiveViewLineEdit);
+
+        biningLabel = new QLabel(optionsWidget);
+        biningLabel->setObjectName(QString::fromUtf8("biningLabel"));
+
+        cameraOptionsLayout->setWidget(3, QFormLayout::LabelRole, biningLabel);
+
+        biningValueLineEdit = new QLineEdit(optionsWidget);
+        biningValueLineEdit->setObjectName(QString::fromUtf8("biningValueLineEdit"));
+
+        cameraOptionsLayout->setWidget(3, QFormLayout::FieldRole, biningValueLineEdit);
+
+        gainLabel = new QLabel(optionsWidget);
+        gainLabel->setObjectName(QString::fromUtf8("gainLabel"));
+
+        cameraOptionsLayout->setWidget(4, QFormLayout::LabelRole, gainLabel);
+
+        gainValueLineEdit = new QLineEdit(optionsWidget);
+        gainValueLineEdit->setObjectName(QString::fromUtf8("gainValueLineEdit"));
+
+        cameraOptionsLayout->setWidget(4, QFormLayout::FieldRole, gainValueLineEdit);
+
+        emptyCameraOptionsLabel = new QLabel(optionsWidget);
+        emptyCameraOptionsLabel->setObjectName(QString::fromUtf8("emptyCameraOptionsLabel"));
+
+        cameraOptionsLayout->setWidget(5, QFormLayout::LabelRole, emptyCameraOptionsLabel);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        cameraOptionsLayout->setItem(6, QFormLayout::LabelRole, verticalSpacer);
+
+
+        gridLayout_3->addLayout(cameraOptionsLayout, 3, 0, 1, 1);
+
+        cameraOptions2Layout = new QGridLayout();
+        cameraOptions2Layout->setObjectName(QString::fromUtf8("cameraOptions2Layout"));
+        cameraOptions2Layout->setContentsMargins(10, 20, 10, -1);
+        dataSavePathLabel = new QLabel(optionsWidget);
+        dataSavePathLabel->setObjectName(QString::fromUtf8("dataSavePathLabel"));
+
+        cameraOptions2Layout->addWidget(dataSavePathLabel, 4, 0, 1, 1);
+
+        verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        cameraOptions2Layout->addItem(verticalSpacer_6, 0, 0, 1, 1);
+
+        findCameraLabel = new QLabel(optionsWidget);
+        findCameraLabel->setObjectName(QString::fromUtf8("findCameraLabel"));
+        findCameraLabel->setWordWrap(true);
+
+        cameraOptions2Layout->addWidget(findCameraLabel, 2, 0, 1, 2);
+
+        findCameraButton = new QPushButton(optionsWidget);
+        findCameraButton->setObjectName(QString::fromUtf8("findCameraButton"));
+        sizePolicy2.setHeightForWidth(findCameraButton->sizePolicy().hasHeightForWidth());
+        findCameraButton->setSizePolicy(sizePolicy2);
+        findCameraButton->setMinimumSize(QSize(200, 0));
+
+        cameraOptions2Layout->addWidget(findCameraButton, 1, 0, 1, 1);
+
+        dataSavePathLineEdit = new QLineEdit(optionsWidget);
+        dataSavePathLineEdit->setObjectName(QString::fromUtf8("dataSavePathLineEdit"));
+
+        cameraOptions2Layout->addWidget(dataSavePathLineEdit, 5, 0, 1, 1);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        cameraOptions2Layout->addItem(verticalSpacer_5, 6, 1, 1, 1);
+
+        dividerCameraOptionsline = new QFrame(optionsWidget);
+        dividerCameraOptionsline->setObjectName(QString::fromUtf8("dividerCameraOptionsline"));
+        dividerCameraOptionsline->setFrameShape(QFrame::HLine);
+        dividerCameraOptionsline->setFrameShadow(QFrame::Sunken);
+
+        cameraOptions2Layout->addWidget(dividerCameraOptionsline, 3, 0, 1, 2);
+
+        folderDialogButton = new QPushButton(optionsWidget);
+        folderDialogButton->setObjectName(QString::fromUtf8("folderDialogButton"));
+
+        cameraOptions2Layout->addWidget(folderDialogButton, 5, 1, 1, 1);
+
+
+        gridLayout_3->addLayout(cameraOptions2Layout, 3, 2, 1, 1);
+
+        line_3 = new QFrame(optionsWidget);
+        line_3->setObjectName(QString::fromUtf8("line_3"));
+        line_3->setFrameShape(QFrame::VLine);
+        line_3->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_3->addWidget(line_3, 3, 1, 1, 1);
+
+        line_4 = new QFrame(optionsWidget);
+        line_4->setObjectName(QString::fromUtf8("line_4"));
+        line_4->setFrameShape(QFrame::VLine);
+        line_4->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_3->addWidget(line_4, 1, 1, 1, 1);
 
         tabWidget->addTab(optionsWidget, QString());
         start_ProgramWidget = new QWidget();
@@ -643,6 +638,32 @@ public:
 
         consoleWindowDockWidget->setWidget(dockWidgetContents_2);
         MainWindow->addDockWidget(Qt::BottomDockWidgetArea, consoleWindowDockWidget);
+        QWidget::setTabOrder(outlinesCheckBox, startCameraViewButton);
+        QWidget::setTabOrder(startCameraViewButton, stoppCameraViewButton);
+        QWidget::setTabOrder(stoppCameraViewButton, saveImageButton);
+        QWidget::setTabOrder(saveImageButton, robotIPLineEdit);
+        QWidget::setTabOrder(robotIPLineEdit, robotPortLineEdit);
+        QWidget::setTabOrder(robotPortLineEdit, zOffsetLneEdit);
+        QWidget::setTabOrder(zOffsetLneEdit, zOffsetFinalLineEdit);
+        QWidget::setTabOrder(zOffsetFinalLineEdit, cameraIPLineEdit);
+        QWidget::setTabOrder(cameraIPLineEdit, fpsLiveViewLineEdit);
+        QWidget::setTabOrder(fpsLiveViewLineEdit, biningValueLineEdit);
+        QWidget::setTabOrder(biningValueLineEdit, gainValueLineEdit);
+        QWidget::setTabOrder(gainValueLineEdit, xminValueLineEdit);
+        QWidget::setTabOrder(xminValueLineEdit, yminValueLineEdit);
+        QWidget::setTabOrder(yminValueLineEdit, zminValueLineEdit);
+        QWidget::setTabOrder(zminValueLineEdit, xmaxValueLineEdit);
+        QWidget::setTabOrder(xmaxValueLineEdit, ymaxValueLineedit);
+        QWidget::setTabOrder(ymaxValueLineedit, zmaxValueLineEdit);
+        QWidget::setTabOrder(zmaxValueLineEdit, findCameraButton);
+        QWidget::setTabOrder(findCameraButton, dataSavePathLineEdit);
+        QWidget::setTabOrder(dataSavePathLineEdit, folderDialogButton);
+        QWidget::setTabOrder(folderDialogButton, coordinatesCheckBox);
+        QWidget::setTabOrder(coordinatesCheckBox, tabWidget);
+        QWidget::setTabOrder(tabWidget, safetyCheckCheckBox);
+        QWidget::setTabOrder(safetyCheckCheckBox, getCoordinatesButton);
+        QWidget::setTabOrder(getCoordinatesButton, startRobotButton);
+        QWidget::setTabOrder(startRobotButton, infoConsoleTextBrowser);
 
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuAbout->menuAction());
@@ -655,11 +676,10 @@ public:
         menuView->addAction(actionOpen_Console);
 
         retranslateUi(MainWindow);
-        QObject::connect(openConsoleButton, SIGNAL(clicked()), consoleWindowDockWidget, SLOT(show()));
         QObject::connect(actionOpen_Console, SIGNAL(triggered()), consoleWindowDockWidget, SLOT(show()));
         QObject::connect(actionExit, SIGNAL(triggered()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -674,33 +694,19 @@ public:
         actionOpen_Console->setText(QCoreApplication::translate("MainWindow", "Open Console", nullptr));
         liveCameraViewLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/newPrefix/example.png\" width=\"1200\"/></p></body></html>", nullptr));
         coordinatesCheckBox->setText(QCoreApplication::translate("MainWindow", "Coordinates", nullptr));
-        checkingCheckBox->setText(QCoreApplication::translate("MainWindow", "Checking", nullptr));
         outlinesCheckBox->setText(QCoreApplication::translate("MainWindow", "Outlines", nullptr));
         startCameraViewButton->setText(QCoreApplication::translate("MainWindow", "Start CameraView", nullptr));
-        stoppCameraViewButton->setText(QCoreApplication::translate("MainWindow", "Stopp CameraView", nullptr));
+        stoppCameraViewButton->setText(QCoreApplication::translate("MainWindow", "Stop CameraView", nullptr));
         saveImageButton->setText(QCoreApplication::translate("MainWindow", "Save Image", nullptr));
         cameraViewTimestampLabel->setText(QCoreApplication::translate("MainWindow", "Timestamp", nullptr));
         cameraViewHeadlineLabel->setText(QCoreApplication::translate("MainWindow", "Filters", nullptr));
-        cameraViewInfoLabel->setText(QCoreApplication::translate("MainWindow", "Camera-FPS : -- Draw-FPS: --", nullptr));
+        cameraViewInfoLabel->setText(QCoreApplication::translate("MainWindow", "Camera-FPS : -- ", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(cameraViewWidget), QCoreApplication::translate("MainWindow", "Camera-View", nullptr));
         robotOptionsLabel->setText(QCoreApplication::translate("MainWindow", "Robot-Options", nullptr));
-        robotIPLabel->setText(QCoreApplication::translate("MainWindow", "IP", nullptr));
+        robotIPLabel->setText(QCoreApplication::translate("MainWindow", "IP-Address", nullptr));
         robotPortLabel->setText(QCoreApplication::translate("MainWindow", "Port", nullptr));
-        zOffsetLabel->setText(QCoreApplication::translate("MainWindow", "Z-Offset", nullptr));
-        zOffsetFinalLabel->setText(QCoreApplication::translate("MainWindow", "Z-Offset Final", nullptr));
-        cameraOptionsLabel->setText(QCoreApplication::translate("MainWindow", "Camera-Options", nullptr));
-        cameraIPLabel->setText(QCoreApplication::translate("MainWindow", "IP", nullptr));
-        exposureLabel->setText(QCoreApplication::translate("MainWindow", "Exposure", nullptr));
-        fpsLiveViewLabel->setText(QCoreApplication::translate("MainWindow", "FPS for Live-View", nullptr));
-        emptyCameraOptionsLabel->setText(QString());
-        triggerOnCheckBox->setText(QCoreApplication::translate("MainWindow", "Flip Image ", nullptr));
-        biningLabel->setText(QCoreApplication::translate("MainWindow", "Bining", nullptr));
-        gainLabel->setText(QCoreApplication::translate("MainWindow", "Gain", nullptr));
-        findCameraLabel->setText(QCoreApplication::translate("MainWindow", "Find the IP and Port of Cameras in the network", nullptr));
-        findCameraButton->setText(QCoreApplication::translate("MainWindow", "Find Camera", nullptr));
-        openConsoleButton->setText(QCoreApplication::translate("MainWindow", "Open Console", nullptr));
-        folderDialogButton->setText(QCoreApplication::translate("MainWindow", "Folder", nullptr));
-        dataSavePathLabel->setText(QCoreApplication::translate("MainWindow", "Imagedata save path", nullptr));
+        zOffsetLabel->setText(QCoreApplication::translate("MainWindow", "Travel Height", nullptr));
+        zOffsetFinalLabel->setText(QCoreApplication::translate("MainWindow", "Gripping Height", nullptr));
         yminLabel->setText(QCoreApplication::translate("MainWindow", "Y min", nullptr));
         ymaxLabel->setText(QCoreApplication::translate("MainWindow", "Y max", nullptr));
         workingAreaLabel->setText(QCoreApplication::translate("MainWindow", "Working-Area", nullptr));
@@ -708,6 +714,16 @@ public:
         zminLabel->setText(QCoreApplication::translate("MainWindow", "Z min", nullptr));
         zmaxLabel->setText(QCoreApplication::translate("MainWindow", "Z max", nullptr));
         xmaxLabel->setText(QCoreApplication::translate("MainWindow", "X max", nullptr));
+        cameraOptionsLabel->setText(QCoreApplication::translate("MainWindow", "Camera-Options", nullptr));
+        cameraIPLabel->setText(QCoreApplication::translate("MainWindow", "IP-Address", nullptr));
+        fpsLiveViewLabel->setText(QCoreApplication::translate("MainWindow", "Acquisition Framerate", nullptr));
+        biningLabel->setText(QCoreApplication::translate("MainWindow", "Bining", nullptr));
+        gainLabel->setText(QCoreApplication::translate("MainWindow", "Gain", nullptr));
+        emptyCameraOptionsLabel->setText(QString());
+        dataSavePathLabel->setText(QCoreApplication::translate("MainWindow", "Imagedata save path", nullptr));
+        findCameraLabel->setText(QCoreApplication::translate("MainWindow", "Find the IP and Port of Cameras in the network", nullptr));
+        findCameraButton->setText(QCoreApplication::translate("MainWindow", "Find Camera", nullptr));
+        folderDialogButton->setText(QCoreApplication::translate("MainWindow", "Folder", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(optionsWidget), QCoreApplication::translate("MainWindow", "Options", nullptr));
         safetyCheckCheckBox->setText(QCoreApplication::translate("MainWindow", "Safety Check", nullptr));
         coordinateLabel->setText(QCoreApplication::translate("MainWindow", "Coordinates", nullptr));
@@ -734,4 +750,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // KUKAVISIONUIV1FKSYUB_H
+#endif // KUKAVISIONUIV1CPOWBG_H

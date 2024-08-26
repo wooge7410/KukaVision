@@ -14,6 +14,10 @@
 #include <future>
 #include <unistd.h>
 
+#include <ctime>
+
+#include "object_detection.h"
+
 
 using namespace std;
 using namespace NeoAPI;
@@ -24,7 +28,7 @@ class CameraStream
 {
     public:
         CameraStream(string identifier);
-        void acquisitionLoop(QLabel *view, bool *run);
+        void acquisitionLoop(QLabel *view, bool *run, bool outlines, bool coordinates);
 
         Cam camera = Cam();
         Mat latestImage;
