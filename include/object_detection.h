@@ -3,6 +3,9 @@
 
 #include <opencv2/opencv.hpp>
 #include "ObjectDetails.h"
+#include <iostream>
+#include <cmath>
+
 
 // Declaraciones de funciones
 void drawRectAndAxes(cv::Mat& image, ObjectDetails& objectDetails);
