@@ -22,14 +22,16 @@ Mat findAndDrawObjects(const Mat& grayBase, const Mat& grayTest, ObjectDetails& 
 
     Mat output = bgrTest.clone();
 
+    RotatedRect sheetRect;
+    Point2f sheetRectPoints[4];
+
     if (!sheetContours.empty()) {
         sort(sheetContours.begin(), sheetContours.end(), [](const vector<Point>& a, const vector<Point>& b) {
             return contourArea(a) > contourArea(b);
         });
         vector<Point> largestSheetContour = sheetContours[0];
 
-        RotatedRect sheetRect = minAreaRect(largestSheetContour);
-        Point2f sheetRectPoints[4];
+        sheetRect = minAreaRect(largestSheetContour);
         sheetRect.points(sheetRectPoints);
         for (int j = 0; j < 4; j++) {
             line(output, sheetRectPoints[j], sheetRectPoints[(j+1)%4], Scalar(0, 0, 255), 2);
@@ -79,6 +81,25 @@ Mat findAndDrawObjects(const Mat& grayBase, const Mat& grayTest, ObjectDetails& 
             float minAngle = min(angleToXAxis, angleToYAxis);
             //cout << "Object center: (" << center.x << ", " << center.y << ") with minimum angle: " << minAngle << " degrees" << endl;
 
+
+            for (int i = 0; i < 4; i++) {
+                cout << "SheetCorners X: " << sheetRectPoints[i].x << " Y: " << sheetRectPoints[i].y << endl;
+
+            }
+            Point2f sheetBase = sheetRectPoints[0];
+            for (int i = 1; i < 4; i++) {
+                if(sheetRectPoints[i].x < sheetBase.x || sheetRectPoints[i].y < sheetBase.y) {
+                    sheetBase = sheetRectPoints[i];
+                }
+            }
+
+            cout << "Selected Corner X: " << sheetBase.x << " Y: " << sheetBase.y << endl;
+
+            sheetBase.x = - sheetBase.x;
+            sheetBase.y = - sheetBase.y;
+            Point2f testTransform = coordinateTransform(sheetRect.angle, sheetBase, center);
+            cout << "X: " << testTransform.x << "   Y: " << testTransform.y << endl;
+
             objectDetails.setAngle(minAngle);
             objectDetails.setCenter(center);
             objectDetails.setValid(true);
@@ -87,4 +108,15 @@ Mat findAndDrawObjects(const Mat& grayBase, const Mat& grayTest, ObjectDetails& 
     return output;
     //imshow("Detected Objects", output);
     //waitKey(0);
+}
+
+Point2f coordinateTransform(float angle, Point2f VA, Point2f PB) {
+    Point2f PA;
+
+    float degRad = CV_PI/180.0;
+    float R_AB[2][2] = {{cos(angle * degRad), sin(angle * degRad)}, {-sin(angle * degRad), cos(angle * degRad)}};
+    PA.x = R_AB[0][0] * PB.x + R_AB[0][1] * PB.y + VA.x;
+    PA.y = R_AB[1][0] * PB.x + R_AB[1][1] * PB.y + VA.y;
+
+    return PA;
 }
