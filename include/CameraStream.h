@@ -34,7 +34,7 @@ class CameraStream
         Mat latestImage;
         time_t latestImageTimestamp;
         float bufferRate;
-
+        ObjectDetails latestObject;
     protected:
 
     private:

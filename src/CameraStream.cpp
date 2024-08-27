@@ -78,10 +78,18 @@ void CameraStream::acquisitionLoop(QLabel *view, bool *run, bool outlines, bool 
 
             if (objectDetails.isValid()) {
                 cout << "Object Center: (" << objectDetails.getCenter().x << ", " << objectDetails.getCenter().y << ")" << endl;
-                cout << "Object Angle: " << objectDetails.getAngle() << " degrees" << endl;
-                for (int i = 0; i < 4; ++i) {
-                    cout << "Corner " << i << ": (" << objectDetails.getCorner(i).x << ", " << objectDetails.getCorner(i).y << ")" << endl;
-                }
+                Point2f frameOriginRobC;
+                frameOriginRobC.x = 731.18 - 63.6 * (386.66 - 731.18)/(988.8 - 63.6);
+                frameOriginRobC.y = 137.88 - 20.9 * (386.33 - 137.88)/(693.6 - 20.9); //20
+                Point2f scaledCenter = objectDetails.getCenter();
+                scaledCenter.x = (scaledCenter.x ) * - (386.66 - 731.18)/(988.8 - 63.6);
+                scaledCenter.y = scaledCenter.y * (386.33 - 137.88)/(693.6 - 20.9);
+                //cout << "Frame Origin: (" << frameOriginRobC.x << ", " << frameOriginRobC.y << ")" << endl;
+                Point2f centerRobCoords = coordinateTransform(-0.686, frameOriginRobC, scaledCenter); //objectDetails.getCenter()
+                objectDetails.setCenter(centerRobCoords);
+                latestObject = objectDetails;
+                //cout << "Robot Coordinates: (" << centerRobCoords.x << ", " << centerRobCoords.y << ")" << endl;
+                //cout << "Object Angle: " << objectDetails.getAngle() << " degrees" << endl;
             } else {
                 cout << "No valid object details available." << endl;
             }

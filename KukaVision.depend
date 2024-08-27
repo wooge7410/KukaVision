@@ -2240,7 +2240,7 @@
 1724579646 source:/home/kukavision/KukaVision/repo/KukaVision/src/ObjectDetails.cpp
 	"ObjectDetails.h"
 
-1724688586 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/CameraStream.cpp
+1724777437 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/CameraStream.cpp
 	"CameraStream.h"
 
 1724663062 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/FindCameraDialog.cpp
@@ -2253,16 +2253,16 @@
 	<QtWidgets/QErrorMessage>
 	<string>
 
-1724687793 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/MainWindow.cpp
+1724774893 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/MainWindow.cpp
 	"MainWindow.h"
 
-1724753730 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/object_detection.cpp
+1724775595 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/object_detection.cpp
 	"object_detection.h"
 
 1724663062 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/ObjectDetails.cpp
 	"ObjectDetails.h"
 
-1724687123 /home/kukavision/KukaVision/repo/KukaVision/main/include/CameraStream.h
+1724773304 /home/kukavision/KukaVision/repo/KukaVision/main/include/CameraStream.h
 	<string.h>
 	"neoapi/neoapi.hpp"
 	<opencv2/opencv.hpp>
@@ -2336,14 +2336,14 @@
 	"neoapi/neoapi.hpp"
 	<neoapi/neoapi_camera_info.hpp>
 
-1724676016 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/main.cpp
+1724773502 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/main.cpp
 	"MainWindow.h"
 	<QtWidgets/QApplication>
 	<QtWidgets/QFileDialog>
 	<QtWidgets/QErrorMessage>
 	<string>
 
-1724675978 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindow.h
+1724773534 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindow.h
 	"MainWindowUI.h"
 	<string>
 	<stdexcept>
@@ -2355,6 +2355,7 @@
 	<QtWidgets/QMessageBox>
 	<nlohmann/json.hpp>
 	"CameraStream.h"
+	"EKRLServer.h"
 
 1724686916 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindowUI.h
 	<QtCore/QVariant>
@@ -2822,4 +2823,16 @@
 
 1724663062 /home/kukavision/KukaVision/repo/KukaVision/main/include/ObjectDetails.h
 	<opencv2/opencv.hpp>
+
+1724773466 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/EKRLServer.cpp
+	<sys/socket.h>
+	<netinet/in.h>
+	<iostream>
+	<unistd.h>
+	<arpa/inet.h>
+	<bitset>
+	<cstring>
+	<bits/stdc++.h>
+
+1724771999 /home/kukavision/KukaVision/repo/KukaVision/main/include/EKRLServer.h
 

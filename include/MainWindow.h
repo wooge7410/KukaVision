@@ -10,6 +10,7 @@
 #include <QtWidgets/QMessageBox>
 #include <nlohmann/json.hpp>
 #include "CameraStream.h"
+#include "EKRLServer.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -24,9 +25,6 @@ public:
     void SaveOptionsInJSON(json& currentOptions);
     void GetAllOptions_JSON(json &options);
 
-    void startCameraView();
-
-    void stopCameraView();
 
 private:
     QMainWindow *windowParent;
@@ -85,6 +83,11 @@ private:
 
 
     void consoleLog(string msg);
+
+
+    void startCameraView();
+
+    void stopCameraView();
 
     string generateTimestampString();
 

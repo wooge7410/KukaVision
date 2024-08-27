@@ -43,9 +43,20 @@ Mat findAndDrawObjects(const Mat& grayBase, const Mat& grayTest, ObjectDetails& 
         //cout << "Sheet angle with respect to Y-axis: " << sheetAngle << " degrees" << endl;
     }
 
+        // Find the Corner of the sheet, closest to the image-origin
+    Point2f sheetBase = sheetRectPoints[0];
+    for (int i = 1; i < 4; i++) {
+        if(sheetRectPoints[i].x < sheetBase.x || sheetRectPoints[i].y < sheetBase.y) {
+            sheetBase = sheetRectPoints[i];
+        }
+    }
+    sheetBase.x = - sheetBase.x; //Invert, to get Image-Origin in Frame-Coordinates
+    sheetBase.y = - sheetBase.y;
+
+
     Mat diff;
     absdiff(grayBase, grayTest, diff);
-    threshold(diff, diff, 180, 255, THRESH_BINARY);
+    threshold(diff, diff, 210, 255, THRESH_BINARY);
     Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(5, 5));
     morphologyEx(diff, diff, MORPH_CLOSE, kernel);
 
@@ -82,26 +93,11 @@ Mat findAndDrawObjects(const Mat& grayBase, const Mat& grayTest, ObjectDetails& 
             //cout << "Object center: (" << center.x << ", " << center.y << ") with minimum angle: " << minAngle << " degrees" << endl;
 
 
-            for (int i = 0; i < 4; i++) {
-                cout << "SheetCorners X: " << sheetRectPoints[i].x << " Y: " << sheetRectPoints[i].y << endl;
+            Point2f transformedCenter = coordinateTransform(sheetRect.angle, sheetBase, center);
+            //cout << "X: " << testTransform.x << "   Y: " << testTransform.y << endl;
 
-            }
-            Point2f sheetBase = sheetRectPoints[0];
-            for (int i = 1; i < 4; i++) {
-                if(sheetRectPoints[i].x < sheetBase.x || sheetRectPoints[i].y < sheetBase.y) {
-                    sheetBase = sheetRectPoints[i];
-                }
-            }
-
-            cout << "Selected Corner X: " << sheetBase.x << " Y: " << sheetBase.y << endl;
-
-            sheetBase.x = - sheetBase.x;
-            sheetBase.y = - sheetBase.y;
-            Point2f testTransform = coordinateTransform(sheetRect.angle, sheetBase, center);
-            cout << "X: " << testTransform.x << "   Y: " << testTransform.y << endl;
-
-            objectDetails.setAngle(minAngle);
-            objectDetails.setCenter(center);
+            objectDetails.setAngle(minAngle + sheetRect.angle);
+            objectDetails.setCenter(transformedCenter);
             objectDetails.setValid(true);
         }
     }

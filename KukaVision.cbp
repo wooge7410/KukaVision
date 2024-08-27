@@ -60,12 +60,14 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/CameraStream.h" />
+		<Unit filename="include/EKRLServer.h" />
 		<Unit filename="include/FindCameraDialog.h" />
 		<Unit filename="include/MainWindow.h" />
 		<Unit filename="include/MainWindowUI.h" />
 		<Unit filename="include/ObjectDetails.h" />
 		<Unit filename="include/object_detection.h" />
 		<Unit filename="src/CameraStream.cpp" />
+		<Unit filename="src/EKRLServer.cpp" />
 		<Unit filename="src/FindCameraDialog.cpp" />
 		<Unit filename="src/MainWindow.cpp" />
 		<Unit filename="src/ObjectDetails.cpp" />

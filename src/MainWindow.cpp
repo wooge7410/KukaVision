@@ -21,6 +21,10 @@ MainWindow::MainWindow(QMainWindow *parent) {
     }
 
     QObject::connect(tabWidget, &QTabWidget::currentChanged, [&] {tabChange();});
+    QObject::connect(startCameraViewButton, &QAbstractButton::clicked, [&] {startCameraView();});
+    QObject::connect(stoppCameraViewButton, &QAbstractButton::clicked, [&] {stopCameraView();});
+    QObject::connect(getCoordinatesButton, &QAbstractButton::clicked, [&] {GetCoordinates();});
+    QObject::connect(startRobotButton, &QAbstractButton::clicked, [&] {StartProgram();});
 }
 
 
@@ -155,15 +159,40 @@ void MainWindow::SaveImageFromLiveView()   //TODO wird vom Event gecallt -> void
 //Calculates the Coordinates of the latest Image via OpenCV and displays them on the screen
 void MainWindow::GetCoordinates()
 {
-    std::cout << "GetCoordinatesButton\n";
+    stopCameraView();
+    cout << "Robot Coordinates: (" << cameraStream ->latestObject.getCenter().x << ", " << cameraStream ->latestObject.getCenter().x << ")" << endl;
 } //TODO wird vom Event gecallt -> void
 
 //Starting a cycle of the robot griping an object
 void MainWindow::StartProgram()
 {
-    std::cout << "StartProgramButton\n";
     startProgramStatusColorLabel->setText("Running");
     startProgramStatusColorLabel->setStyleSheet(QString::fromUtf8("\n" "background-color: rgb(51,102,0);"));
+
+    cout << "Startet Robot: (" << cameraStream ->latestObject.getCenter().x << ", " << cameraStream ->latestObject.getCenter().x << ")" << endl;
+    runERKLSequence(cameraStream ->latestObject.getCenter().x, cameraStream ->latestObject.getCenter().y, 200, cameraStream ->latestObject.getAngle());
+
+
+    startProgramStatusColorLabel->setText("Finished");
+    startProgramStatusColorLabel->setStyleSheet(QString::fromUtf8("\n" "background-color: rgb(255,0,0);"));
+
+    if (cameraConnected) {
+        runCameraStream = true;
+    f = std::async(&CameraStream::acquisitionLoop, cameraStream, programImageLabel, &runCameraStream, true, false);
+    } else {
+        if(cameraIPLineEdit -> text() != "") {
+            try {
+                cameraStream = new CameraStream(cameraIPLineEdit -> text().toStdString());
+                runCameraStream = true;
+                cameraConnected = true;
+                f = std::async(&CameraStream::acquisitionLoop, cameraStream, programImageLabel, &runCameraStream, true, false);
+            } catch (NeoAPI::NotConnectedException e) {
+                ShowParameterErrorMessage("Unable to connect to Camera");
+                cameraConnected = false;
+            }
+        }
+    }
+
 } //TODO wird vom Event gecallt -> void
 
 //Opens the Project-Info
@@ -205,6 +234,24 @@ void MainWindow::tabChange() {
     if (lastTabIndex == 1 && tabWidget -> currentIndex() != 1) {
         GetAllOptions_JSON(options_JSON);
         consoleLog("Updated Options");
+    } else if (lastTabIndex == 2 && tabWidget -> currentIndex() != 2) stopCameraView();
+    if(tabWidget -> currentIndex() == 2) {
+        if (cameraConnected) {
+            runCameraStream = true;
+        f = std::async(&CameraStream::acquisitionLoop, cameraStream, programImageLabel, &runCameraStream, true, false);
+        } else {
+            if(cameraIPLineEdit -> text() != "") {
+                try {
+                    cameraStream = new CameraStream(cameraIPLineEdit -> text().toStdString());
+                    runCameraStream = true;
+                    cameraConnected = true;
+                    f = std::async(&CameraStream::acquisitionLoop, cameraStream, programImageLabel, &runCameraStream, true, false);
+                } catch (NeoAPI::NotConnectedException e) {
+                    ShowParameterErrorMessage("Unable to connect to Camera");
+                    cameraConnected = false;
+                }
+            }
+        }
     }
     lastTabIndex = tabWidget -> currentIndex();
 }
