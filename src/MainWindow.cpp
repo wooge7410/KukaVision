@@ -160,25 +160,23 @@ void MainWindow::SaveImageFromLiveView()   //TODO wird vom Event gecallt -> void
 void MainWindow::GetCoordinates()
 {
     stopCameraView();
-    cout << "Robot Coordinates: (" << cameraStream ->latestObject.getCenter().x << ", " << cameraStream ->latestObject.getCenter().x << ")" << endl;
+    cout << "Robot Coordinates: (" << cameraStream ->latestObject.getCenter().x << ", " << cameraStream ->latestObject.getCenter().y << ") Angle: "<< cameraStream -> latestObject.getAngle() << endl;
 } //TODO wird vom Event gecallt -> void
 
 //Starting a cycle of the robot griping an object
 void MainWindow::StartProgram()
 {
+    static std::future<void> ekrlService;
     startProgramStatusColorLabel->setText("Running");
     startProgramStatusColorLabel->setStyleSheet(QString::fromUtf8("\n" "background-color: rgb(51,102,0);"));
 
-    cout << "Startet Robot: (" << cameraStream ->latestObject.getCenter().x << ", " << cameraStream ->latestObject.getCenter().x << ")" << endl;
-    runERKLSequence(cameraStream ->latestObject.getCenter().x, cameraStream ->latestObject.getCenter().y, 200, cameraStream ->latestObject.getAngle());
-
-
-    startProgramStatusColorLabel->setText("Finished");
-    startProgramStatusColorLabel->setStyleSheet(QString::fromUtf8("\n" "background-color: rgb(255,0,0);"));
+    cout << "Startet Robot: (" << cameraStream ->latestObject.getCenter().x << ", " << cameraStream ->latestObject.getCenter().y << ") Angle: "<< cameraStream -> latestObject.getAngle() << endl;
+    //runERKLSequence(options_JSON["Robot"]["IP_Address"], options_JSON["Robot"]["Port"], startProgramStatusColorLabel, cameraStream -> latestObject.getCenter().x, cameraStream->latestObject.getCenter().y, options_JSON["Robot"]["Travel_Height"], options_JSON["Robot"]["Gripping_Height"], -cameraStream ->latestObject.getAngle());
+    ekrlService = std::async(&runERKLSequence, options_JSON["Robot"]["IP_Address"], options_JSON["Robot"]["Port"], startProgramStatusColorLabel, cameraStream -> latestObject.getCenter().x, cameraStream->latestObject.getCenter().y, options_JSON["Robot"]["Travel_Height"], options_JSON["Robot"]["Gripping_Height"], -cameraStream ->latestObject.getAngle());
 
     if (cameraConnected) {
         runCameraStream = true;
-    f = std::async(&CameraStream::acquisitionLoop, cameraStream, programImageLabel, &runCameraStream, true, false);
+        f = std::async(&CameraStream::acquisitionLoop, cameraStream, programImageLabel, &runCameraStream, true, false);
     } else {
         if(cameraIPLineEdit -> text() != "") {
             try {
@@ -192,6 +190,7 @@ void MainWindow::StartProgram()
             }
         }
     }
+
 
 } //TODO wird vom Event gecallt -> void
 

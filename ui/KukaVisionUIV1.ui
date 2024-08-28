@@ -36,7 +36,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="cameraViewWidget">
        <property name="sizePolicy">
@@ -571,16 +571,6 @@
            <number>10</number>
           </property>
           <item>
-           <widget class="QCheckBox" name="safetyCheckCheckBox">
-            <property name="enabled">
-             <bool>true</bool>
-            </property>
-            <property name="text">
-             <string>Safety Check</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QLabel" name="coordinateLabel">
             <property name="text">
              <string>Coordinates</string>
@@ -590,7 +580,7 @@
           <item>
            <widget class="QLabel" name="coordinateShowLabel">
             <property name="text">
-             <string>X Y Z A B C</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;X: &lt;/p&gt;&lt;p&gt;Y: &lt;/p&gt;&lt;p&gt;Z: &lt;/p&gt;&lt;p&gt;A: &lt;/p&gt;&lt;p&gt;B: &lt;/p&gt;&lt;p&gt;C: &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -633,13 +623,6 @@
             </property>
            </spacer>
           </item>
-          <item>
-           <widget class="QLabel" name="timestampProgramLabel">
-            <property name="text">
-             <string>Timestamp</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
         <item row="1" column="0" rowspan="2">
@@ -678,6 +661,12 @@
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QLabel" name="startProgramHeadlineLabel">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="autoFillBackground">
              <bool>true</bool>
             </property>
@@ -819,7 +808,6 @@ background-color: rgb(224, 27, 36);</string>
   <tabstop>folderDialogButton</tabstop>
   <tabstop>coordinatesCheckBox</tabstop>
   <tabstop>tabWidget</tabstop>
-  <tabstop>safetyCheckCheckBox</tabstop>
   <tabstop>getCoordinatesButton</tabstop>
   <tabstop>startRobotButton</tabstop>
   <tabstop>infoConsoleTextBrowser</tabstop>

@@ -1,0 +1,163 @@
+﻿&ACCESS RV
+&REL 1
+&PARAM DISKPATH = KRC:\R1\Program
+&PARAM SensorITMASK = *
+&PARAM TEMPLATE = KRC:\R1\TP\EthernetKRL
+&PARAM EDITMASK = *
+DEF  KukaVision ( )
+
+;FOLD Declaration
+   INT i
+   DECL EKI_STATUS RET
+   ;FRAME positionBuffer
+   E6POS positionBufferTH
+   E6POS positionBufferGH
+   INT OFFSET
+   CHAR Bytes[64]
+;ENDFOLD (Declaration)
+;FOLD INI;%{PE}
+  ;FOLD BASISTECH INI
+    GLOBAL INTERRUPT DECL 3 WHEN $STOPMESS==TRUE DO IR_STOPM ( )
+    INTERRUPT ON 3 
+    BAS (#INITMOV,0 )
+  ;ENDFOLD (BASISTECH INI)
+  ;FOLD USER INI
+    ;Make your modifications here
+
+  ;ENDFOLD (USER INI)
+  ;ENDFOLD (INI)
+  
+;FOLD Initialize sample data
+   FOR i=1 TO (64)  
+      Bytes[i]=0
+   ENDFOR   
+;ENDFOLD (Initialize sample data)
+
+
+;FOLD SPTP HOME Vel=100 % DEFAULT ;%{PE}
+;FOLD Parameters ;%{h}
+;Params IlfProvider=kukaroboter.basistech.inlineforms.movement.spline; Kuka.IsGlobalPoint=False; Kuka.PointName=HOME; Kuka.BlendingEnabled=False; Kuka.MoveDataPtpName=DEFAULT; Kuka.VelocityPtp=100; Kuka.VelocityFieldEnabled=True; Kuka.CurrentCDSetIndex=0; Kuka.MovementParameterFieldEnabled=True; IlfCommand=SPTP
+;ENDFOLD
+SPTP XHOME WITH $VEL_AXIS[1] = SVEL_JOINT(100.0), $TOOL = STOOL2(FHOME), $BASE = SBASE(FHOME.BASE_NO), $IPO_MODE = SIPO_MODE(FHOME.IPO_FRAME), $LOAD = SLOAD(FHOME.TOOL_NO), $ACC_AXIS[1] = SACC_JOINT(PDEFAULT), $APO = SAPO_PTP(PDEFAULT), $GEAR_JERK[1] = SGEAR_JERK(PDEFAULT), $COLLMON_TOL_PRO[1] = USE_CM_PRO_VALUES(0)
+;ENDFOLD
+
+
+; Initialize EKRL
+RET=EKI_Init("KukaVision")
+
+
+WHILE TRUE
+
+; wait until server is conntected
+RET=EKI_Open("KukaVision")
+wait for $FLAG[1]
+
+;Send Confirmation of successfull connection
+WAIT SEC 2.0
+OFFSET = 0
+FOR i=1 TO (64)  
+   Bytes[i]=0
+ENDFOR 
+CAST_TO(Bytes[], OFFSET, TRUE)
+RET = EKI_Send("KukaVision",Bytes[])
+
+
+;Waiting for position with Travel Height
+$FLAG[2] = FALSE
+WAIT FOR $FLAG[2]
+RET=EKI_GetString("KukaVision","Buffer",Bytes[])
+$FLAG[2]=FALSE
+
+OFFSET=0
+; Cast Binary Data into E6POS
+CAST_FROM(Bytes[],OFFSET,positionBufferTH.X,positionBufferTH.Y,positionBufferTH.Z,positionBufferTH.A,positionBufferTH.B,positionBufferTH.C)
+; S&T Value are here constant, but could easily be send to Robot like before
+positionBufferTH.S = 2  
+positionBufferTH.T = 35
+
+SLIN positionBufferTH WITH $VEL_AXIS[1] = SVEL_JOINT(100.0), $TOOL = STOOL2(tools);
+
+;Send Confirmation
+WAIT SEC 2.0
+OFFSET = 0
+FOR i=1 TO (64)  
+   Bytes[i]=0
+ENDFOR 
+CAST_TO(Bytes[], OFFSET, TRUE)
+RET = EKI_Send("KukaVision",Bytes[])
+
+
+;Waiting for position with Gripping Height
+$FLAG[2] = FALSE
+WAIT FOR $FLAG[2]
+RET=EKI_GetString("KukaVision","Buffer",Bytes[])
+$FLAG[2]=FALSE
+
+OFFSET=0
+; Cast Binary Data into E6POS
+CAST_FROM(Bytes[],OFFSET,positionBufferGH.X,positionBufferGH.Y,positionBufferGH.Z,positionBufferGH.A,positionBufferGH.B,positionBufferGH.C)
+; S&T Value are here constant, but could easily be send to Robot like before
+positionBufferGH.S = 2  
+positionBufferGH.T = 35
+
+; Open Gripper
+GRPg_SetStateAndCheck(1, 1, 0.2, 1)
+
+; Move to Gripping Position with 10% of Speed
+SLIN positionBufferGH WITH $TOOL = STOOL2(tools), $VEL_AXIS[1] = SVEL_JOINT(10.0);
+
+; Close Gripper, wait 0.5s
+GRPg_SetStateAndCheck(1, 2, 0.5, 1)
+
+
+; Send Confirmation
+WAIT SEC 2.0
+OFFSET = 0
+FOR i=1 TO (64)  
+   Bytes[i]=0
+ENDFOR 
+CAST_TO(Bytes[], OFFSET, TRUE)
+RET = EKI_Send("KukaVision",Bytes[])
+
+
+
+; Lift Cube with 10% Speed
+SLIN positionBufferTH WITH $TOOL = STOOL2(tools), $VEL_AXIS[1] = SVEL_JOINT(10.0)
+SPTP DropoffPrestage WITH $VEL_AXIS[1] = SVEL_JOINT(100.0), $TOOL = STOOL2(tools)
+SLIN DropoffPos WITH $TOOL = STOOL2(tools), $VEL_AXIS[1] = SVEL_JOINT(10.0)
+GRPg_SetStateAndCheck(1, 1, 0.5, 1)
+SLIN DropoffPrestage WITH $TOOL = STOOL2(tools), $VEL_AXIS[1] = SVEL_JOINT(10.0)
+
+; Send Confirmation
+WAIT SEC 2.0
+OFFSET = 0
+FOR i=1 TO (64)  
+   Bytes[i]=0
+ENDFOR 
+CAST_TO(Bytes[], OFFSET, TRUE)
+RET = EKI_Send("KukaVision",Bytes[])
+
+; Move to Home Position
+SPTP XHOME WITH $VEL_AXIS[1] = SVEL_JOINT(100.0)
+; Send Confirmation
+WAIT SEC 2.0
+OFFSET = 0
+FOR i=1 TO (64)  
+   Bytes[i]=0
+ENDFOR 
+CAST_TO(Bytes[], OFFSET, TRUE)
+RET = EKI_Send("KukaVision",Bytes[])
+
+; Close Connection
+RET = EKI_Close("KukaVision");
+
+ENDWHILE
+
+;FOLD SPTP HOME Vel=100 % DEFAULT ;%{PE}
+;FOLD Parameters ;%{h}
+;Params IlfProvider=kukaroboter.basistech.inlineforms.movement.spline; Kuka.IsGlobalPoint=False; Kuka.PointName=HOME; Kuka.BlendingEnabled=False; Kuka.MoveDataPtpName=DEFAULT; Kuka.VelocityPtp=100; Kuka.VelocityFieldEnabled=True; Kuka.CurrentCDSetIndex=0; Kuka.MovementParameterFieldEnabled=True; IlfCommand=SPTP
+;ENDFOLD
+SPTP XHOME WITH $VEL_AXIS[1] = SVEL_JOINT(100.0), $TOOL = STOOL2(FHOME), $BASE = SBASE(FHOME.BASE_NO), $IPO_MODE = SIPO_MODE(FHOME.IPO_FRAME), $LOAD = SLOAD(FHOME.TOOL_NO), $ACC_AXIS[1] = SACC_JOINT(PDEFAULT), $APO = SAPO_PTP(PDEFAULT), $GEAR_JERK[1] = SGEAR_JERK(PDEFAULT), $COLLMON_TOL_PRO[1] = USE_CM_PRO_VALUES(0)
+;ENDFOLD
+
+END

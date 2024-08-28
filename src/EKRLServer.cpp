@@ -1,29 +1,4 @@
-
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <iostream>
-#include <unistd.h>
-#include <arpa/inet.h>
-#include <bitset>
-#include <cstring>
-#include <bits/stdc++.h>
-
-#define BUFFERSIZE 64
-#define IP "192.168.41.64"
-#define PORT 54600
-#define CONNATTEMPTS 5
-#define CONNDELAY 5
-
-using namespace std;
-
-struct FRAME {
-    float X;
-    float Y;
-    float Z;
-    float A;
-    float B;
-    float C;
-};
+#include "EKRLServer.h"
 
 template <typename T> int bufferToVar(char* buffer, int bufferSize, T &var) {
     if(bufferSize == sizeof(var)) {
@@ -39,7 +14,7 @@ template <typename T> int varToBuffer(char* buffer, int bufferSize, T &var) {
     } else return -1;
 }
 
-int connectSocket(char* ipAddress, int port, int &clientSocket) {
+int connectSocket(const char* ipAddress, int port, int &clientSocket) {
     clientSocket = socket(AF_INET, SOCK_STREAM, 0);
     sockaddr_in serverAddress;
     serverAddress.sin_family = AF_INET; // IPv4
@@ -58,7 +33,7 @@ int receiveBuffer(char * buffer, int bufferSize, int &clientSocket) {
 }
 
 bool checkVerificationBuffer(char * buffer, int bufferSize) {
-    bool verified;
+    bool verified = true;
 
     if (buffer[0] == 0x01) {
         for (int i = 1; i < bufferSize; i++) {
@@ -83,15 +58,16 @@ int bufferToFrame(FRAME &position, char* buffer, int bufferSize) {
 }
 
 
-void runERKLSequence(float x, float y, float z, float a) {
+void runERKLSequence(string ipAddress, int port, QLabel* statusLabel, float x, float y, float zTravel, float zGripping, float a) {
     int clientSocket;
     char buffer[BUFFERSIZE] = {0};
     FRAME positionBuffer;
     bool connected = false;
 
-    cout << "Connecting to " << IP << ":" << PORT << endl;
+    cout << "Connecting to " << ipAddress << ":" << port << endl;
+    statusLabel ->setText("Connecting");
     for(int i = 0; i < CONNATTEMPTS; i++) {
-        if (connectSocket(IP, PORT, clientSocket) >= 0) {
+        if (connectSocket(ipAddress.c_str(), port, clientSocket) >= 0) {
             connected = true;
             break;
         } else {
@@ -102,49 +78,101 @@ void runERKLSequence(float x, float y, float z, float a) {
         }
     }
     if (!connected) {
+        statusLabel ->setText("ERROR");
         cout << "Connection failed! Exiting...";
     }
     cout << "Connection successfull!" << endl;
 
     cout << "\n\n--------------------------------------------------------------------\n";
-    cout << "Moving to home position...\n";
+    cout << "Confirming Connection\n";
 
     while(receiveBuffer(buffer, BUFFERSIZE, clientSocket) < (BUFFERSIZE-1));
-
     if(!checkVerificationBuffer(buffer, BUFFERSIZE)) {
         cout << "ERROR: Received Unexpected Data!\nExiting...";
+        cout << sizeof(buffer);
+        statusLabel ->setText("ERROR");
     }
+    cout << "Connection Verified!\n";
+    statusLabel ->setText("Connected");
 
+    // Prepare to Send Coordinates with Travel Height
     positionBuffer.X = x;
     positionBuffer.Y = y;
-    positionBuffer.Z = z;
+    positionBuffer.Z = zTravel;
     positionBuffer.A = a;
     positionBuffer.B = 90;
     positionBuffer.C = 0;
 
-    cout << "\nNew Position:\nX:" << positionBuffer.X << " | Y:" << positionBuffer.Y << " | Z:" << positionBuffer.Z << " | A:" << positionBuffer.A << " | B:" << positionBuffer.B << " | C:" << positionBuffer.C << endl;
+    cout << "\nPosition (Travel Height):\nX:" << positionBuffer.X << " | Y:" << positionBuffer.Y << " | Z:" << positionBuffer.Z << " | A:" << positionBuffer.A << " | B:" << positionBuffer.B << " | C:" << positionBuffer.C << endl;
 
-
+    // Send Coordinates with Travel Height
     frameToBuffer(positionBuffer, buffer, BUFFERSIZE);
     if(sendBuffer(buffer, BUFFERSIZE, clientSocket) < (BUFFERSIZE-1)) {
         cout << "Error while sending Data!\nExiting...";
+        statusLabel ->setText("ERROR");
     }
+    cout << "Coordinates send!\n";
 
-    while(receiveBuffer(buffer, BUFFERSIZE, clientSocket) < (BUFFERSIZE-1));
-
-    if(!checkVerificationBuffer(buffer, BUFFERSIZE)) {
-        cout << "ERROR: Received Unexpected Data!\nExiting...";
-    }
-    cout << "\nMoving to new position...\n";
-
-
+    // Wait for Confirmation
     while(receiveBuffer(buffer, BUFFERSIZE, clientSocket) < (BUFFERSIZE-1));
     if(!checkVerificationBuffer(buffer, BUFFERSIZE)) {
         cout << "ERROR: Received Unexpected Data!\nExiting...";
+        statusLabel ->setText("ERROR");
+    }
+    cout << "Confirmed\n";
+
+
+    // Send Position with Gripping Height
+    positionBuffer.X = x;
+    positionBuffer.Y = y;
+    positionBuffer.Z = zGripping;
+    positionBuffer.A = a;
+    positionBuffer.B = 90;
+    positionBuffer.C = 0;
+
+    cout << "\nPosition (Travel Height):\nX:" << positionBuffer.X << " | Y:" << positionBuffer.Y << " | Z:" << positionBuffer.Z << " | A:" << positionBuffer.A << " | B:" << positionBuffer.B << " | C:" << positionBuffer.C << endl;
+
+    // Send Coordinates with Travel Height
+    frameToBuffer(positionBuffer, buffer, BUFFERSIZE);
+    if(sendBuffer(buffer, BUFFERSIZE, clientSocket) < (BUFFERSIZE-1)) {
+        cout << "Error while sending Data!\nExiting...";
+        statusLabel ->setText("ERROR");
+    }
+    cout << "Coordinates send!\n";
+    statusLabel ->setText("Pickup");
+
+    // Wait for Confirmation
+    while(receiveBuffer(buffer, BUFFERSIZE, clientSocket) < (BUFFERSIZE-1));
+    if(!checkVerificationBuffer(buffer, BUFFERSIZE)) {
+        cout << "ERROR: Received Unexpected Data!\nExiting...";
+        statusLabel ->setText("ERROR");
     }
 
+    cout << "Pickup confirmed\n";
+    statusLabel -> setText("Dropoff");
 
-    cout << "\nPosition Reached!\n\n";
+    // Wait for confirmation
+    while(receiveBuffer(buffer, BUFFERSIZE, clientSocket) < (BUFFERSIZE-1));
+    if(!checkVerificationBuffer(buffer, BUFFERSIZE)) {
+        cout << "ERROR: Received Unexpected Data!\nExiting...";
+        statusLabel ->setText("ERROR");
+    }
 
+    cout << "Dropoff confirmed\n";
+    statusLabel -> setText("Homing");
+
+
+    // Wait for Confirmation of Home Position
+    while(receiveBuffer(buffer, BUFFERSIZE, clientSocket) < (BUFFERSIZE-1));
+    if(!checkVerificationBuffer(buffer, BUFFERSIZE)) {
+        cout << "ERROR: Received Unexpected Data!\nExiting...";
+        statusLabel ->setText("ERROR");
+    }
+
+    cout << "Finished\n";
+    statusLabel -> setText("Finished");
+    statusLabel->setStyleSheet(QString::fromUtf8("\n" "background-color: rgb(255,0,0);"));
+
+    // Close Connection
     close(clientSocket);
 }

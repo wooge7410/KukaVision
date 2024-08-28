@@ -22,7 +22,7 @@ CameraStream::CameraStream(string identifier)  {    //NoAccessException, NotConn
     camera.f().BinningVertical.Set(1);
 
     camera.f().GainAuto.Set(GainAuto::Off);
-    camera.f().Gain.Set(1.2);
+    camera.f().Gain.Set(1.0);
 
 
 
@@ -77,15 +77,15 @@ void CameraStream::acquisitionLoop(QLabel *view, bool *run, bool outlines, bool 
 
 
             if (objectDetails.isValid()) {
-                cout << "Object Center: (" << objectDetails.getCenter().x << ", " << objectDetails.getCenter().y << ")" << endl;
+                cout << "Object Center: (" << objectDetails.getCenter().x << ", " << objectDetails.getCenter().y << ") Angle: " << objectDetails.getAngle() << endl;
                 Point2f frameOriginRobC;
                 frameOriginRobC.x = 731.18 - 63.6 * (386.66 - 731.18)/(988.8 - 63.6);
-                frameOriginRobC.y = 137.88 - 20.9 * (386.33 - 137.88)/(693.6 - 20.9); //20
+                frameOriginRobC.y = 137.88 - 20.9 * (386.33 - 137.88)/(684.4 - 20.9); //20
                 Point2f scaledCenter = objectDetails.getCenter();
-                scaledCenter.x = (scaledCenter.x ) * - (386.66 - 731.18)/(988.8 - 63.6);
-                scaledCenter.y = scaledCenter.y * (386.33 - 137.88)/(693.6 - 20.9);
+                scaledCenter.x = (scaledCenter.x) *  (386.66 - 731.18)/(988.8 - 63.6);
+                scaledCenter.y = scaledCenter.y * (386.33 - 137.88)/(684.4 - 20.9);
                 //cout << "Frame Origin: (" << frameOriginRobC.x << ", " << frameOriginRobC.y << ")" << endl;
-                Point2f centerRobCoords = coordinateTransform(-0.686, frameOriginRobC, scaledCenter); //objectDetails.getCenter()
+                Point2f centerRobCoords = coordinateTransform(0, frameOriginRobC, scaledCenter); //objectDetails.getCenter()
                 objectDetails.setCenter(centerRobCoords);
                 latestObject = objectDetails;
                 //cout << "Robot Coordinates: (" << centerRobCoords.x << ", " << centerRobCoords.y << ")" << endl;

@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'KukaVisionUIV1cPowBg.ui'
+** Form generated from reading UI file 'KukaVisionUIV1vKaWZL.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.15.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef KUKAVISIONUIV1CPOWBG_H
-#define KUKAVISIONUIV1CPOWBG_H
+#ifndef KUKAVISIONUIV1VKAWZL_H
+#define KUKAVISIONUIV1VKAWZL_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -113,13 +113,11 @@ public:
     QWidget *start_ProgramWidget;
     QGridLayout *gridLayout_4;
     QVBoxLayout *verticalLayout_2;
-    QCheckBox *safetyCheckCheckBox;
     QLabel *coordinateLabel;
     QLabel *coordinateShowLabel;
     QPushButton *getCoordinatesButton;
     QPushButton *startRobotButton;
     QSpacerItem *verticalSpacer_3;
-    QLabel *timestampProgramLabel;
     QLabel *programImageLabel;
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout;
@@ -530,12 +528,6 @@ public:
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setSizeConstraint(QLayout::SetDefaultConstraint);
         verticalLayout_2->setContentsMargins(10, -1, 10, -1);
-        safetyCheckCheckBox = new QCheckBox(start_ProgramWidget);
-        safetyCheckCheckBox->setObjectName(QString::fromUtf8("safetyCheckCheckBox"));
-        safetyCheckCheckBox->setEnabled(true);
-
-        verticalLayout_2->addWidget(safetyCheckCheckBox);
-
         coordinateLabel = new QLabel(start_ProgramWidget);
         coordinateLabel->setObjectName(QString::fromUtf8("coordinateLabel"));
 
@@ -563,11 +555,6 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer_3);
 
-        timestampProgramLabel = new QLabel(start_ProgramWidget);
-        timestampProgramLabel->setObjectName(QString::fromUtf8("timestampProgramLabel"));
-
-        verticalLayout_2->addWidget(timestampProgramLabel);
-
 
         gridLayout_4->addLayout(verticalLayout_2, 2, 1, 1, 1);
 
@@ -588,6 +575,7 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         startProgramHeadlineLabel = new QLabel(start_ProgramWidget);
         startProgramHeadlineLabel->setObjectName(QString::fromUtf8("startProgramHeadlineLabel"));
+        startProgramHeadlineLabel->setMaximumSize(QSize(50, 16777215));
         startProgramHeadlineLabel->setAutoFillBackground(true);
         startProgramHeadlineLabel->setFrameShape(QFrame::NoFrame);
 
@@ -660,8 +648,7 @@ public:
         QWidget::setTabOrder(dataSavePathLineEdit, folderDialogButton);
         QWidget::setTabOrder(folderDialogButton, coordinatesCheckBox);
         QWidget::setTabOrder(coordinatesCheckBox, tabWidget);
-        QWidget::setTabOrder(tabWidget, safetyCheckCheckBox);
-        QWidget::setTabOrder(safetyCheckCheckBox, getCoordinatesButton);
+        QWidget::setTabOrder(tabWidget, getCoordinatesButton);
         QWidget::setTabOrder(getCoordinatesButton, startRobotButton);
         QWidget::setTabOrder(startRobotButton, infoConsoleTextBrowser);
 
@@ -679,7 +666,7 @@ public:
         QObject::connect(actionOpen_Console, SIGNAL(triggered()), consoleWindowDockWidget, SLOT(show()));
         QObject::connect(actionExit, SIGNAL(triggered()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -725,12 +712,10 @@ public:
         findCameraButton->setText(QCoreApplication::translate("MainWindow", "Find Camera", nullptr));
         folderDialogButton->setText(QCoreApplication::translate("MainWindow", "Folder", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(optionsWidget), QCoreApplication::translate("MainWindow", "Options", nullptr));
-        safetyCheckCheckBox->setText(QCoreApplication::translate("MainWindow", "Safety Check", nullptr));
         coordinateLabel->setText(QCoreApplication::translate("MainWindow", "Coordinates", nullptr));
-        coordinateShowLabel->setText(QCoreApplication::translate("MainWindow", "X Y Z A B C", nullptr));
+        coordinateShowLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>X: </p><p>Y: </p><p>Z: </p><p>A: </p><p>B: </p><p>C: </p></body></html>", nullptr));
         getCoordinatesButton->setText(QCoreApplication::translate("MainWindow", "Get Coordinates", nullptr));
         startRobotButton->setText(QCoreApplication::translate("MainWindow", "Start Robot", nullptr));
-        timestampProgramLabel->setText(QCoreApplication::translate("MainWindow", "Timestamp", nullptr));
         programImageLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/newPrefix/example.png\" width=\"1200\" /></p></body></html>", nullptr));
         startProgramHeadlineLabel->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
         startProgramStatusColorLabel->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
@@ -750,4 +735,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // KUKAVISIONUIV1CPOWBG_H
+#endif // KUKAVISIONUIV1VKAWZL_H

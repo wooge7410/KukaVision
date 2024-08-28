@@ -56,7 +56,7 @@ Mat findAndDrawObjects(const Mat& grayBase, const Mat& grayTest, ObjectDetails& 
 
     Mat diff;
     absdiff(grayBase, grayTest, diff);
-    threshold(diff, diff, 210, 255, THRESH_BINARY);
+    threshold(diff, diff, 180, 255, THRESH_BINARY);
     Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(5, 5));
     morphologyEx(diff, diff, MORPH_CLOSE, kernel);
 
@@ -89,14 +89,14 @@ Mat findAndDrawObjects(const Mat& grayBase, const Mat& grayTest, ObjectDetails& 
             float angleToYAxis = abs(90 - abs(rotatedRect.angle));  // Ángulo respecto al eje Y
 
             // Imprimir el ángulo más pequeño
-            float minAngle = min(angleToXAxis, angleToYAxis);
+            float minAngle = angleToXAxis;//min(angleToXAxis, angleToYAxis);
             //cout << "Object center: (" << center.x << ", " << center.y << ") with minimum angle: " << minAngle << " degrees" << endl;
 
 
             Point2f transformedCenter = coordinateTransform(sheetRect.angle, sheetBase, center);
             //cout << "X: " << testTransform.x << "   Y: " << testTransform.y << endl;
 
-            objectDetails.setAngle(minAngle + sheetRect.angle);
+            objectDetails.setAngle(minAngle - sheetRect.angle);
             objectDetails.setCenter(transformedCenter);
             objectDetails.setValid(true);
         }
