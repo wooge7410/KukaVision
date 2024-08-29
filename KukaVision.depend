@@ -2253,7 +2253,7 @@
 	<QtWidgets/QErrorMessage>
 	<string>
 
-1724838728 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/MainWindow.cpp
+1724923135 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/MainWindow.cpp
 	"MainWindow.h"
 
 1724840214 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/object_detection.cpp
@@ -2326,7 +2326,7 @@
 1723704605 /home/kukavision/KukaVision/repo/KukaVision/main/include/neoapi/neoapi_trace.hpp
 	"neoapi_common.hpp"
 
-1724663062 /home/kukavision/KukaVision/repo/KukaVision/main/include/FindCameraDialog.h
+1724921963 /home/kukavision/KukaVision/repo/KukaVision/main/include/FindCameraDialog.h
 	<QtCore/QVariant>
 	<QtWidgets/QApplication>
 	<QtWidgets/QDialog>
@@ -2343,7 +2343,7 @@
 	<QtWidgets/QErrorMessage>
 	<string>
 
-1724773534 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindow.h
+1724921950 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindow.h
 	"MainWindowUI.h"
 	<string>
 	<stdexcept>
@@ -2357,7 +2357,7 @@
 	"CameraStream.h"
 	"EKRLServer.h"
 
-1724833914 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindowUI.h
+1724923307 /home/kukavision/KukaVision/repo/KukaVision/main/include/MainWindowUI.h
 	<QtCore/QVariant>
 	<QtWidgets/QAction>
 	<QtWidgets/QApplication>
@@ -2837,4 +2837,15 @@
 	<cstring>
 	<bits/stdc++.h>
 	<QtWidgets/QLabel>
+
+1724914451 /home/kukavision/KukaVision/repo/KukaVision/main/include/ProjectInfoUI.h
+	<QtCore/QVariant>
+	<QtWidgets/QApplication>
+	<QtWidgets/QDialog>
+	<QtWidgets/QDialogButtonBox>
+	<QtWidgets/QFrame>
+	<QtWidgets/QLabel>
+
+1724913976 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/ProjectInfoUI.cpp
+	"ProjectInfoUI.h"
 

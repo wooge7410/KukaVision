@@ -174,7 +174,7 @@ private:
      *
      * \param currentOptions json& JSON-Object that stores the read option
      * \return void
-     *
+     *delimiter
      */
     void ReadOptionsFromJSON(json& currentOptions);
 
@@ -227,7 +227,7 @@ private:
      * \return string TimeStamp String in Format %Y-%m-%d-%H:%M:%S
      *
      */
-    string generateTimestampString()
+    string generateTimestampString();
 
 
     /** \brief splits a string by the given delimiter

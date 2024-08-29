@@ -666,7 +666,7 @@ public:
         QObject::connect(actionOpen_Console, SIGNAL(triggered()), consoleWindowDockWidget, SLOT(show()));
         QObject::connect(actionExit, SIGNAL(triggered()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

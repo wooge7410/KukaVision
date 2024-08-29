@@ -14,13 +14,13 @@
 				<Compiler>
 					<Add option="-fPIC" />
 					<Add option="-g" />
-					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/main/include" />
+					<Add directory="./include" />
 					<Add directory="/usr/include/opencv4" />
 					<Add directory="/usr/lib/x86_64-linux-gnu/" />
 					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
 				</Compiler>
 				<Linker>
-					<Add library="/home/kukavision/KukaVision/repo/KukaVision/main/lib/libneoapi_cpp.so.1.3.1" />
+					<Add library="./lib/libneoapi_cpp.so.1.3.1" />
 					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so" />
 					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so" />
 					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_core.so" />
@@ -28,8 +28,8 @@
 					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so" />
 					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so" />
 					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so" />
-					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/main/include" />
-					<Add directory="/home/kukavision/KukaVision/repo/KukaVision/main/lib" />
+					<Add directory="./include" />
+					<Add directory="./lib" />
 					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
 					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
 					<Add directory="/usr/include/opencv4" />

@@ -25,6 +25,7 @@ MainWindow::MainWindow(QMainWindow *parent) {
     QObject::connect(stoppCameraViewButton, &QAbstractButton::clicked, [&] {stopCameraView();});
     QObject::connect(getCoordinatesButton, &QAbstractButton::clicked, [&] {GetCoordinates();});
     QObject::connect(startRobotButton, &QAbstractButton::clicked, [&] {StartProgram();});
+    QObject::connect(actionProject_Infos, &QAction::triggered, [&] {OpenProjectInfo();});
 }
 
 
@@ -197,6 +198,9 @@ void MainWindow::StartProgram()
 //Opens the Project-Info
 void MainWindow::OpenProjectInfo()
 {
+    QMessageBox info(windowParent);
+    info.information(windowParent, "Invalid Parameter", "This project was made by Renko Stahlschmidt, Sarah Vásquez and Alexander Klaus in a project at the HSBI.\n\nThe program detects objects by a camera and identifies them with OpenCV and sends the calculated coordinates via Ethernet KRL to a Kuka robot. \n\n More informations can be found in the wiki\nAlexander.Klaus@hsbi.de\nRenko.Stahlschmidt@hsbi.de\nsarah_daniela.vasquez@hsbi.de");
+
     std::cout << "ProjectInfoButton\n";
 } //TODO wird vom Event gecallt -> void
 
