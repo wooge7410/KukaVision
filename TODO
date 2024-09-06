@@ -1,0 +1,12 @@
+# UI-TODOs
+
+- Rename "Z-Offset" and "Z-Offset Final"
+	- maybe "Gripping Height" and "Travel Height"
+- Camera Options: remove Exposure
+- Remove Flip Image button
+- Change "IP" to "IP-Address"
+- Move "Find Camera" Button down, so it is clear it belongs to the Camera Options
+- Maybe add a Seperator (Like under "Find the IP and Port..:") under each Section ("Robot Options", "Working-Area", "Camera-Options")
+- Put "Open Console" Button somwhere else. It is Currently in the Section of the Camera-Options (Maybe even remove it, because we have it in the "View"-Dropdown)
+- Rename "Live View FPS" to "Acquisition Framerate"
+- Bring Widgets on Option Page in order, so that one can "TAB" through the different fields in the options

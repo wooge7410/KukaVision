@@ -1,0 +1,1804 @@
+# depslib dependency file v1.0
+1723447796 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/main.cpp
+	"ui_mainwindow.h"
+	"CameraStream.h"
+	<QtWidgets/QApplication>
+	<QtCore/QObject>
+	<future>
+
+1723472986 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.h
+	<QtCore/QVariant>
+	<QtWidgets/QAction>
+	<QtWidgets/QApplication>
+	<QtWidgets/QCheckBox>
+	<QtWidgets/QDockWidget>
+	<QtWidgets/QFormLayout>
+	<QtWidgets/QFrame>
+	<QtWidgets/QGridLayout>
+	<QtWidgets/QLabel>
+	<QtWidgets/QLineEdit>
+	<QtWidgets/QMainWindow>
+	<QtWidgets/QMenu>
+	<QtWidgets/QMenuBar>
+	<QtWidgets/QPushButton>
+	<QtWidgets/QSpacerItem>
+	<QtWidgets/QStatusBar>
+	<QtWidgets/QTabWidget>
+	<QtWidgets/QTextBrowser>
+	<QtWidgets/QVBoxLayout>
+	<QtWidgets/QWidget>
+	"FindCameraDialog.h"
+	"CameraStream.h"
+	<iostream>
+	<opencv2/opencv.hpp>
+	<opencv2/highgui.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/core.hpp>
+	<string.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QVariant
+	"qvariant.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvariant.h
+	<QtCore/qatomic.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qlist.h>
+	<QtCore/qmetatype.h>
+	<QtCore/qmap.h>
+	<QtCore/qhash.h>
+	<QtCore/qstring.h>
+	<QtCore/qstringlist.h>
+	<QtCore/qobject.h>
+	<QtCore/qbytearraylist.h>
+	<variant>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic.h
+	<QtCore/qglobal.h>
+	<QtCore/qbasicatomic.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobal.h
+	<type_traits>
+	<cstddef>
+	<utility>
+	<assert.h>
+	<stddef.h>
+	<QtCore/qconfig-bootstrapped.h>
+	<QtCore/qconfig.h>
+	<QtCore/qtcore-config.h>
+	<QtCore/qsystemdetection.h>
+	<QtCore/qprocessordetection.h>
+	<QtCore/qcompilerdetection.h>
+	<algorithm>
+	<QtCore/qtypeinfo.h>
+	<QtCore/qsysinfo.h>
+	<QtCore/qlogging.h>
+	<QtCore/qflags.h>
+	<QtCore/qatomic.h>
+	<QtCore/qglobalstatic.h>
+	<QtCore/qnumeric.h>
+	<QtCore/qversiontagging.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig-bootstrapped.h
+
+1585314160 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qconfig.h
+
+1585314166 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtcore-config.h
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsystemdetection.h
+	<QtCore/qglobal.h>
+	<TargetConditionals.h>
+	<Availability.h>
+	<AvailabilityMacros.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qprocessordetection.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcompilerdetection.h
+	<QtCore/qglobal.h>
+	<utility>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtypeinfo.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsysinfo.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlogging.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qflags.h
+	<QtCore/qglobal.h>
+	<initializer_list>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qglobalstatic.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qmutex.h>
+	<mutex>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmutex.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<new>
+	<chrono>
+	<limits>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnumeric.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qversiontagging.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qbasicatomic.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic_bootstrap.h>
+	<QtCore/qatomic_cxx11.h>
+	<QtCore/qatomic_msvc.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_bootstrap.h
+	<QtCore/qgenericatomic.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qgenericatomic.h
+	<QtCore/qglobal.h>
+	<QtCore/qtypeinfo.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_cxx11.h
+	<QtCore/qgenericatomic.h>
+	<atomic>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qatomic_msvc.h
+	<QtCore/qgenericatomic.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qbytearray.h
+	<QtCore/qrefcount.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qarraydata.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	<string>
+	<iterator>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qrefcount.h
+	<QtCore/qatomic.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qnamespace.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qarraydata.h
+	<QtCore/qrefcount.h>
+	<string.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlist.h
+	<QtCore/qalgorithms.h>
+	<QtCore/qiterator.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qarraydata.h>
+	<QtCore/qhashfunctions.h>
+	<QtCore/qvector.h>
+	<QtCore/qcontainertools_impl.h>
+	<algorithm>
+	<initializer_list>
+	<iterator>
+	<list>
+	<stdlib.h>
+	<new>
+	<limits.h>
+	<string.h>
+	<QtCore/qbytearraylist.h>
+	<QtCore/qstringlist.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qalgorithms.h
+	<QtCore/qglobal.h>
+	<intrin.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qiterator.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qhashfunctions.h
+	<QtCore/qstring.h>
+	<QtCore/qpair.h>
+	<numeric>
+	<functional>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstring.h
+	<QtCore/qchar.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstringliteral.h>
+	<QtCore/qstringalgorithms.h>
+	<QtCore/qstringview.h>
+	<string>
+	<iterator>
+	<stdarg.h>
+	<QtCore/qstringbuilder.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qchar.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringliteral.h
+	<QtCore/qarraydata.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringalgorithms.h
+	<QtCore/qnamespace.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringview.h
+	<QtCore/qchar.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qstringliteral.h>
+	<QtCore/qstringalgorithms.h>
+	<string>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringbuilder.h
+	<QtCore/qstring.h>
+	<QtCore/qbytearray.h>
+	<string.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpair.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvector.h
+	<QtCore/qalgorithms.h>
+	<QtCore/qiterator.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qarraydata.h>
+	<QtCore/qhashfunctions.h>
+	<QtCore/qcontainertools_impl.h>
+	<iterator>
+	<initializer_list>
+	<vector>
+	<stdlib.h>
+	<string.h>
+	<algorithm>
+	<QtCore/qpoint.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainertools_impl.h
+	<QtCore/qglobal.h>
+	<iterator>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qpoint.h
+	<QtCore/qnamespace.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qbytearraylist.h
+	<QtCore/qlist.h>
+	<QtCore/qbytearray.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringlist.h
+	<QtCore/qlist.h>
+	<QtCore/qalgorithms.h>
+	<QtCore/qcontainertools_impl.h>
+	<QtCore/qregexp.h>
+	<QtCore/qstring.h>
+	<QtCore/qstringmatcher.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qregexp.h
+	<QtCore/qglobal.h>
+	<QtCore/qstring.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qstringmatcher.h
+	<QtCore/qstring.h>
+	<QtCore/qstringview.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmetatype.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qvarlengtharray.h>
+	<QtCore/qobjectdefs.h>
+	<new>
+	<vector>
+	<list>
+	<map>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qvarlengtharray.h
+	<QtCore/qcontainerfwd.h>
+	<QtCore/qglobal.h>
+	<QtCore/qalgorithms.h>
+	<QtCore/qcontainertools_impl.h>
+	<QtCore/qhashfunctions.h>
+	<algorithm>
+	<initializer_list>
+	<iterator>
+	<new>
+	<string.h>
+	<stdlib.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontainerfwd.h
+	<QtCore/qglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs.h
+	<QtCore/qnamespace.h>
+	<QtCore/qobjectdefs_impl.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobjectdefs_impl.h
+	<QtCore/qnamespace.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmap.h
+	<QtCore/qiterator.h>
+	<QtCore/qlist.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qpair.h>
+	<QtCore/qdebug.h>
+	<functional>
+	<initializer_list>
+	<map>
+	<new>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qdebug.h
+	<QtCore/qalgorithms.h>
+	<QtCore/qhash.h>
+	<QtCore/qlist.h>
+	<QtCore/qmap.h>
+	<QtCore/qpair.h>
+	<QtCore/qtextstream.h>
+	<QtCore/qstring.h>
+	<QtCore/qvector.h>
+	<QtCore/qset.h>
+	<QtCore/qcontiguouscache.h>
+	<QtCore/qsharedpointer.h>
+	<vector>
+	<list>
+	<map>
+	<utility>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qhash.h
+	<QtCore/qchar.h>
+	<QtCore/qiterator.h>
+	<QtCore/qlist.h>
+	<QtCore/qrefcount.h>
+	<QtCore/qhashfunctions.h>
+	<QtCore/qcontainertools_impl.h>
+	<algorithm>
+	<initializer_list>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qtextstream.h
+	<QtCore/qiodevice.h>
+	<QtCore/qstring.h>
+	<QtCore/qchar.h>
+	<QtCore/qlocale.h>
+	<QtCore/qscopedpointer.h>
+	<stdio.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qiodevice.h
+	<QtCore/qglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qscopedpointer.h>
+	<QtCore/qstring.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject.h
+	<QtCore/qobjectdefs.h>
+	<QtCore/qstring.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qlist.h>
+	<QtCore/qcoreevent.h>
+	<QtCore/qscopedpointer.h>
+	<QtCore/qmetatype.h>
+	<QtCore/qobject_impl.h>
+	<chrono>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcoreevent.h
+	<QtCore/qnamespace.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qobjectdefs.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qscopedpointer.h
+	<QtCore/qglobal.h>
+	<stdlib.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qobject_impl.h
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qlocale.h
+	<QtCore/qvariant.h>
+	<QtCore/qstring.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qshareddata.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qshareddata.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qhash.h>
+	<QtCore/qhashfunctions.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qset.h
+	<QtCore/qhash.h>
+	<QtCore/qcontainertools_impl.h>
+	<initializer_list>
+	<iterator>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcontiguouscache.h
+	<QtCore/qatomic.h>
+	<limits.h>
+	<new>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsharedpointer.h
+	<QtCore/qglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qshareddata.h>
+	<QtCore/qsharedpointer_impl.h>
+	<memory>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsharedpointer_impl.h
+	<new>
+	<QtCore/qatomic.h>
+	<QtCore/qobject.h>
+	<QtCore/qhash.h>
+	<QtCore/qhashfunctions.h>
+	<memory>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QAction
+	"qaction.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qaction.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtGui/qkeysequence.h>
+	<QtCore/qstring.h>
+	<QtWidgets/qwidget.h>
+	<QtCore/qvariant.h>
+	<QtGui/qicon.h>
+	<QtWidgets/qactiongroup.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h
+	<QtGui/qtguiglobal.h>
+	<QtWidgets/qtwidgets-config.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtguiglobal.h
+	<QtCore/qglobal.h>
+	<QtGui/qtgui-config.h>
+
+1585314174 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtgui-config.h
+
+1585314175 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qtwidgets-config.h
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qkeysequence.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qstring.h>
+	<QtCore/qobjectdefs.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qwidget.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qobject.h>
+	<QtCore/qmargins.h>
+	<QtGui/qpaintdevice.h>
+	<QtGui/qpalette.h>
+	<QtGui/qfont.h>
+	<QtGui/qfontmetrics.h>
+	<QtGui/qfontinfo.h>
+	<QtWidgets/qsizepolicy.h>
+	<QtGui/qregion.h>
+	<QtGui/qbrush.h>
+	<QtGui/qcursor.h>
+	<QtGui/qkeysequence.h>
+	<QtGui/qevent.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qwindowdefs.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qnamespace.h>
+	<QtGui/qwindowdefs_win.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qwindowdefs_win.h
+	<QtGui/qtguiglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qmargins.h
+	<QtCore/qnamespace.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpaintdevice.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qrect.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qrect.h
+	<QtCore/qmargins.h>
+	<QtCore/qsize.h>
+	<QtCore/qpoint.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qsize.h
+	<QtCore/qnamespace.h>
+	<QtCore/qmargins.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpalette.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qwindowdefs.h>
+	<QtGui/qcolor.h>
+	<QtGui/qbrush.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qcolor.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qrgb.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstringlist.h>
+	<QtGui/qrgba64.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qrgb.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qprocessordetection.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qrgba64.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qprocessordetection.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qbrush.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qpair.h>
+	<QtCore/qpoint.h>
+	<QtCore/qvector.h>
+	<QtCore/qscopedpointer.h>
+	<QtGui/qcolor.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qtransform.h>
+	<QtGui/qimage.h>
+	<QtGui/qpixmap.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qmatrix.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qpolygon.h>
+	<QtGui/qregion.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qline.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpolygon.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qvector.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qregion.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qatomic.h>
+	<QtCore/qrect.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qdatastream.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qdatastream.h
+	<QtCore/qscopedpointer.h>
+	<QtCore/qiodevice.h>
+	<QtCore/qpair.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qline.h
+	<QtCore/qpoint.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtransform.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qpainterpath.h>
+	<QtGui/qpolygon.h>
+	<QtGui/qregion.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qline.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpainterpath.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qmatrix.h>
+	<QtCore/qglobal.h>
+	<QtCore/qrect.h>
+	<QtCore/qline.h>
+	<QtCore/qvector.h>
+	<QtCore/qscopedpointer.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qimage.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qcolor.h>
+	<QtGui/qrgb.h>
+	<QtGui/qpaintdevice.h>
+	<QtGui/qpixelformat.h>
+	<QtGui/qtransform.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qrect.h>
+	<QtCore/qstring.h>
+	<QtCore/qstringlist.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpixelformat.h
+	<QtGui/qtguiglobal.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpixmap.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qpaintdevice.h>
+	<QtGui/qcolor.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstring.h>
+	<QtCore/qsharedpointer.h>
+	<QtGui/qimage.h>
+	<QtGui/qtransform.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qfont.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qstring.h>
+	<QtCore/qsharedpointer.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qfontmetrics.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qfont.h>
+	<QtCore/qsharedpointer.h>
+	<QtCore/qrect.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qfontinfo.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qfont.h>
+	<QtCore/qsharedpointer.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qsizepolicy.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qalgorithms.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qcursor.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qpoint.h>
+	<QtGui/qwindowdefs.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qevent.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qwindowdefs.h>
+	<QtGui/qregion.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstring.h>
+	<QtGui/qkeysequence.h>
+	<QtCore/qcoreevent.h>
+	<QtCore/qvariant.h>
+	<QtCore/qmap.h>
+	<QtCore/qvector.h>
+	<QtCore/qset.h>
+	<QtCore/qurl.h>
+	<QtCore/qfile.h>
+	<QtGui/qvector2d.h>
+	<QtGui/qtouchdevice.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qurl.h
+	<QtCore/qbytearray.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qstring.h>
+	<QtCore/qlist.h>
+	<QtCore/qpair.h>
+	<QtCore/qglobal.h>
+	<QtCore/qurlquery.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qurlquery.h
+	<QtCore/qpair.h>
+	<QtCore/qshareddata.h>
+	<QtCore/qurl.h>
+	<QtCore/qstringlist.h>
+	<initializer_list>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qfile.h
+	<QtCore/qfiledevice.h>
+	<QtCore/qstring.h>
+	<stdio.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qfiledevice.h
+	<QtCore/qiodevice.h>
+	<QtCore/qstring.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qvector2d.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qpoint.h>
+	<QtCore/qmetatype.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtouchdevice.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qobject.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qicon.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qsize.h>
+	<QtCore/qlist.h>
+	<QtGui/qpixmap.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qactiongroup.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qaction.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QApplication
+	"qapplication.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qapplication.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qcoreapplication.h>
+	<QtGui/qwindowdefs.h>
+	<QtCore/qpoint.h>
+	<QtCore/qsize.h>
+	<QtGui/qcursor.h>
+	<QtWidgets/qdesktopwidget.h>
+	<QtGui/qguiapplication.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qcoreapplication.h
+	<QtCore/qglobal.h>
+	<QtCore/qstring.h>
+	<QtCore/qobject.h>
+	<QtCore/qcoreevent.h>
+	<QtCore/qeventloop.h>
+	<QtCore/qscopedpointer.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qeventloop.h
+	<QtCore/qobject.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qdesktopwidget.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qguiapplication.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qcoreapplication.h>
+	<QtGui/qwindowdefs.h>
+	<QtGui/qinputmethod.h>
+	<QtCore/qlocale.h>
+	<QtCore/qpoint.h>
+	<QtCore/qsize.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qinputmethod.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qobject.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QCheckBox
+	"qcheckbox.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qcheckbox.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractbutton.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractbutton.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtGui/qicon.h>
+	<QtGui/qkeysequence.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDockWidget
+	"qdockwidget.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qdockwidget.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QFormLayout
+	"qformlayout.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qformlayout.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/QLayout>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QLayout
+	"qlayout.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qlayout.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qobject.h>
+	<QtWidgets/qlayoutitem.h>
+	<QtWidgets/qsizepolicy.h>
+	<QtCore/qrect.h>
+	<QtCore/qmargins.h>
+	<limits.h>
+	<QtWidgets/qboxlayout.h>
+	<QtWidgets/qgridlayout.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qlayoutitem.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qsizepolicy.h>
+	<QtCore/qrect.h>
+	<limits.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qboxlayout.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qlayout.h>
+	<QtWidgets/qwidget.h>
+	<limits.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qgridlayout.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qlayout.h>
+	<QtWidgets/qwidget.h>
+	<limits.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QFrame
+	"qframe.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qframe.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QGridLayout
+	"qgridlayout.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QLabel
+	"qlabel.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qlabel.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qframe.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QLineEdit
+	"qlineedit.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qlineedit.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qframe.h>
+	<QtGui/qtextcursor.h>
+	<QtCore/qstring.h>
+	<QtCore/qmargins.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtextcursor.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qstring.h>
+	<QtCore/qshareddata.h>
+	<QtGui/qtextformat.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtextformat.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qcolor.h>
+	<QtGui/qfont.h>
+	<QtCore/qshareddata.h>
+	<QtCore/qvector.h>
+	<QtCore/qvariant.h>
+	<QtGui/qpen.h>
+	<QtGui/qbrush.h>
+	<QtGui/qtextoption.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpen.h
+	<QtGui/qtguiglobal.h>
+	<QtGui/qcolor.h>
+	<QtGui/qbrush.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtextoption.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qchar.h>
+	<QtCore/qmetatype.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QMainWindow
+	"qmainwindow.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qmainwindow.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+	<QtWidgets/qtabwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qtabwidget.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+	<QtGui/qicon.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QMenu
+	"qmenu.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qmenu.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+	<QtCore/qstring.h>
+	<QtGui/qicon.h>
+	<QtWidgets/qaction.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QMenuBar
+	"qmenubar.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qmenubar.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qmenu.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QPushButton
+	"qpushbutton.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qpushbutton.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractbutton.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QSpacerItem
+	"qlayoutitem.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QStatusBar
+	"qstatusbar.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qstatusbar.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QTabWidget
+	"qtabwidget.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QTextBrowser
+	"qtextbrowser.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qtextbrowser.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qtextedit.h>
+	<QtCore/qurl.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qtextedit.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractscrollarea.h>
+	<QtGui/qtextdocument.h>
+	<QtGui/qtextoption.h>
+	<QtGui/qtextcursor.h>
+	<QtGui/qtextformat.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractscrollarea.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qframe.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qtextdocument.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qsize.h>
+	<QtCore/qrect.h>
+	<QtCore/qvariant.h>
+	<QtGui/qfont.h>
+	<QtCore/qurl.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QVBoxLayout
+	"qboxlayout.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QWidget
+	"qwidget.h"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/FindCameraDialog.h
+	<QtCore/QVariant>
+	<QtWidgets/QApplication>
+	<QtWidgets/QDialog>
+	<QtWidgets/QDialogButtonBox>
+	<QtWidgets/QListWidget>
+	<string>
+	"neoapi/neoapi.hpp"
+	<neoapi/neoapi_camera_info.hpp>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDialog
+	"qdialog.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qdialog.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QDialogButtonBox
+	"qdialogbuttonbox.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QListWidget
+	"qlistwidget.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qlistwidget.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qlistview.h>
+	<QtCore/qvariant.h>
+	<QtCore/qvector.h>
+	<QtCore/qitemselectionmodel.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qlistview.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractitemview.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractitemview.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractscrollarea.h>
+	<QtCore/qabstractitemmodel.h>
+	<QtCore/qitemselectionmodel.h>
+	<QtWidgets/qabstractitemdelegate.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qabstractitemmodel.h
+	<QtCore/qvariant.h>
+	<QtCore/qobject.h>
+	<QtCore/qhash.h>
+	<QtCore/qvector.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qitemselectionmodel.h
+	<QtCore/qglobal.h>
+	<QtCore/qset.h>
+	<QtCore/qvector.h>
+	<QtCore/qlist.h>
+	<QtCore/qabstractitemmodel.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qobject.h>
+	<QtWidgets/qstyleoption.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qstyleoption.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qlocale.h>
+	<QtCore/qvariant.h>
+	<QtWidgets/qabstractspinbox.h>
+	<QtGui/qicon.h>
+	<QtGui/qmatrix.h>
+	<QtWidgets/qslider.h>
+	<QtWidgets/qstyle.h>
+	<QtWidgets/qtabbar.h>
+	<QtWidgets/qtabwidget.h>
+	<QtWidgets/qrubberband.h>
+	<QtWidgets/qframe.h>
+	<QtCore/qabstractitemmodel.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractspinbox.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+	<QtGui/qvalidator.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qvalidator.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qstring.h>
+	<QtCore/qregexp.h>
+	<QtCore/qregularexpression.h>
+	<QtCore/qlocale.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/qregularexpression.h
+	<QtCore/qglobal.h>
+	<QtCore/qstring.h>
+	<QtCore/qstringlist.h>
+	<QtCore/qshareddata.h>
+	<QtCore/qvariant.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qslider.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractslider.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qabstractslider.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qstyle.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qrect.h>
+	<QtCore/qsize.h>
+	<QtGui/qicon.h>
+	<QtGui/qpixmap.h>
+	<QtGui/qpalette.h>
+	<QtWidgets/qsizepolicy.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qtabbar.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qrubberband.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qwidget.h>
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi.hpp
+	"neoapi_common.hpp"
+	"neoapi_camera.hpp"
+	"neoapi_camera_info.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_image_converter.hpp"
+	"neoapi_image.hpp"
+	"neoapi_trace.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_common.hpp
+	<string.h>
+	<cstddef>
+	<cstdint>
+	<iostream>
+	"neoapi/neoapi.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_camera.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_event.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_featureaccess.hpp
+	"neoapi_common.hpp"
+	"neoapi_feature.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_feature.hpp
+	"neoapi_common.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_event.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_camera_info.hpp
+	"neoapi_common.hpp"
+	"neoapi_camera.hpp"
+	"neoapi_event.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_image_converter.hpp
+	<string>
+	<memory>
+	"neoapi_common.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_image.hpp
+	"neoapi_common.hpp"
+	"neoapi_featureaccess.hpp"
+	"neoapi_image_converter.hpp"
+
+1720003952 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/neoapi/neoapi_trace.hpp
+	"neoapi_common.hpp"
+
+1723472986 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/ui_mainwindow.cpp
+	"ui_mainwindow.h"
+
+1720603343 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/eventHandler.h
+	<QtWidgets/QLineEdit>
+	<iostream>
+
+1720603351 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/tests/CameraViewPOC/eventHandler.cpp
+	"eventHandler.h"
+
+1720003952 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/FindCameraDialog.cpp
+	"FindCameraDialog.h"
+
+1723471811 source:/home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/src/CameraStream.cpp
+	"CameraStream.h"
+
+1723470350 /home/kukavision/KukaVision/repo/KukaVision/CameraViewPOC/include/CameraStream.h
+	<string.h>
+	"neoapi/neoapi.hpp"
+	<opencv2/opencv.hpp>
+	<opencv2/highgui.hpp>
+	<opencv2/core.hpp>
+	<QtWidgets/QLabel>
+	<QtGui/QImage>
+	<thread>
+	<future>
+	<unistd.h>
+
+1633794506 /usr/include/opencv4/opencv2/opencv.hpp
+	"opencv2/opencv_modules.hpp"
+	"opencv2/core.hpp"
+	"opencv2/calib3d.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/dnn.hpp"
+	"opencv2/flann.hpp"
+	"opencv2/highgui.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/ml.hpp"
+	"opencv2/objdetect.hpp"
+	"opencv2/photo.hpp"
+	"opencv2/stitching.hpp"
+	"opencv2/video.hpp"
+	"opencv2/videoio.hpp"
+
+1643813711 /usr/include/opencv4/opencv2/opencv_modules.hpp
+
+1633794506 /usr/include/opencv4/opencv2/core.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/base.hpp"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/traits.hpp"
+	"opencv2/core/matx.hpp"
+	"opencv2/core/types.hpp"
+	"opencv2/core/mat.hpp"
+	"opencv2/core/persistence.hpp"
+	"opencv2/core/operations.hpp"
+	"opencv2/core/cvstd.inl.hpp"
+	"opencv2/core/utility.hpp"
+	"opencv2/core/optim.hpp"
+	"opencv2/core/ovx.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/cvdef.h
+	"opencv2/core/version.hpp"
+	"cvconfig.h"
+	<limits>
+	<limits.h>
+	"opencv2/core/hal/interface.h"
+	"cv_cpu_dispatch.h"
+	<intrin.h>
+	<array>
+	<cstdint>
+	<stdint.h>
+	<stdint.h>
+	"opencv2/core/fast_math.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/version.hpp
+
+1633794506 /usr/include/opencv4/opencv2/core/hal/interface.h
+	<cstddef>
+	<stddef.h>
+	<stdbool.h>
+	<cstdint>
+	<stdint.h>
+
+1633794506 /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h
+	"cv_cpu_config.h"
+	"cv_cpu_helper.h"
+	<emmintrin.h>
+	<pmmintrin.h>
+	<tmmintrin.h>
+	<smmintrin.h>
+	<nmmintrin.h>
+	<nmmintrin.h>
+	<popcntintrin.h>
+	<immintrin.h>
+	<arm_neon.h>
+	<immintrin.h>
+	<immintrin.h>
+	<immintrin.h>
+	<Intrin.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<riscv-vector.h>
+	<arm_neon.h>
+	<altivec.h>
+	"hal/msa_macros.h"
+	<wasm_simd128.h>
+	<riscv_vector.h>
+	<emmintrin.h>
+	<Intrin.h>
+	<arm_neon.h>
+	<arm_neon.h>
+	<altivec.h>
+	<immintrin.h>
+
+1633794506 /usr/include/opencv4/opencv2/core/cv_cpu_helper.h
+
+1633794506 /usr/include/opencv4/opencv2/core/hal/msa_macros.h
+	"msa.h"
+	<stdint.h>
+
+1633794506 /usr/include/opencv4/opencv2/core/fast_math.hpp
+	"opencv2/core/cvdef.h"
+	<cmath>
+	<fastmath.h>
+	<math.h>
+	<emmintrin.h>
+	<altivec.h>
+
+1633794506 /usr/include/opencv4/opencv2/core/base.hpp
+	"opencv2/opencv_modules.hpp"
+	<climits>
+	<algorithm>
+	"opencv2/core/cvdef.h"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/neon_utils.hpp"
+	"opencv2/core/vsx_utils.hpp"
+	"opencv2/core/check.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/cvstd.hpp
+	"opencv2/core/cvdef.h"
+	<cstddef>
+	<cstring>
+	<cctype>
+	<string>
+	<algorithm>
+	<utility>
+	<cstdlib>
+	<cmath>
+	"cvstd_wrapper.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp
+	"opencv2/core/cvdef.h"
+	<string>
+	<memory>
+	<type_traits>
+
+1633794506 /usr/include/opencv4/opencv2/core/neon_utils.hpp
+	"opencv2/core/cvdef.h"
+
+1633794506 /usr/include/opencv4/opencv2/core/vsx_utils.hpp
+	"opencv2/core/cvdef.h"
+	<assert.h>
+
+1633794506 /usr/include/opencv4/opencv2/core/check.hpp
+	<opencv2/core/base.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/core/traits.hpp
+	"opencv2/core/cvdef.h"
+
+1633794506 /usr/include/opencv4/opencv2/core/matx.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/base.hpp"
+	"opencv2/core/traits.hpp"
+	"opencv2/core/saturate.hpp"
+	<initializer_list>
+
+1633794506 /usr/include/opencv4/opencv2/core/saturate.hpp
+	"opencv2/core/cvdef.h"
+	"opencv2/core/fast_math.hpp"
+
+1643813711 /usr/include/opencv4/opencv2/core/types.hpp
+	<climits>
+	<cfloat>
+	<vector>
+	<limits>
+	"opencv2/core/cvdef.h"
+	"opencv2/core/cvstd.hpp"
+	"opencv2/core/matx.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/mat.hpp
+	"opencv2/core/matx.hpp"
+	"opencv2/core/types.hpp"
+	"opencv2/core/bufferpool.hpp"
+	<type_traits>
+	"opencv2/core/mat.inl.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/bufferpool.hpp
+
+1633794506 /usr/include/opencv4/opencv2/core/mat.inl.hpp
+
+1633794506 /usr/include/opencv4/opencv2/core/persistence.hpp
+	"opencv2/core/types.hpp"
+	"opencv2/core/mat.hpp"
+	"opencv2/core.hpp"
+	<time.h>
+
+1633794506 /usr/include/opencv4/opencv2/core/operations.hpp
+	<cstdio>
+
+1633794506 /usr/include/opencv4/opencv2/core/cvstd.inl.hpp
+	<complex>
+	<ostream>
+	<sstream>
+
+1633794506 /usr/include/opencv4/opencv2/core/utility.hpp
+	"opencv2/core.hpp"
+	<ostream>
+	<functional>
+	<mutex>
+	"opencv2/core/utils/instrumentation.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/utils/instrumentation.hpp
+	<opencv2/core/utility.hpp>
+	<opencv2/core/utils/tls.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/core/utils/tls.hpp
+
+1633794506 /usr/include/opencv4/opencv2/core/optim.hpp
+	"opencv2/core.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/ovx.hpp
+	"cvdef.h"
+
+1633794506 /usr/include/opencv4/opencv2/calib3d.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/core/affine.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/features2d.hpp
+	"opencv2/opencv_modules.hpp"
+	"opencv2/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/flann/miniflann.hpp
+	"opencv2/core.hpp"
+	"opencv2/flann/defines.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/defines.h
+	"config.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/config.h
+
+1633794506 /usr/include/opencv4/opencv2/core/affine.hpp
+	<opencv2/core.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/dnn.hpp
+	<opencv2/dnn/dnn.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/dnn/dnn.hpp
+	<vector>
+	<opencv2/core.hpp>
+	"opencv2/core/async.hpp"
+	"../dnn/version.hpp"
+	<opencv2/dnn/dict.hpp>
+	<opencv2/dnn/layer.hpp>
+	<opencv2/dnn/dnn.inl.hpp>
+	<opencv2/dnn/utils/inference_engine.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/core/async.hpp
+	<opencv2/core/mat.hpp>
+	<chrono>
+
+1633794506 /usr/include/opencv4/opencv2/dnn/version.hpp
+
+1633794506 /usr/include/opencv4/opencv2/dnn/dict.hpp
+	<opencv2/core.hpp>
+	<map>
+	<ostream>
+	<opencv2/dnn/dnn.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/dnn/layer.hpp
+	<opencv2/dnn.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp
+	<opencv2/dnn.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp
+	"../dnn.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/flann.hpp
+	"opencv2/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+	"opencv2/flann/flann_base.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/flann/flann_base.hpp
+	<vector>
+	<cstdio>
+	"general.h"
+	"matrix.h"
+	"params.h"
+	"saving.h"
+	"all_indices.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/general.h
+	"opencv2/core.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/flann/matrix.h
+	<stdio.h>
+
+1633794506 /usr/include/opencv4/opencv2/flann/params.h
+	"any.h"
+	"general.h"
+	<iostream>
+	<map>
+
+1633794506 /usr/include/opencv4/opencv2/flann/any.h
+	"defines.h"
+	<stdexcept>
+	<ostream>
+	<typeinfo>
+
+1633794506 /usr/include/opencv4/opencv2/flann/saving.h
+	<cstring>
+	<vector>
+	"general.h"
+	"nn_index.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/nn_index.h
+	"matrix.h"
+	"result_set.h"
+	"params.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/result_set.h
+	<algorithm>
+	<cstring>
+	<iostream>
+	<limits>
+	<set>
+	<vector>
+
+1633794506 /usr/include/opencv4/opencv2/flann/all_indices.h
+	"general.h"
+	"nn_index.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"hierarchical_clustering_index.h"
+	"lsh_index.h"
+	"autotuned_index.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/kdtree_index.h
+	<algorithm>
+	<map>
+	<cstring>
+	"nn_index.h"
+	"dynamic_bitset.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/dynamic_bitset.h
+	<boost/dynamic_bitset.hpp>
+	<limits.h>
+	"dist.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/dist.h
+	<cmath>
+	<cstdlib>
+	<string.h>
+	<stdint.h>
+	"defines.h"
+	<Intrin.h>
+	"arm_neon.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/heap.h
+	<algorithm>
+	<vector>
+	<unordered_map>
+
+1633794506 /usr/include/opencv4/opencv2/flann/allocator.h
+	<stdlib.h>
+	<stdio.h>
+
+1633794506 /usr/include/opencv4/opencv2/flann/random.h
+	<algorithm>
+	<cstdlib>
+	<vector>
+
+1633794506 /usr/include/opencv4/opencv2/flann/kdtree_single_index.h
+	<algorithm>
+	<map>
+	<cstring>
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/kmeans_index.h
+	<algorithm>
+	<map>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+	"logger.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/logger.h
+	<stdio.h>
+	<stdarg.h>
+	"defines.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/composite_index.h
+	"nn_index.h"
+	"kdtree_index.h"
+	"kmeans_index.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/linear_index.h
+	"nn_index.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h
+	<algorithm>
+	<map>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/lsh_index.h
+	<algorithm>
+	<cstring>
+	<map>
+	<vector>
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"lsh_table.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/lsh_table.h
+	<algorithm>
+	<iostream>
+	<iomanip>
+	<limits.h>
+	<unordered_map>
+	<map>
+	<math.h>
+	<stddef.h>
+	"dynamic_bitset.h"
+	"matrix.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/autotuned_index.h
+	<sstream>
+	"nn_index.h"
+	"ground_truth.h"
+	"index_testing.h"
+	"sampling.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"logger.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/ground_truth.h
+	"dist.h"
+	"matrix.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/index_testing.h
+	<cstring>
+	<cmath>
+	"matrix.h"
+	"nn_index.h"
+	"result_set.h"
+	"logger.h"
+	"timer.h"
+
+1633794506 /usr/include/opencv4/opencv2/flann/timer.h
+	<time.h>
+	"opencv2/core.hpp"
+	"opencv2/core/utility.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/flann/sampling.h
+	"matrix.h"
+	"random.h"
+
+1633794506 /usr/include/opencv4/opencv2/highgui.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgcodecs.hpp"
+	"opencv2/videoio.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/imgcodecs.hpp
+	"opencv2/core.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/videoio.hpp
+	"opencv2/core.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/imgproc.hpp
+	"opencv2/core.hpp"
+	"./imgproc/segmentation.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/imgproc/segmentation.hpp
+	"opencv2/imgproc.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/ml.hpp
+	"opencv2/core.hpp"
+	<float.h>
+	<map>
+	<iostream>
+	<opencv2/ml/ml.inl.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/ml/ml.inl.hpp
+
+1633794506 /usr/include/opencv4/opencv2/objdetect.hpp
+	"opencv2/core.hpp"
+	"opencv2/objdetect/detection_based_tracker.hpp"
+	"opencv2/objdetect/face.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp
+	<opencv2/core.hpp>
+	<vector>
+
+1633794506 /usr/include/opencv4/opencv2/objdetect/face.hpp
+	<opencv2/core.hpp>
+
+1633794506 /usr/include/opencv4/opencv2/photo.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/stitching/warpers.hpp"
+	"opencv2/stitching/detail/matchers.hpp"
+	"opencv2/stitching/detail/motion_estimators.hpp"
+	"opencv2/stitching/detail/exposure_compensate.hpp"
+	"opencv2/stitching/detail/seam_finders.hpp"
+	"opencv2/stitching/detail/blenders.hpp"
+	"opencv2/stitching/detail/camera.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/warpers.hpp
+	"opencv2/stitching/detail/warpers.hpp"
+	<string>
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda.hpp"
+	"opencv2/imgproc.hpp"
+	"opencv2/opencv_modules.hpp"
+	"warpers_inl.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/cuda.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda_types.hpp"
+	<opencv2/opencv.hpp>
+	"opencv2/core/cuda.inl.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/core/cuda_types.hpp
+
+1633794506 /usr/include/opencv4/opencv2/core/cuda.inl.hpp
+	"opencv2/core/cuda.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp
+	"opencv2/core.hpp"
+	"warpers.hpp"
+	<limits>
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp
+	"opencv2/core.hpp"
+	"opencv2/features2d.hpp"
+	"opencv2/opencv_modules.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp
+	"opencv2/core.hpp"
+	"matchers.hpp"
+	"util.hpp"
+	"camera.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/util.hpp
+	<list>
+	"opencv2/core.hpp"
+	"util_inl.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp
+	<queue>
+	"opencv2/core.hpp"
+	"util.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/camera.hpp
+	"opencv2/core.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp
+	"opencv2/core.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp
+	<set>
+	"opencv2/core.hpp"
+	"opencv2/opencv_modules.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp
+	"opencv2/core.hpp"
+	"opencv2/core/cuda.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/video.hpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/video/background_segm.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/video/tracking.hpp
+	"opencv2/core.hpp"
+	"opencv2/imgproc.hpp"
+
+1633794506 /usr/include/opencv4/opencv2/video/background_segm.hpp
+	"opencv2/core.hpp"
+
+1714989658 /usr/include/opencv4/opencv2
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/QImage
+	"qimage.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtCore/QObject
+	"qobject.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/QGraphicsView
+	"qgraphicsview.h"
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qgraphicsview.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qmetatype.h>
+	<QtGui/qpainter.h>
+	<QtWidgets/qscrollarea.h>
+	<QtWidgets/qgraphicsscene.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtGui/qpainter.h
+	<QtGui/qtguiglobal.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qrect.h>
+	<QtCore/qpoint.h>
+	<QtCore/qscopedpointer.h>
+	<QtGui/qpixmap.h>
+	<QtGui/qimage.h>
+	<QtGui/qtextoption.h>
+	<QtGui/qpolygon.h>
+	<QtGui/qpen.h>
+	<QtGui/qbrush.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qtransform.h>
+	<QtGui/qfontinfo.h>
+	<QtGui/qfontmetrics.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qscrollarea.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtWidgets/qabstractscrollarea.h>
+
+1585302570 /home/kukavision/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets/qgraphicsscene.h
+	<QtWidgets/qtwidgetsglobal.h>
+	<QtCore/qobject.h>
+	<QtCore/qpoint.h>
+	<QtCore/qrect.h>
+	<QtGui/qbrush.h>
+	<QtGui/qfont.h>
+	<QtGui/qtransform.h>
+	<QtGui/qmatrix.h>
+	<QtGui/qpen.h>
+
+1633794506 /usr/include/opencv4/opencv2/highgui/highgui.hpp
+	"opencv2/highgui.hpp"
+

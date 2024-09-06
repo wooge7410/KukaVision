@@ -1,0 +1,109 @@
+#include <opencv2/opencv.hpp>
+#include <iostream>
+
+using namespace cv;
+using namespace std;
+
+// Function Declarations
+void drawRectAndAxes(Mat& image, Point2f center, Point2f rectPoints[4], float angle);
+bool isContourSquare(const vector<Point>& contour);
+void findAndDrawObjects(const Mat& base, const Mat& test);
+
+void findAndDrawObjects(const Mat& base, const Mat& test) {
+    Mat grayBase, grayTest;
+    cvtColor(base, grayBase, COLOR_BGR2GRAY);
+    cvtColor(test, grayTest, COLOR_BGR2GRAY);
+
+    Mat brightAreas;
+    threshold(grayTest, brightAreas, 180, 255, THRESH_BINARY);  // Adjust threshold for detecting white areas
+
+    vector<vector<Point>> sheetContours;
+    findContours(brightAreas, sheetContours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    Mat output = test.clone();
+
+     if (!sheetContours.empty()) {
+        // Suponiendo que el contorno más grande es la hoja blanca
+        sort(sheetContours.begin(), sheetContours.end(), [](const vector<Point>& a, const vector<Point>& b) {
+            return contourArea(a) > contourArea(b);
+        });
+        vector<Point> largestSheetContour = sheetContours[0];
+
+        RotatedRect sheetRect = minAreaRect(largestSheetContour);
+        Point2f sheetRectPoints[4];
+        sheetRect.points(sheetRectPoints);
+        for (int j = 0; j < 4; j++) {
+            line(output, sheetRectPoints[j], sheetRectPoints[(j+1)%4], Scalar(0, 0, 255), 2);  // Dibujar rectángulo rojo
+        }
+        // Calculando e imprimiendo el ángulo respecto al eje 'y'
+        float angle = sheetRect.angle;
+        if (sheetRect.size.width < sheetRect.size.height) {
+            angle = 90 + angle;  // Ajustar el ángulo si el rectángulo está girado
+        }
+        cout << "Degrees with respect to axis 'y': " << angle << " grados" << endl;
+        }
+
+
+    // Existing code for object detection
+    Mat diff;
+    absdiff(grayBase, grayTest, diff);
+    threshold(diff, diff, 30, 255, THRESH_BINARY);
+
+    Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(5, 5));
+    morphologyEx(diff, diff, MORPH_CLOSE, kernel);
+
+    vector<vector<Point>> contours;
+    findContours(diff, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+
+    if (!contours.empty()) {
+        sort(contours.begin(), contours.end(), [](const vector<Point>& a, const vector<Point>& b) {
+            return contourArea(a) > contourArea(b);
+        });
+        vector<Point> largestContour = contours[0];
+
+        RotatedRect rotatedRect = minAreaRect(largestContour);
+        Point2f rectPoints[4];
+        rotatedRect.points(rectPoints);
+
+        // Draw both principal axes and corners
+        Point2f center = rotatedRect.center;
+        drawRectAndAxes(output, center, rectPoints, rotatedRect.angle);
+    }
+
+    imshow("Detected Objects", output);
+    waitKey(0);
+}
+
+void drawRectAndAxes(Mat& image, Point2f center, Point2f rectPoints[4], float angle) {
+    for (int j = 0; j < 4; j++) {
+        line(image, rectPoints[j], rectPoints[(j+1)%4], Scalar(0, 255, 0), 2);
+        circle(image, rectPoints[j], 5, Scalar(255, 255, 0), -1);
+        cout << "Corner " << j << " coordinates: (" << rectPoints[j].x << ", " << rectPoints[j].y << ")" << endl;
+    }
+    Vec2f majorAxis(cos(angle * CV_PI / 180.0), sin(angle * CV_PI / 180.0));
+    Vec2f minorAxis(-majorAxis[1], majorAxis[0]);
+    line(image, center, Point(center.x + majorAxis[0] * 100, center.y + majorAxis[1] * 100), Scalar(255, 0, 0), 2);
+    line(image, center, Point(center.x + minorAxis[0] * 100, center.y + minorAxis[1] * 100), Scalar(0, 0, 255), 2);
+    circle(image, center, 5, Scalar(255, 0, 0), -1);
+    cout << "Center coordinates: (" << center.x << ", " << center.y << ")" << endl;
+}
+
+bool isContourSquare(const vector<Point>& contour) {
+    RotatedRect rect = minAreaRect(contour);
+    Point2f vertices[4];
+    rect.points(vertices);
+    double ratio = fabs(norm(vertices[0] - vertices[1]) / norm(vertices[1] - vertices[2]));
+    return ratio > 0.9 && ratio < 1.1;  // Aspect ratio close to 1
+}
+
+int main() {
+    Mat base = imread("/home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/240626-2.bmp", IMREAD_COLOR);
+    Mat test = imread("/home/kukavision/KukaVision/repo/KukaVision/NeoAPI_Test/240626-1.bmp", IMREAD_COLOR);
+
+    if (base.empty() || test.empty()) {
+        cout << "Error loading the images" << endl;
+        return -1;
+    }
+
+    findAndDrawObjects(base, test);
+    return 0;
+}

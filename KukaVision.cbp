@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="KukaVision" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/KukaVision" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fPIC" />
+					<Add option="-g" />
+					<Add directory="./include" />
+					<Add directory="/usr/include/opencv4" />
+					<Add directory="/usr/lib/x86_64-linux-gnu/" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
+				</Compiler>
+				<Linker>
+					<Add library="./lib/libneoapi_cpp.so.1.3.1" />
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so" />
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_core.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_highgui.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so" />
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so" />
+					<Add directory="./include" />
+					<Add directory="./lib" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib" />
+					<Add directory="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/include" />
+					<Add directory="/usr/include/opencv4" />
+					<Add directory="/usr/lib/x86_64-linux-gnu/" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/KukaVision" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="/home/kukavision/KukaVision/repo/KukaVision/lib/libneoapi_cpp.so.1.3.1" />
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Core.so" />
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Widgets.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_core.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_highgui.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so" />
+					<Add library="/home/kukavision/Qt5.14.2/5.14.2/gcc_64/lib/libQt5Gui.so" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/CameraStream.h" />
+		<Unit filename="include/EKRLServer.h" />
+		<Unit filename="include/FindCameraDialog.h" />
+		<Unit filename="include/MainWindow.h" />
+		<Unit filename="include/MainWindowUI.h" />
+		<Unit filename="include/ObjectDetails.h" />
+		<Unit filename="include/object_detection.h" />
+		<Unit filename="src/CameraStream.cpp" />
+		<Unit filename="src/EKRLServer.cpp" />
+		<Unit filename="src/FindCameraDialog.cpp" />
+		<Unit filename="src/MainWindow.cpp" />
+		<Unit filename="src/ObjectDetails.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/object_detection.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

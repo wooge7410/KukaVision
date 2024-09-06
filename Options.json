@@ -1,0 +1,20 @@
+{
+    "Camera": {
+        "Acquisition_Framerate": 5,
+        "Binning": 1,
+        "Gain": 1,
+        "IP_Address": "192.168.41.65"
+    },
+    "Robot": {
+        "Gripping_Height": 155,
+        "IP_Address": "192.168.41.64",
+        "Port": 54600,
+        "Travel_Height": 200,
+        "X_Max": 2,
+        "X_Min": 1,
+        "Y_Max": 2,
+        "Y_Min": 1,
+        "Z_Max": 2,
+        "Z_Min": 1
+    }
+}

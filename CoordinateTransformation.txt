@@ -1,0 +1,32 @@
+P2 
+X	    Y           Z	    A		B	    C		S  T
+394.602875, 172.452637, 155.473709, 8.59287834, 88.6703949, 10.0094271, 2, 35
+ImageCoordinates (1468, 347)
+FrameCoordinates (980, 25)
+
+P3
+X	    Y           Z	    A		 B	     C		  S  T
+393.864838, 419.533508, 156.694519, -5.12919092, 89.2604218, -3.71601462, 2, 35
+ImageCoordinates (1436, 1012)
+FrameCoordinates (981, 688)
+
+P4
+X	    Y           Z	    A		 B	     C		  S  T
+735.954407, 422.036285, 156.69519   -5.12919092, 89.2604218, -3.71601462, 2, 35
+ImageCoordinates (512, 965)
+FrameCoordinates (58, 690)
+
+P5
+X	    Y           Z	    A		 B	     C		  S  T
+736.568604, 176.356827, 153.493896, -5.39221239, 89.2601089, -3.97905803, 2, 35
+ImageCoordinates (550, 298)
+FrameCoordinates (61, 36)
+
+Relevant turning axis: A 10°=0
+
+
+                frameOriginRobC.x = 736.6 - 61.0 * (394.6 - 736.6)/(980.0 - 61.0);
+                frameOriginRobC.y = 176.0 - 36.0 * (422.0 - 176.0)/(690.0 - 36.0); //20
+                Point2f scaledCenter = objectDetails.getCenter();
+                scaledCenter.x = (scaledCenter.x ) * - (736.6 - 394.6)/(980.0 - 61.0);
+                scaledCenter.y = scaledCenter.y * (422.0 - 176.0)/(690.0 - 36.0);

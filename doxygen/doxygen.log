@@ -1,0 +1,5 @@
+/home/kukavision/KukaVision/repo/KukaVision/include/FindCameraDialog.h:80: warning: argument 'NeoString' of command @param is not found in the argument list of FindCameraDialog::neoStringToQString(NeoString nString)
+/home/kukavision/KukaVision/repo/KukaVision/include/FindCameraDialog.h:84: warning: The following parameter of FindCameraDialog::neoStringToQString(NeoString nString) is not documented:
+  parameter 'nString'
+/home/kukavision/KukaVision/repo/KukaVision/include/MainWindow.h:55: warning: documented empty return type of MainWindow::GetAllOptions_JSON
+/home/kukavision/KukaVision/repo/KukaVision/include/MainWindow.h:46: warning: documented empty return type of MainWindow::SaveOptionsInJSON
