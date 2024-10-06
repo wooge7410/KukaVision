@@ -1,11 +1,3 @@
-/********************************************************************************
-** Form generated from reading UI file 'FindCameraDialog.ui'
-**
-** Created by: Qt User Interface Compiler version 5.15.3
-**
-** WARNING! All changes made in this file will be lost when recompiling UI file!
-********************************************************************************/
-
 #ifndef FINDCAMERADIALOG_H
 #define FINDCAMERADIALOG_H
 
@@ -37,6 +29,12 @@ public:
     QDialogButtonBox *buttonBox;
     QListWidget *listWidget;
 
+    /** \brief Sets up the UI-Elements
+     *
+     * \param Dialog QDialog* Parent QDialog
+     * \return void
+     *
+     */
     void setupUi(QDialog *Dialog)
     {
         if (Dialog->objectName().isEmpty())
@@ -66,10 +64,10 @@ public:
 };
 
 
-/*
+/**
 * Find Camera Dialog
 * \brief Dialog for searching and selecting Baumer Cameras
-*/
+**/
 class FindCameraDialog {
    public:
         string selectedIP;  // String of the IP of the selected Camera. Is Empty in case of error

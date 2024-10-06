@@ -10,7 +10,7 @@ cv::Point2f ObjectDetails::getCorner(int index) const {
     if (index >= 0 && index < 4) {
         return corners[index];
     }
-    return cv::Point2f(); // Retorna un punto vacío si el índice está fuera de rango
+    return cv::Point2f();
 }
 
 float ObjectDetails::getAngle() const {
@@ -39,3 +39,4 @@ void ObjectDetails::setValid(bool valid) {
     this->valid = valid;
 }
 
+// TODO (kukavision#1#): Error-Handling

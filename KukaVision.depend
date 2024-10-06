@@ -2,7 +2,7 @@
 1724579680 source:/home/kukavision/KukaVision/repo/KukaVision/src/CameraStream.cpp
 	"CameraStream.h"
 
-1724579688 /home/kukavision/KukaVision/repo/KukaVision/include/CameraStream.h
+1726834954 /home/kukavision/KukaVision/repo/KukaVision/include/CameraStream.h
 	<string.h>
 	"neoapi/neoapi.hpp"
 	<opencv2/opencv.hpp>
@@ -13,6 +13,8 @@
 	<thread>
 	<future>
 	<unistd.h>
+	<ctime>
+	"object_detection.h"
 
 1724471495 /home/kukavision/KukaVision/repo/KukaVision/include/neoapi/neoapi.hpp
 	"neoapi_common.hpp"
@@ -1331,7 +1333,7 @@
 	<QtWidgets/QErrorMessage>
 	<string>
 
-1724579646 /home/kukavision/KukaVision/repo/KukaVision/include/MainWindow.h
+1726729504 /home/kukavision/KukaVision/repo/KukaVision/include/MainWindow.h
 	"MainWindowUI.h"
 	<string>
 	<stdexcept>
@@ -1342,8 +1344,10 @@
 	<QtWidgets/QFileDialog>
 	<QtWidgets/QMessageBox>
 	<nlohmann/json.hpp>
+	"CameraStream.h"
+	"EKRLServer.h"
 
-1724579646 /home/kukavision/KukaVision/repo/KukaVision/include/MainWindowUI.h
+1726729504 /home/kukavision/KukaVision/repo/KukaVision/include/MainWindowUI.h
 	<QtCore/QVariant>
 	<QtWidgets/QAction>
 	<QtWidgets/QApplication>
@@ -2099,13 +2103,13 @@
 	<QtWidgets/qtwidgetsglobal.h>
 	<QtWidgets/qdialog.h>
 
-1724579646 source:/home/kukavision/KukaVision/repo/KukaVision/src/MainWindow.cpp
+1726729504 source:/home/kukavision/KukaVision/repo/KukaVision/src/MainWindow.cpp
 	"MainWindow.h"
 
 1724620908 source:/home/kukavision/KukaVision/repo/KukaVision/src/FindCameraDialog.cpp
 	"FindCameraDialog.h"
 
-1724579646 /home/kukavision/KukaVision/repo/KukaVision/include/FindCameraDialog.h
+1726832812 /home/kukavision/KukaVision/repo/KukaVision/include/FindCameraDialog.h
 	<QtCore/QVariant>
 	<QtWidgets/QApplication>
 	<QtWidgets/QDialog>
@@ -2225,14 +2229,14 @@
 	<QtWidgets/qtwidgetsglobal.h>
 	<QtWidgets/qwidget.h>
 
-1724579646 source:/home/kukavision/KukaVision/repo/KukaVision/src/object_detection.cpp
+1724890370 source:/home/kukavision/KukaVision/repo/KukaVision/src/object_detection.cpp
 	"object_detection.h"
-	<iostream>
-	<cmath>
 
-1724579646 /home/kukavision/KukaVision/repo/KukaVision/include/object_detection.h
+1727690900 /home/kukavision/KukaVision/repo/KukaVision/include/object_detection.h
 	<opencv2/opencv.hpp>
 	"ObjectDetails.h"
+	<iostream>
+	<cmath>
 
 1724579646 /home/kukavision/KukaVision/repo/KukaVision/include/ObjectDetails.h
 	<opencv2/opencv.hpp>
@@ -2848,4 +2852,25 @@
 
 1724913976 source:/home/kukavision/KukaVision/repo/KukaVision/main/src/ProjectInfoUI.cpp
 	"ProjectInfoUI.h"
+
+1724890370 source:/home/kukavision/KukaVision/repo/KukaVision/src/EKRLServer.cpp
+	"EKRLServer.h"
+
+1727690583 /home/kukavision/KukaVision/repo/KukaVision/include/EKRLServer.h
+	<sys/socket.h>
+	<netinet/in.h>
+	<iostream>
+	<unistd.h>
+	<arpa/inet.h>
+	<bitset>
+	<cstring>
+	<bits/stdc++.h>
+	<QtWidgets/QLabel>
+
+1724890370 source:/home/kukavision/KukaVision/repo/KukaVision/src/main.cpp
+	"MainWindow.h"
+	<QtWidgets/QApplication>
+	<QtWidgets/QFileDialog>
+	<QtWidgets/QErrorMessage>
+	<string>
 

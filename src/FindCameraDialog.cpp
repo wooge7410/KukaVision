@@ -7,8 +7,8 @@ FindCameraDialog::FindCameraDialog() {
 
 
         for (int i = 0; i < (int)connectedCameras.size(); i++) {
-            QString camInfo = neoStringToQString(connectedCameras[i].GetGevIpAddress()) + " (" + neoStringToQString(connectedCameras[i].GetSerialNumber()) + ")";
-            new QListWidgetItem(camInfo, ui.listWidget);    // Create new ListWidgetItems with Informaiton about new Cameras
+            QString camInfo = neoStringToQString(connectedCameras[i].GetGevIpAddress()) + " (" + neoStringToQString(connectedCameras[i].GetSerialNumber()) + ")"; // Generate String consisting of camera-ip and serial number
+            new QListWidgetItem(camInfo, ui.listWidget);    // Create new ListWidgetItems with Information about new Cameras
         }
 
         ui.listWidget->setCurrentRow(0);    // Automatically select the first connected Camera
@@ -31,12 +31,7 @@ FindCameraDialog::FindCameraDialog() {
 }
 
 
-/**
-* \brief Conversion from NeoString to QString
-* \param NeoString nString : NeoString to be converted
-* \return QString
-**/
 QString FindCameraDialog::neoStringToQString(NeoString nString) {
-    return QString::fromStdString(nString.c_str());
+    return QString::fromStdString(nString.c_str()); // Convert a NeoString to QString
 }
 

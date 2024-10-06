@@ -143,7 +143,7 @@ private:
      * \return void
      *
      */
-    void GetCoordinates(); //TODO validate coordinates by XYZ_MinMax values in Setting; Make sure the Robot-Sequence cannot be started without getting the coordinates first
+    void GetCoordinates();
 
 
     /** \brief Triggered by startRobotButton. Starts the Robot-Sequence for the previously determined coordinates
