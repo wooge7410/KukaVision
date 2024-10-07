@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KukaVision: FindCameraDialog.h Source File</title>
+<title>KukaVision: /home/kukavision/KukaVision/repo/KukaVision/include/FindCameraDialog.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">KukaVision
+   &#160;<span id="projectnumber">2024</span>
    </div>
+   <div id="projectbrief">Visual driven Grasping</div>
   </td>
  </tr>
  </tbody>
@@ -85,103 +87,101 @@ $(document).ready(function(){initNavTree('_find_camera_dialog_8h_source.html',''
 <div class="title">FindCameraDialog.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/********************************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">** Form generated from reading UI file &#39;FindCameraDialog.ui&#39;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">** Created by: Qt User Interface Compiler version 5.15.3</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">** WARNING! All changes made in this file will be lost when recompiling UI file!</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">********************************************************************************/</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef FINDCAMERADIALOG_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define FINDCAMERADIALOG_H</span></div>
+<a href="_find_camera_dialog_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FINDCAMERADIALOG_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define FINDCAMERADIALOG_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QtCore/QVariant&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QApplication&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QDialog&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QDialogButtonBox&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QListWidget&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QtCore/QVariant&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QApplication&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QDialog&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QDialogButtonBox&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QListWidget&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;neoapi/neoapi.hpp&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;neoapi/neoapi_camera_info.hpp&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span>NeoAPI;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;QT_BEGIN_NAMESPACE</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_ui___dialog.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ui___dialog.html">Ui_Dialog</a></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    QDialogButtonBox *buttonBox;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    QListWidget *listWidget;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> setupUi(QDialog *Dialog)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (Dialog-&gt;objectName().isEmpty())</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            Dialog-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;Dialog&quot;</span>));</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        Dialog-&gt;resize(304, 231);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        buttonBox = <span class="keyword">new</span> QDialogButtonBox(Dialog);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        buttonBox-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;buttonBox&quot;</span>));</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        buttonBox-&gt;setGeometry(QRect(0, 200, 301, 31));</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        buttonBox-&gt;setOrientation(Qt::Horizontal);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        buttonBox-&gt;setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        listWidget = <span class="keyword">new</span> QListWidget(Dialog);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        listWidget-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;listWidget&quot;</span>));</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        listWidget-&gt;setGeometry(QRect(0, 10, 301, 191));</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        retranslateUi(Dialog);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        QObject::connect(buttonBox, SIGNAL(accepted()), Dialog, SLOT(accept()));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        QObject::connect(buttonBox, SIGNAL(rejected()), Dialog, SLOT(reject()));</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        QMetaObject::connectSlotsByName(Dialog);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    } <span class="comment">// setupUi</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> retranslateUi(QDialog *Dialog)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        Dialog-&gt;setWindowTitle(QCoreApplication::translate(<span class="stringliteral">&quot;Dialog&quot;</span>, <span class="stringliteral">&quot;Select Camera&quot;</span>, <span class="keyword">nullptr</span>));</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    } <span class="comment">// retranslateUi</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;neoapi/neoapi.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;neoapi/neoapi_camera_info.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span>NeoAPI;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;QT_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_ui___dialog.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ui___dialog.html">Ui_Dialog</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_ui___dialog.html#a271a59402f80983c2722bb455db37365">   29</a></span>&#160;    QDialogButtonBox *<a class="code" href="class_ui___dialog.html#a271a59402f80983c2722bb455db37365">buttonBox</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_ui___dialog.html#abd154ecbbc6886028a25d0300075c8f9">   30</a></span>&#160;    QListWidget *<a class="code" href="class_ui___dialog.html#abd154ecbbc6886028a25d0300075c8f9">listWidget</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_ui___dialog.html#a4f6a478c3ecdafabffb17b39cb26444a">   38</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ui___dialog.html#a4f6a478c3ecdafabffb17b39cb26444a">setupUi</a>(QDialog *Dialog)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (Dialog-&gt;objectName().isEmpty())</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            Dialog-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;Dialog&quot;</span>));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        Dialog-&gt;resize(304, 231);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        buttonBox = <span class="keyword">new</span> QDialogButtonBox(Dialog);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        buttonBox-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;buttonBox&quot;</span>));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        buttonBox-&gt;setGeometry(QRect(0, 200, 301, 31));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        buttonBox-&gt;setOrientation(Qt::Horizontal);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        buttonBox-&gt;setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        listWidget = <span class="keyword">new</span> QListWidget(Dialog);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        listWidget-&gt;setObjectName(QString::fromUtf8(<span class="stringliteral">&quot;listWidget&quot;</span>));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        listWidget-&gt;setGeometry(QRect(0, 10, 301, 191));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        retranslateUi(Dialog);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        QObject::connect(buttonBox, SIGNAL(accepted()), Dialog, SLOT(accept()));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        QObject::connect(buttonBox, SIGNAL(rejected()), Dialog, SLOT(reject()));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        QMetaObject::connectSlotsByName(Dialog);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    } <span class="comment">// setupUi</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_ui___dialog.html#afa0ccb6f716ca6178260522a193c250e">   59</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ui___dialog.html#afa0ccb6f716ca6178260522a193c250e">retranslateUi</a>(QDialog *Dialog)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        Dialog-&gt;setWindowTitle(QCoreApplication::translate(<span class="stringliteral">&quot;Dialog&quot;</span>, <span class="stringliteral">&quot;Select Camera&quot;</span>, <span class="keyword">nullptr</span>));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    } <span class="comment">// retranslateUi</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">* Find Camera Dialog</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">* \brief Dialog for searching and selecting Baumer Cameras</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_find_camera_dialog.html">   73</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_find_camera_dialog.html">FindCameraDialog</a> {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">string</span> selectedIP;  <span class="comment">// String of the IP of the selected Camera. Is Empty in case of error</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        QDialog dialog;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_ui___dialog.html">Ui_Dialog</a> ui;       <span class="comment">// UI-Design</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        QString neoStringToQString(NeoString nString);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="class_find_camera_dialog.html">FindCameraDialog</a>(); <span class="comment">// Constructor</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">namespace </span>Ui {</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_ui_1_1_dialog.html">   95</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ui_1_1_dialog.html">Dialog</a>: <span class="keyword">public</span> <a class="code" href="class_ui___dialog.html">Ui_Dialog</a> {};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;} <span class="comment">// namespace Ui</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_find_camera_dialog.html">   71</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_find_camera_dialog.html">FindCameraDialog</a> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_find_camera_dialog.html#a28498ed20818ad4e3107811c252c094e">   73</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_find_camera_dialog.html#a28498ed20818ad4e3107811c252c094e">selectedIP</a>;  <span class="comment">// String of the IP of the selected Camera. Is Empty in case of error</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_find_camera_dialog.html#a61333b3b041b4d205da2fe982d346cd5">   74</a></span>&#160;        QDialog <a class="code" href="class_find_camera_dialog.html#a61333b3b041b4d205da2fe982d346cd5">dialog</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_find_camera_dialog.html#a19610411481d83a2d531ababb4d834a5">   75</a></span>&#160;        <a class="code" href="class_ui___dialog.html">Ui_Dialog</a> <a class="code" href="class_find_camera_dialog.html#a19610411481d83a2d531ababb4d834a5">ui</a>;       <span class="comment">// UI-Design</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_find_camera_dialog.html#a33fbcd285a7dae5878ccc5871120279e">   82</a></span>&#160;        QString <a class="code" href="class_find_camera_dialog.html#a33fbcd285a7dae5878ccc5871120279e">neoStringToQString</a>(NeoString nString);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_find_camera_dialog.html#ab563b3a804a6ea92233fad6a2ad87c46">   89</a></span>&#160;        <a class="code" href="class_find_camera_dialog.html#ab563b3a804a6ea92233fad6a2ad87c46">FindCameraDialog</a>(); <span class="comment">// Constructor</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="namespace_ui.html">   92</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_ui_1_1_dialog.html">   93</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ui_1_1_dialog.html">Dialog</a>: <span class="keyword">public</span> <a class="code" href="class_ui___dialog.html">Ui_Dialog</a> {};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">// namespace Ui</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;QT_END_NAMESPACE</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;QT_END_NAMESPACE</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// FINDCAMERADIALOG_H</span></div>
-<div class="ttc" id="aclass_find_camera_dialog_html"><div class="ttname"><a href="class_find_camera_dialog.html">FindCameraDialog</a></div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:73</div></div>
-<div class="ttc" id="aclass_ui_1_1_dialog_html"><div class="ttname"><a href="class_ui_1_1_dialog.html">Ui::Dialog</a></div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:95</div></div>
-<div class="ttc" id="aclass_ui___dialog_html"><div class="ttname"><a href="class_ui___dialog.html">Ui_Dialog</a></div><div class="ttdoc">QT-Generatred Desogm for FindCamera Dialog.</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:35</div></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// FINDCAMERADIALOG_H</span></div>
+<div class="ttc" id="aclass_find_camera_dialog_html"><div class="ttname"><a href="class_find_camera_dialog.html">FindCameraDialog</a></div><div class="ttdoc">Dialog for searching and selecting Baumer Cameras.</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:71</div></div>
+<div class="ttc" id="aclass_find_camera_dialog_html_a19610411481d83a2d531ababb4d834a5"><div class="ttname"><a href="class_find_camera_dialog.html#a19610411481d83a2d531ababb4d834a5">FindCameraDialog::ui</a></div><div class="ttdeci">Ui_Dialog ui</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:75</div></div>
+<div class="ttc" id="aclass_find_camera_dialog_html_a28498ed20818ad4e3107811c252c094e"><div class="ttname"><a href="class_find_camera_dialog.html#a28498ed20818ad4e3107811c252c094e">FindCameraDialog::selectedIP</a></div><div class="ttdeci">string selectedIP</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:73</div></div>
+<div class="ttc" id="aclass_find_camera_dialog_html_a33fbcd285a7dae5878ccc5871120279e"><div class="ttname"><a href="class_find_camera_dialog.html#a33fbcd285a7dae5878ccc5871120279e">FindCameraDialog::neoStringToQString</a></div><div class="ttdeci">QString neoStringToQString(NeoString nString)</div><div class="ttdoc">Conversion from NeoString to QString.</div></div>
+<div class="ttc" id="aclass_find_camera_dialog_html_a61333b3b041b4d205da2fe982d346cd5"><div class="ttname"><a href="class_find_camera_dialog.html#a61333b3b041b4d205da2fe982d346cd5">FindCameraDialog::dialog</a></div><div class="ttdeci">QDialog dialog</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:74</div></div>
+<div class="ttc" id="aclass_find_camera_dialog_html_ab563b3a804a6ea92233fad6a2ad87c46"><div class="ttname"><a href="class_find_camera_dialog.html#ab563b3a804a6ea92233fad6a2ad87c46">FindCameraDialog::FindCameraDialog</a></div><div class="ttdeci">FindCameraDialog()</div><div class="ttdoc">Displays Dialog, searches for connected Cameras and saves selected IP-Address in &quot;selectedIP&quot;....</div></div>
+<div class="ttc" id="aclass_ui_1_1_dialog_html"><div class="ttname"><a href="class_ui_1_1_dialog.html">Ui::Dialog</a></div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:93</div></div>
+<div class="ttc" id="aclass_ui___dialog_html"><div class="ttname"><a href="class_ui___dialog.html">Ui_Dialog</a></div><div class="ttdoc">QT-Generatred Design for FindCamera Dialog.</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:27</div></div>
+<div class="ttc" id="aclass_ui___dialog_html_a271a59402f80983c2722bb455db37365"><div class="ttname"><a href="class_ui___dialog.html#a271a59402f80983c2722bb455db37365">Ui_Dialog::buttonBox</a></div><div class="ttdeci">QDialogButtonBox * buttonBox</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:29</div></div>
+<div class="ttc" id="aclass_ui___dialog_html_a4f6a478c3ecdafabffb17b39cb26444a"><div class="ttname"><a href="class_ui___dialog.html#a4f6a478c3ecdafabffb17b39cb26444a">Ui_Dialog::setupUi</a></div><div class="ttdeci">void setupUi(QDialog *Dialog)</div><div class="ttdoc">Sets up the UI-Elements.</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:38</div></div>
+<div class="ttc" id="aclass_ui___dialog_html_abd154ecbbc6886028a25d0300075c8f9"><div class="ttname"><a href="class_ui___dialog.html#abd154ecbbc6886028a25d0300075c8f9">Ui_Dialog::listWidget</a></div><div class="ttdeci">QListWidget * listWidget</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:30</div></div>
+<div class="ttc" id="aclass_ui___dialog_html_afa0ccb6f716ca6178260522a193c250e"><div class="ttname"><a href="class_ui___dialog.html#afa0ccb6f716ca6178260522a193c250e">Ui_Dialog::retranslateUi</a></div><div class="ttdeci">void retranslateUi(QDialog *Dialog)</div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:59</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> FindCameraDialog.h:92</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>FindCameraDialog.h</b></li>
-    <li class="footer">Generated on Thu Aug 29 2024 02:25:21 for KukaVision by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_find_camera_dialog_8h.html">FindCameraDialog.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

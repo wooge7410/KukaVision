@@ -1,8 +1,8 @@
 var annotated_dup =
 [
-    [ "Ui", null, [
-      [ "MainWindow", "class_ui_1_1_main_window.html", null ],
-      [ "Dialog", "class_ui_1_1_dialog.html", null ]
+    [ "Ui", "namespace_ui.html", [
+      [ "Dialog", "class_ui_1_1_dialog.html", null ],
+      [ "MainWindow", "class_ui_1_1_main_window.html", null ]
     ] ],
     [ "CameraStream", "class_camera_stream.html", "class_camera_stream" ],
     [ "FindCameraDialog", "class_find_camera_dialog.html", "class_find_camera_dialog" ],

@@ -26,7 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">KukaVision
+   &#160;<span id="projectnumber">2024</span>
    </div>
+   <div id="projectbrief">Visual driven Grasping</div>
   </td>
  </tr>
  </tbody>
@@ -89,37 +91,186 @@ $(document).ready(function(){initNavTree('class_camera_stream.html',''); initRes
 <div class="title">CameraStream Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class coordinates the connection to the camera, the object detection and the display of the latest image in a QLabel.  
+ <a href="class_camera_stream.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_camera_stream_8h_source.html">CameraStream.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for CameraStream:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_camera_stream__coll__graph.png" border="0" usemap="#a_camera_stream_coll__map" alt="Collaboration graph"/></div>
+<map name="a_camera_stream_coll__map" id="a_camera_stream_coll__map">
+<area shape="rect" title="Class coordinates the connection to the camera, the object detection and the display of the latest im..." alt="" coords="5,263,195,384"/>
+<area shape="rect" href="class_object_details.html" title="Details of a detected object. Includes center and corner coordinates and angle." alt="" coords="33,5,167,200"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a90267dfa5fa5255f8553031fa4245d8a"><td class="memItemLeft" align="right" valign="top"><a id="a90267dfa5fa5255f8553031fa4245d8a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CameraStream</b> (string identifier)</td></tr>
+<tr class="memitem:a90267dfa5fa5255f8553031fa4245d8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_stream.html#a90267dfa5fa5255f8553031fa4245d8a">CameraStream</a> (string identifier)</td></tr>
+<tr class="memdesc:a90267dfa5fa5255f8553031fa4245d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor sets up the connection the camera.  <a href="class_camera_stream.html#a90267dfa5fa5255f8553031fa4245d8a">More...</a><br /></td></tr>
 <tr class="separator:a90267dfa5fa5255f8553031fa4245d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111e50c476a35e54a0d2a7ab1bde8f00"><td class="memItemLeft" align="right" valign="top"><a id="a111e50c476a35e54a0d2a7ab1bde8f00"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>acquisitionLoop</b> (QLabel *view, bool *run, bool outlines, bool coordinates)</td></tr>
+<tr class="memitem:a111e50c476a35e54a0d2a7ab1bde8f00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_stream.html#a111e50c476a35e54a0d2a7ab1bde8f00">acquisitionLoop</a> (QLabel *view, bool *run, bool outlines, bool coordinates)</td></tr>
+<tr class="memdesc:a111e50c476a35e54a0d2a7ab1bde8f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">loop that gets newest image from cam and runs image detection  <a href="class_camera_stream.html#a111e50c476a35e54a0d2a7ab1bde8f00">More...</a><br /></td></tr>
 <tr class="separator:a111e50c476a35e54a0d2a7ab1bde8f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a17d4ac33bf614bfd451820be644987fe"><td class="memItemLeft" align="right" valign="top"><a id="a17d4ac33bf614bfd451820be644987fe"></a>
-Cam&#160;</td><td class="memItemRight" valign="bottom"><b>camera</b> = Cam()</td></tr>
+<tr class="memitem:a17d4ac33bf614bfd451820be644987fe"><td class="memItemLeft" align="right" valign="top">Cam&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_stream.html#a17d4ac33bf614bfd451820be644987fe">camera</a> = Cam()</td></tr>
 <tr class="separator:a17d4ac33bf614bfd451820be644987fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae269b53c1eb8f49fd804a62d2ee9498f"><td class="memItemLeft" align="right" valign="top"><a id="ae269b53c1eb8f49fd804a62d2ee9498f"></a>
-Mat&#160;</td><td class="memItemRight" valign="bottom"><b>latestImage</b></td></tr>
+<tr class="memitem:ae269b53c1eb8f49fd804a62d2ee9498f"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_stream.html#ae269b53c1eb8f49fd804a62d2ee9498f">latestImage</a></td></tr>
 <tr class="separator:ae269b53c1eb8f49fd804a62d2ee9498f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ca389a039e185cff50482b393f591b3"><td class="memItemLeft" align="right" valign="top"><a id="a2ca389a039e185cff50482b393f591b3"></a>
-time_t&#160;</td><td class="memItemRight" valign="bottom"><b>latestImageTimestamp</b></td></tr>
+<tr class="memitem:a2ca389a039e185cff50482b393f591b3"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_stream.html#a2ca389a039e185cff50482b393f591b3">latestImageTimestamp</a></td></tr>
 <tr class="separator:a2ca389a039e185cff50482b393f591b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a978f049486c3e14d828547ba10b0ad"><td class="memItemLeft" align="right" valign="top"><a id="a1a978f049486c3e14d828547ba10b0ad"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>bufferRate</b></td></tr>
-<tr class="separator:a1a978f049486c3e14d828547ba10b0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56dba999604cbdc4f37354f7a5f1ffc2"><td class="memItemLeft" align="right" valign="top"><a id="a56dba999604cbdc4f37354f7a5f1ffc2"></a>
-<a class="el" href="class_object_details.html">ObjectDetails</a>&#160;</td><td class="memItemRight" valign="bottom"><b>latestObject</b></td></tr>
+<tr class="memitem:a56dba999604cbdc4f37354f7a5f1ffc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_object_details.html">ObjectDetails</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_stream.html#a56dba999604cbdc4f37354f7a5f1ffc2">latestObject</a></td></tr>
 <tr class="separator:a56dba999604cbdc4f37354f7a5f1ffc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_camera_stream_8h_source.html">CameraStream.h</a></li>
-<li>CameraStream.cpp</li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class coordinates the connection to the camera, the object detection and the display of the latest image in a QLabel. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a90267dfa5fa5255f8553031fa4245d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90267dfa5fa5255f8553031fa4245d8a">&#9670;&nbsp;</a></span>CameraStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CameraStream::CameraStream </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>identifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor sets up the connection the camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>string IP-Address of the camera that should be connected </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a111e50c476a35e54a0d2a7ab1bde8f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111e50c476a35e54a0d2a7ab1bde8f00">&#9670;&nbsp;</a></span>acquisitionLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraStream::acquisitionLoop </td>
+          <td>(</td>
+          <td class="paramtype">QLabel *&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>run</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>outlines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>coordinates</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>loop that gets newest image from cam and runs image detection </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>QLabel* Label that is used for displaying the image </td></tr>
+    <tr><td class="paramname">run</td><td>bool* stops the loop </td></tr>
+    <tr><td class="paramname">outlines</td><td>bool if true, the outline of the detected object is displayed in the QLabel </td></tr>
+    <tr><td class="paramname">coordinates</td><td>bool if true, the center-coordinates are displayed in the QLabel (Not implemented) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a17d4ac33bf614bfd451820be644987fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d4ac33bf614bfd451820be644987fe">&#9670;&nbsp;</a></span>camera</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cam CameraStream::camera = Cam()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>NeoAPI Camera Object </p>
+
+</div>
+</div>
+<a id="ae269b53c1eb8f49fd804a62d2ee9498f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae269b53c1eb8f49fd804a62d2ee9498f">&#9670;&nbsp;</a></span>latestImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mat CameraStream::latestImage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the latest Image received from the camera </p>
+
+</div>
+</div>
+<a id="a2ca389a039e185cff50482b393f591b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca389a039e185cff50482b393f591b3">&#9670;&nbsp;</a></span>latestImageTimestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t CameraStream::latestImageTimestamp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Timestamp of the last received image </p>
+
+</div>
+</div>
+<a id="a56dba999604cbdc4f37354f7a5f1ffc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56dba999604cbdc4f37354f7a5f1ffc2">&#9670;&nbsp;</a></span>latestObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_object_details.html">ObjectDetails</a> CameraStream::latestObject</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Object Details(Coordinates, angle, etc.) of the latest received object </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/kukavision/KukaVision/repo/KukaVision/include/<a class="el" href="_camera_stream_8h_source.html">CameraStream.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -127,7 +278,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>bufferRate</b></td><
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_camera_stream.html">CameraStream</a></li>
-    <li class="footer">Generated on Thu Aug 29 2024 02:25:21 for KukaVision by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

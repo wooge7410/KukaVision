@@ -1,0 +1,4 @@
+<map id="FindCameraDialog::neoStringToQString" name="FindCameraDialog::neoStringToQString">
+<area shape="rect" id="node1" title="Conversion from NeoString to QString." alt="" coords="281,5,493,47"/>
+<area shape="rect" id="node2" href="$class_find_camera_dialog.html#ab563b3a804a6ea92233fad6a2ad87c46" title="Displays Dialog, searches for connected Cameras and saves selected IP&#45;Address in &quot;selectedIP&quot;...." alt="" coords="5,5,233,47"/>
+</map>

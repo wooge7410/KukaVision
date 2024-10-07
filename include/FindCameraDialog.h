@@ -20,7 +20,7 @@ QT_BEGIN_NAMESPACE
 
 
 /**
-* \brief QT-Generatred Desogm for FindCamera Dialog
+* \brief QT-Generatred Design for FindCamera Dialog
 *
 **/
 class Ui_Dialog

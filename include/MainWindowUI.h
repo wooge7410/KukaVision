@@ -33,6 +33,8 @@
 
 QT_BEGIN_NAMESPACE
 
+/** \brief QT-Generatred Design for UI
+ */
 class Ui_MainWindow
 {
 public:

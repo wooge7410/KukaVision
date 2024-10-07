@@ -1,0 +1,4 @@
+<map id="CameraStream" name="CameraStream">
+<area shape="rect" id="node1" title="Class coordinates the connection to the camera, the object detection and the display of the latest im..." alt="" coords="5,263,195,384"/>
+<area shape="rect" id="node2" href="$class_object_details.html" title="Details of a detected object. Includes center and corner coordinates and angle." alt="" coords="33,5,167,200"/>
+</map>

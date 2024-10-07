@@ -1,0 +1,7 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="node1" title="MainWindow Class inherits the QTDesigner&#45;Generated Class Ui::MainWindow." alt="" coords="97,491,273,597"/>
+<area shape="rect" id="node2" href="$class_ui_1_1_main_window.html" title=" " alt="" coords="31,329,159,406"/>
+<area shape="rect" id="node3" href="$class_ui___main_window.html" title="QT&#45;Generatred Design for UI." alt="" coords="5,5,184,244"/>
+<area shape="rect" id="node4" href="$class_camera_stream.html" title="Class coordinates the connection to the camera, the object detection and the display of the latest im..." alt="" coords="183,307,372,428"/>
+<area shape="rect" id="node5" href="$class_object_details.html" title="Details of a detected object. Includes center and corner coordinates and angle." alt="" coords="210,27,345,222"/>
+</map>

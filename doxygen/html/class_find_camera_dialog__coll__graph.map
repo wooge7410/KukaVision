@@ -1,0 +1,4 @@
+<map id="FindCameraDialog" name="FindCameraDialog">
+<area shape="rect" id="node1" title="Dialog for searching and selecting Baumer Cameras." alt="" coords="5,175,176,281"/>
+<area shape="rect" id="node2" href="$class_ui___dialog.html" title="QT&#45;Generatred Design for FindCamera Dialog." alt="" coords="25,5,157,112"/>
+</map>

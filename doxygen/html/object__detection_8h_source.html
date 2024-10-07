@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KukaVision: object_detection.h Source File</title>
+<title>KukaVision: /home/kukavision/KukaVision/repo/KukaVision/include/object_detection.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">KukaVision
+   &#160;<span id="projectnumber">2024</span>
    </div>
+   <div id="projectbrief">Visual driven Grasping</div>
   </td>
  </tr>
  </tbody>
@@ -85,30 +87,32 @@ $(document).ready(function(){initNavTree('object__detection_8h_source.html','');
 <div class="title">object_detection.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OBJECT_DETECTION_H</span></div>
+<a href="object__detection_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OBJECT_DETECTION_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OBJECT_DETECTION_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ObjectDetails.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_object_details_8h.html">ObjectDetails.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Declaraciones de funciones</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> drawRectAndAxes(cv::Mat&amp; image, <a class="code" href="class_object_details.html">ObjectDetails</a>&amp; objectDetails);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;cv::Mat findAndDrawObjects(<span class="keyword">const</span> cv::Mat&amp; base, <span class="keyword">const</span> cv::Mat&amp; test, <a class="code" href="class_object_details.html">ObjectDetails</a>&amp; objectDetails);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;cv::Point2f coordinateTransform(<span class="keywordtype">float</span> angle, cv::Point2f VA, cv::Point2f PB);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OBJECT_DETECTION_H</span></div>
-<div class="ttc" id="aclass_object_details_html"><div class="ttname"><a href="class_object_details.html">ObjectDetails</a></div><div class="ttdef"><b>Definition:</b> ObjectDetails.h:6</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="object__detection_8h.html#a6cf506561625bd7512c61aedad155364">   18</a></span>&#160;cv::Mat <a class="code" href="object__detection_8h.html#a6cf506561625bd7512c61aedad155364">findAndDrawObjects</a>(<span class="keyword">const</span> cv::Mat&amp; base, <span class="keyword">const</span> cv::Mat&amp; test, <a class="code" href="class_object_details.html">ObjectDetails</a>&amp; objectDetails);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="object__detection_8h.html#ad9b9fa4172a6363bd2a4340f29324c6f">   29</a></span>&#160;cv::Point2f <a class="code" href="object__detection_8h.html#ad9b9fa4172a6363bd2a4340f29324c6f">coordinateTransform</a>(<span class="keywordtype">float</span> angle, cv::Point2f VA, cv::Point2f PB);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// OBJECT_DETECTION_H</span></div>
+<div class="ttc" id="a_object_details_8h_html"><div class="ttname"><a href="_object_details_8h.html">ObjectDetails.h</a></div></div>
+<div class="ttc" id="aclass_object_details_html"><div class="ttname"><a href="class_object_details.html">ObjectDetails</a></div><div class="ttdoc">Details of a detected object. Includes center and corner coordinates and angle.</div><div class="ttdef"><b>Definition:</b> ObjectDetails.h:9</div></div>
+<div class="ttc" id="aobject__detection_8h_html_a6cf506561625bd7512c61aedad155364"><div class="ttname"><a href="object__detection_8h.html#a6cf506561625bd7512c61aedad155364">findAndDrawObjects</a></div><div class="ttdeci">cv::Mat findAndDrawObjects(const cv::Mat &amp;base, const cv::Mat &amp;test, ObjectDetails &amp;objectDetails)</div><div class="ttdoc">Detect objects in test-Image and marks them in Image.</div></div>
+<div class="ttc" id="aobject__detection_8h_html_ad9b9fa4172a6363bd2a4340f29324c6f"><div class="ttname"><a href="object__detection_8h.html#ad9b9fa4172a6363bd2a4340f29324c6f">coordinateTransform</a></div><div class="ttdeci">cv::Point2f coordinateTransform(float angle, cv::Point2f VA, cv::Point2f PB)</div><div class="ttdoc">Transform point in coordinate system to another system that is shifted and rotated.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>object_detection.h</b></li>
-    <li class="footer">Generated on Thu Aug 29 2024 02:25:21 for KukaVision by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="object__detection_8h.html">object_detection.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

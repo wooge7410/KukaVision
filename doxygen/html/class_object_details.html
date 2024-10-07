@@ -26,7 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">KukaVision
+   &#160;<span id="projectnumber">2024</span>
    </div>
+   <div id="projectbrief">Visual driven Grasping</div>
   </td>
  </tr>
  </tbody>
@@ -88,37 +90,281 @@ $(document).ready(function(){initNavTree('class_object_details.html',''); initRe
 <div class="title">ObjectDetails Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Details of a detected object. Includes center and corner coordinates and angle.  
+ <a href="class_object_details.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_object_details_8h_source.html">ObjectDetails.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for ObjectDetails:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_details__coll__graph.png" border="0" usemap="#a_object_details_coll__map" alt="Collaboration graph"/></div>
+<map name="a_object_details_coll__map" id="a_object_details_coll__map">
+<area shape="rect" title="Details of a detected object. Includes center and corner coordinates and angle." alt="" coords="5,5,140,200"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa1b8af09f3d68eeb40499f5c78133b67"><td class="memItemLeft" align="right" valign="top"><a id="aa1b8af09f3d68eeb40499f5c78133b67"></a>
-cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><b>getCenter</b> () const</td></tr>
+<tr class="memitem:af36d03cc43272cbc98f95ed575dc28c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#af36d03cc43272cbc98f95ed575dc28c2">ObjectDetails</a> ()</td></tr>
+<tr class="memdesc:af36d03cc43272cbc98f95ed575dc28c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor; Sets angle to 0 and validity to false.  <a href="class_object_details.html#af36d03cc43272cbc98f95ed575dc28c2">More...</a><br /></td></tr>
+<tr class="separator:af36d03cc43272cbc98f95ed575dc28c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b8af09f3d68eeb40499f5c78133b67"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#aa1b8af09f3d68eeb40499f5c78133b67">getCenter</a> () const</td></tr>
+<tr class="memdesc:aa1b8af09f3d68eeb40499f5c78133b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns center coordinates.  <a href="class_object_details.html#aa1b8af09f3d68eeb40499f5c78133b67">More...</a><br /></td></tr>
 <tr class="separator:aa1b8af09f3d68eeb40499f5c78133b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0f544f3380e672ceee6a79f5d105aa5"><td class="memItemLeft" align="right" valign="top"><a id="af0f544f3380e672ceee6a79f5d105aa5"></a>
-cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><b>getCorner</b> (int index) const</td></tr>
+<tr class="memitem:af0f544f3380e672ceee6a79f5d105aa5"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#af0f544f3380e672ceee6a79f5d105aa5">getCorner</a> (int index) const</td></tr>
+<tr class="memdesc:af0f544f3380e672ceee6a79f5d105aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns coordinates of the corner with the given index.  <a href="class_object_details.html#af0f544f3380e672ceee6a79f5d105aa5">More...</a><br /></td></tr>
 <tr class="separator:af0f544f3380e672ceee6a79f5d105aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e18248a07f93de5534d5b1ccc60d4a6"><td class="memItemLeft" align="right" valign="top"><a id="a7e18248a07f93de5534d5b1ccc60d4a6"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getAngle</b> () const</td></tr>
+<tr class="memitem:a7e18248a07f93de5534d5b1ccc60d4a6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#a7e18248a07f93de5534d5b1ccc60d4a6">getAngle</a> () const</td></tr>
+<tr class="memdesc:a7e18248a07f93de5534d5b1ccc60d4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns angle of the object.  <a href="class_object_details.html#a7e18248a07f93de5534d5b1ccc60d4a6">More...</a><br /></td></tr>
 <tr class="separator:a7e18248a07f93de5534d5b1ccc60d4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a226a73af992f89e336207848b5b21ec2"><td class="memItemLeft" align="right" valign="top"><a id="a226a73af992f89e336207848b5b21ec2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> () const</td></tr>
+<tr class="memitem:a226a73af992f89e336207848b5b21ec2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#a226a73af992f89e336207848b5b21ec2">isValid</a> () const</td></tr>
+<tr class="memdesc:a226a73af992f89e336207848b5b21ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Object-Validity (Currently unused)  <a href="class_object_details.html#a226a73af992f89e336207848b5b21ec2">More...</a><br /></td></tr>
 <tr class="separator:a226a73af992f89e336207848b5b21ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22cd664d1e66fe1214bc9bf77dd53995"><td class="memItemLeft" align="right" valign="top"><a id="a22cd664d1e66fe1214bc9bf77dd53995"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCenter</b> (const cv::Point2f &amp;center)</td></tr>
+<tr class="memitem:a22cd664d1e66fe1214bc9bf77dd53995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#a22cd664d1e66fe1214bc9bf77dd53995">setCenter</a> (const cv::Point2f &amp;center)</td></tr>
+<tr class="memdesc:a22cd664d1e66fe1214bc9bf77dd53995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets center-attribute.  <a href="class_object_details.html#a22cd664d1e66fe1214bc9bf77dd53995">More...</a><br /></td></tr>
 <tr class="separator:a22cd664d1e66fe1214bc9bf77dd53995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acceb2db74e918b37b425dc0ddec60dab"><td class="memItemLeft" align="right" valign="top"><a id="acceb2db74e918b37b425dc0ddec60dab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCorner</b> (int index, const cv::Point2f &amp;corner)</td></tr>
+<tr class="memitem:acceb2db74e918b37b425dc0ddec60dab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#acceb2db74e918b37b425dc0ddec60dab">setCorner</a> (int index, const cv::Point2f &amp;corner)</td></tr>
+<tr class="memdesc:acceb2db74e918b37b425dc0ddec60dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets Corner-Attribute for given corner-index.  <a href="class_object_details.html#acceb2db74e918b37b425dc0ddec60dab">More...</a><br /></td></tr>
 <tr class="separator:acceb2db74e918b37b425dc0ddec60dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a004a98eddc8652a3ecdc75355d18de78"><td class="memItemLeft" align="right" valign="top"><a id="a004a98eddc8652a3ecdc75355d18de78"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAngle</b> (float angle)</td></tr>
+<tr class="memitem:a004a98eddc8652a3ecdc75355d18de78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#a004a98eddc8652a3ecdc75355d18de78">setAngle</a> (float angle)</td></tr>
+<tr class="memdesc:a004a98eddc8652a3ecdc75355d18de78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets angle-attribute.  <a href="class_object_details.html#a004a98eddc8652a3ecdc75355d18de78">More...</a><br /></td></tr>
 <tr class="separator:a004a98eddc8652a3ecdc75355d18de78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ea04a9b1c6f60764ecd0e347f8a34cd"><td class="memItemLeft" align="right" valign="top"><a id="a9ea04a9b1c6f60764ecd0e347f8a34cd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setValid</b> (bool valid)</td></tr>
+<tr class="memitem:a9ea04a9b1c6f60764ecd0e347f8a34cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_details.html#a9ea04a9b1c6f60764ecd0e347f8a34cd">setValid</a> (bool valid)</td></tr>
+<tr class="memdesc:a9ea04a9b1c6f60764ecd0e347f8a34cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets Validity-Attribute.  <a href="class_object_details.html#a9ea04a9b1c6f60764ecd0e347f8a34cd">More...</a><br /></td></tr>
 <tr class="separator:a9ea04a9b1c6f60764ecd0e347f8a34cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_object_details_8h_source.html">ObjectDetails.h</a></li>
-<li>ObjectDetails.cpp</li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Details of a detected object. Includes center and corner coordinates and angle. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af36d03cc43272cbc98f95ed575dc28c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36d03cc43272cbc98f95ed575dc28c2">&#9670;&nbsp;</a></span>ObjectDetails()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectDetails::ObjectDetails </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor; Sets angle to 0 and validity to false. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7e18248a07f93de5534d5b1ccc60d4a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e18248a07f93de5534d5b1ccc60d4a6">&#9670;&nbsp;</a></span>getAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ObjectDetails::getAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns angle of the object. </p>
+<dl class="section return"><dt>Returns</dt><dd>float Object-Angle </dd></dl>
+
+</div>
+</div>
+<a id="aa1b8af09f3d68eeb40499f5c78133b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b8af09f3d68eeb40499f5c78133b67">&#9670;&nbsp;</a></span>getCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Point2f ObjectDetails::getCenter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns center coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>cv::Point2f Center-Coordinates </dd></dl>
+
+</div>
+</div>
+<a id="af0f544f3380e672ceee6a79f5d105aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0f544f3380e672ceee6a79f5d105aa5">&#9670;&nbsp;</a></span>getCorner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Point2f ObjectDetails::getCorner </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns coordinates of the corner with the given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>int Index of the corner. 0 to 3 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Point2f Coordinates of the corner </dd></dl>
+
+</div>
+</div>
+<a id="a226a73af992f89e336207848b5b21ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226a73af992f89e336207848b5b21ec2">&#9670;&nbsp;</a></span>isValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ObjectDetails::isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns Object-Validity (Currently unused) </p>
+<dl class="section return"><dt>Returns</dt><dd>bool Validity </dd></dl>
+
+</div>
+</div>
+<a id="a004a98eddc8652a3ecdc75355d18de78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a004a98eddc8652a3ecdc75355d18de78">&#9670;&nbsp;</a></span>setAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ObjectDetails::setAngle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets angle-attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>float Object-Angle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a22cd664d1e66fe1214bc9bf77dd53995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22cd664d1e66fe1214bc9bf77dd53995">&#9670;&nbsp;</a></span>setCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ObjectDetails::setCenter </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Point2f &amp;&#160;</td>
+          <td class="paramname"><em>center</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets center-attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>const cv::Point2f&amp; Center-Point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="acceb2db74e918b37b425dc0ddec60dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acceb2db74e918b37b425dc0ddec60dab">&#9670;&nbsp;</a></span>setCorner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ObjectDetails::setCorner </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point2f &amp;&#160;</td>
+          <td class="paramname"><em>corner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets Corner-Attribute for given corner-index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>int corner-index </td></tr>
+    <tr><td class="paramname">corner</td><td>const cv::Point2f&amp; Corner-Coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a9ea04a9b1c6f60764ecd0e347f8a34cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea04a9b1c6f60764ecd0e347f8a34cd">&#9670;&nbsp;</a></span>setValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ObjectDetails::setValid </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>valid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets Validity-Attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valid</td><td>bool Validity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/kukavision/KukaVision/repo/KukaVision/include/<a class="el" href="_object_details_8h_source.html">ObjectDetails.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -126,7 +372,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setValid</b> (bool va
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_object_details.html">ObjectDetails</a></li>
-    <li class="footer">Generated on Thu Aug 29 2024 02:25:21 for KukaVision by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

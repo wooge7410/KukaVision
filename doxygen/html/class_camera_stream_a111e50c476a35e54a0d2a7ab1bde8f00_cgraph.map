@@ -1,0 +1,8 @@
+<map id="CameraStream::acquisitionLoop" name="CameraStream::acquisitionLoop">
+<area shape="rect" id="node1" title="loop that gets newest image from cam and runs image detection" alt="" coords="5,107,236,133"/>
+<area shape="rect" id="node2" href="$class_object_details.html#a7e18248a07f93de5534d5b1ccc60d4a6" title="Returns angle of the object." alt="" coords="287,5,463,32"/>
+<area shape="rect" id="node3" href="$class_object_details.html#aa1b8af09f3d68eeb40499f5c78133b67" title="Returns center coordinates." alt="" coords="284,56,467,83"/>
+<area shape="rect" id="node4" href="$class_object_details.html#af0f544f3380e672ceee6a79f5d105aa5" title="Returns coordinates of the corner with the given index." alt="" coords="284,107,467,133"/>
+<area shape="rect" id="node5" href="$class_object_details.html#a226a73af992f89e336207848b5b21ec2" title="Returns Object&#45;Validity (Currently unused)" alt="" coords="295,157,456,184"/>
+<area shape="rect" id="node6" href="$class_object_details.html#a22cd664d1e66fe1214bc9bf77dd53995" title="Sets center&#45;attribute." alt="" coords="285,208,466,235"/>
+</map>

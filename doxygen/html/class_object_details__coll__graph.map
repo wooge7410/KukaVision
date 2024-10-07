@@ -1,0 +1,3 @@
+<map id="ObjectDetails" name="ObjectDetails">
+<area shape="rect" id="node1" title="Details of a detected object. Includes center and corner coordinates and angle." alt="" coords="5,5,140,200"/>
+</map>

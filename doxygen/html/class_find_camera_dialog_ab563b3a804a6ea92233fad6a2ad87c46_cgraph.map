@@ -1,0 +1,5 @@
+<map id="FindCameraDialog::FindCameraDialog" name="FindCameraDialog::FindCameraDialog">
+<area shape="rect" id="node1" title="Displays Dialog, searches for connected Cameras and saves selected IP&#45;Address in &quot;selectedIP&quot;...." alt="" coords="5,35,233,76"/>
+<area shape="rect" id="node2" href="$class_find_camera_dialog.html#a33fbcd285a7dae5878ccc5871120279e" title="Conversion from NeoString to QString." alt="" coords="281,5,493,47"/>
+<area shape="rect" id="node3" href="$class_ui___dialog.html#a4f6a478c3ecdafabffb17b39cb26444a" title="Sets up the UI&#45;Elements." alt="" coords="316,71,459,98"/>
+</map>

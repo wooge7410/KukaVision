@@ -1,0 +1,4 @@
+<map id="ObjectDetails::setCenter" name="ObjectDetails::setCenter">
+<area shape="rect" id="node1" title="Sets center&#45;attribute." alt="" coords="284,5,465,32"/>
+<area shape="rect" id="node2" href="$class_camera_stream.html#a111e50c476a35e54a0d2a7ab1bde8f00" title="loop that gets newest image from cam and runs image detection" alt="" coords="5,5,236,32"/>
+</map>

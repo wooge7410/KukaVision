@@ -1,0 +1,4 @@
+<map id="ObjectDetails::getAngle" name="ObjectDetails::getAngle">
+<area shape="rect" id="node1" title="Returns angle of the object." alt="" coords="284,5,460,32"/>
+<area shape="rect" id="node2" href="$class_camera_stream.html#a111e50c476a35e54a0d2a7ab1bde8f00" title="loop that gets newest image from cam and runs image detection" alt="" coords="5,5,236,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Ui_Dialog::setupUi" name="Ui_Dialog::setupUi">
+<area shape="rect" id="node1" title="Sets up the UI&#45;Elements." alt="" coords="281,13,424,39"/>
+<area shape="rect" id="node2" href="$class_find_camera_dialog.html#ab563b3a804a6ea92233fad6a2ad87c46" title="Displays Dialog, searches for connected Cameras and saves selected IP&#45;Address in &quot;selectedIP&quot;...." alt="" coords="5,5,233,47"/>
+</map>

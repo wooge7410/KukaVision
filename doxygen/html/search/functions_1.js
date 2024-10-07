@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mainwindow_19',['MainWindow',['../class_main_window.html#a101f98e1371d3a6085f8aad628028ea5',1,'MainWindow']]]
+  ['buffertoframe_175',['bufferToFrame',['../_e_k_r_l_server_8h.html#aa65e068bd14e4c7c5e13544c5d91de42',1,'EKRLServer.h']]],
+  ['buffertovar_176',['bufferToVar',['../_e_k_r_l_server_8h.html#adf5f055cc5066a0d441a2f76179884a4',1,'EKRLServer.h']]]
 ];
