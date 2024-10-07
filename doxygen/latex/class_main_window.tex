@@ -1,0 +1,127 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window Class Reference}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+\mbox{\hyperlink{class_main_window}{Main\+Window}} Class inherits the QTDesigner-\/\+Generated Class \mbox{\hyperlink{class_ui_1_1_main_window}{Ui\+::\+Main\+Window}}.  
+
+
+
+
+{\ttfamily \#include $<$Main\+Window.\+h$>$}
+
+
+
+Inheritance diagram for Main\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{class_main_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a101f98e1371d3a6085f8aad628028ea5}{Main\+Window}} (QMain\+Window $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Constructor for Main\+Window-\/\+Class runs \mbox{\hyperlink{class_ui_1_1_main_window}{Ui\+::\+Main\+Window}} setup() connects UI-\/\+Events to functions Loads Options and Initializes Options-\/\+Page sets up \mbox{\hyperlink{class_camera_stream}{Camera\+Stream}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ae6a3568f089241243ffcbd021b40dc4f}{Save\+Options\+In\+JSON}} (\mbox{\hyperlink{_main_window_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \&current\+Options)
+\begin{DoxyCompactList}\small\item\em Saves JSON-\/\+Object in File Takes a JSON-\/\+Object(The Options) and stores them in \char`\"{}\+Options.\+json\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a063bcdf9f849a5451c2417a8bddad772}{Get\+All\+Options\+\_\+\+JSON}} (\mbox{\hyperlink{_main_window_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \&options)
+\begin{DoxyCompactList}\small\item\em Reads all Options from the UI and stores them in JSON-\/\+Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_main_window_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{class_main_window_a3b22392fdda3c1b8a46ee3e049e8556c}{options\+\_\+\+JSON}}
+\item 
+\mbox{\hyperlink{class_camera_stream}{Camera\+Stream}} $\ast$ \mbox{\hyperlink{class_main_window_a13bf85538e18f9203742c07a4870423f}{camera\+Stream}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_main_window}{Main\+Window}} Class inherits the QTDesigner-\/\+Generated Class \mbox{\hyperlink{class_ui_1_1_main_window}{Ui\+::\+Main\+Window}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_window_a101f98e1371d3a6085f8aad628028ea5}\label{class_main_window_a101f98e1371d3a6085f8aad628028ea5}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QMain\+Window $\ast$}]{parent }\end{DoxyParamCaption})}
+
+
+
+Constructor for Main\+Window-\/\+Class runs \mbox{\hyperlink{class_ui_1_1_main_window}{Ui\+::\+Main\+Window}} setup() connects UI-\/\+Events to functions Loads Options and Initializes Options-\/\+Page sets up \mbox{\hyperlink{class_camera_stream}{Camera\+Stream}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & QMain\+Window$\ast$ Parent\+Winow; Required for show Message Boxes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_a063bcdf9f849a5451c2417a8bddad772}\label{class_main_window_a063bcdf9f849a5451c2417a8bddad772}} 
+\index{MainWindow@{MainWindow}!GetAllOptions\_JSON@{GetAllOptions\_JSON}}
+\index{GetAllOptions\_JSON@{GetAllOptions\_JSON}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{GetAllOptions\_JSON()}{GetAllOptions\_JSON()}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Get\+All\+Options\+\_\+\+JSON (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_main_window_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \&}]{options }\end{DoxyParamCaption})}
+
+
+
+Reads all Options from the UI and stores them in JSON-\/\+Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & json\& JSON-\/\+Object where options will be stored in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_ae6a3568f089241243ffcbd021b40dc4f}\label{class_main_window_ae6a3568f089241243ffcbd021b40dc4f}} 
+\index{MainWindow@{MainWindow}!SaveOptionsInJSON@{SaveOptionsInJSON}}
+\index{SaveOptionsInJSON@{SaveOptionsInJSON}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{SaveOptionsInJSON()}{SaveOptionsInJSON()}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Save\+Options\+In\+JSON (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_main_window_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \&}]{current\+Options }\end{DoxyParamCaption})}
+
+
+
+Saves JSON-\/\+Object in File Takes a JSON-\/\+Object(The Options) and stores them in \char`\"{}\+Options.\+json\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Options} & json\& The JSON-\/\+Object that should be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_window_a13bf85538e18f9203742c07a4870423f}\label{class_main_window_a13bf85538e18f9203742c07a4870423f}} 
+\index{MainWindow@{MainWindow}!cameraStream@{cameraStream}}
+\index{cameraStream@{cameraStream}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{cameraStream}{cameraStream}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_stream}{Camera\+Stream}}$\ast$ Main\+Window\+::camera\+Stream}
+
+\mbox{\Hypertarget{class_main_window_a3b22392fdda3c1b8a46ee3e049e8556c}\label{class_main_window_a3b22392fdda3c1b8a46ee3e049e8556c}} 
+\index{MainWindow@{MainWindow}!options\_JSON@{options\_JSON}}
+\index{options\_JSON@{options\_JSON}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{options\_JSON}{options\_JSON}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_main_window_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} Main\+Window\+::options\+\_\+\+JSON}
+
+JSON-\/\+Object that holds Settings 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/kukavision/\+Kuka\+Vision/repo/\+Kuka\+Vision/include/\mbox{\hyperlink{_main_window_8h}{Main\+Window.\+h}}\end{DoxyCompactItemize}

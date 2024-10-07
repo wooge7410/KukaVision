@@ -1,0 +1,204 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ui Namespace Reference}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Camera\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stream Class Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{12}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{12}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}CameraStream()}{12}{subsubsection.6.1.2.1}%
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{12}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}acquisitionLoop()}{12}{subsubsection.6.1.3.1}%
+\contentsline {subsection}{\numberline {6.1.4}Member Data Documentation}{13}{subsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.4.1}camera}{13}{subsubsection.6.1.4.1}%
+\contentsline {subsubsection}{\numberline {6.1.4.2}latestImage}{13}{subsubsection.6.1.4.2}%
+\contentsline {subsubsection}{\numberline {6.1.4.3}latestImageTimestamp}{13}{subsubsection.6.1.4.3}%
+\contentsline {subsubsection}{\numberline {6.1.4.4}latestObject}{13}{subsubsection.6.1.4.4}%
+\contentsline {section}{\numberline {6.2}Ui\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Dialog Class Reference}{14}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Find\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Camera\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dialog Class Reference}{15}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{16}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{16}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}FindCameraDialog()}{16}{subsubsection.6.3.2.1}%
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{16}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}neoStringToQString()}{16}{subsubsection.6.3.3.1}%
+\contentsline {subsection}{\numberline {6.3.4}Member Data Documentation}{16}{subsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.4.1}dialog}{16}{subsubsection.6.3.4.1}%
+\contentsline {subsubsection}{\numberline {6.3.4.2}selectedIP}{17}{subsubsection.6.3.4.2}%
+\contentsline {subsubsection}{\numberline {6.3.4.3}ui}{17}{subsubsection.6.3.4.3}%
+\contentsline {section}{\numberline {6.4}FRAME Struct Reference}{17}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Member Data Documentation}{17}{subsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.1.1}A}{18}{subsubsection.6.4.1.1}%
+\contentsline {subsubsection}{\numberline {6.4.1.2}B}{18}{subsubsection.6.4.1.2}%
+\contentsline {subsubsection}{\numberline {6.4.1.3}C}{18}{subsubsection.6.4.1.3}%
+\contentsline {subsubsection}{\numberline {6.4.1.4}X}{18}{subsubsection.6.4.1.4}%
+\contentsline {subsubsection}{\numberline {6.4.1.5}Y}{18}{subsubsection.6.4.1.5}%
+\contentsline {subsubsection}{\numberline {6.4.1.6}Z}{18}{subsubsection.6.4.1.6}%
+\contentsline {section}{\numberline {6.5}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window Class Reference}{19}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{21}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Constructor \& Destructor Documentation}{21}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}MainWindow()}{21}{subsubsection.6.5.2.1}%
+\contentsline {subsection}{\numberline {6.5.3}Member Function Documentation}{21}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}GetAllOptions\_JSON()}{21}{subsubsection.6.5.3.1}%
+\contentsline {subsubsection}{\numberline {6.5.3.2}SaveOptionsInJSON()}{22}{subsubsection.6.5.3.2}%
+\contentsline {subsection}{\numberline {6.5.4}Member Data Documentation}{22}{subsection.6.5.4}%
+\contentsline {subsubsection}{\numberline {6.5.4.1}cameraStream}{22}{subsubsection.6.5.4.1}%
+\contentsline {subsubsection}{\numberline {6.5.4.2}options\_JSON}{22}{subsubsection.6.5.4.2}%
+\contentsline {section}{\numberline {6.6}Ui\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window Class Reference}{22}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Details Class Reference}{24}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{25}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Constructor \& Destructor Documentation}{25}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}ObjectDetails()}{26}{subsubsection.6.7.2.1}%
+\contentsline {subsection}{\numberline {6.7.3}Member Function Documentation}{26}{subsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.1}getAngle()}{26}{subsubsection.6.7.3.1}%
+\contentsline {subsubsection}{\numberline {6.7.3.2}getCenter()}{26}{subsubsection.6.7.3.2}%
+\contentsline {subsubsection}{\numberline {6.7.3.3}getCorner()}{26}{subsubsection.6.7.3.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.4}isValid()}{27}{subsubsection.6.7.3.4}%
+\contentsline {subsubsection}{\numberline {6.7.3.5}setAngle()}{27}{subsubsection.6.7.3.5}%
+\contentsline {subsubsection}{\numberline {6.7.3.6}setCenter()}{27}{subsubsection.6.7.3.6}%
+\contentsline {subsubsection}{\numberline {6.7.3.7}setCorner()}{28}{subsubsection.6.7.3.7}%
+\contentsline {subsubsection}{\numberline {6.7.3.8}setValid()}{28}{subsubsection.6.7.3.8}%
+\contentsline {section}{\numberline {6.8}Ui\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dialog Class Reference}{28}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{30}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Member Function Documentation}{30}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}retranslateUi()}{30}{subsubsection.6.8.2.1}%
+\contentsline {subsubsection}{\numberline {6.8.2.2}setupUi()}{30}{subsubsection.6.8.2.2}%
+\contentsline {subsection}{\numberline {6.8.3}Member Data Documentation}{30}{subsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.1}buttonBox}{30}{subsubsection.6.8.3.1}%
+\contentsline {subsubsection}{\numberline {6.8.3.2}listWidget}{30}{subsubsection.6.8.3.2}%
+\contentsline {section}{\numberline {6.9}Ui\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window Class Reference}{31}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{34}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Member Function Documentation}{34}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}retranslateUi()}{34}{subsubsection.6.9.2.1}%
+\contentsline {subsubsection}{\numberline {6.9.2.2}setupUi()}{35}{subsubsection.6.9.2.2}%
+\contentsline {subsection}{\numberline {6.9.3}Member Data Documentation}{35}{subsection.6.9.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.1}actionExit}{35}{subsubsection.6.9.3.1}%
+\contentsline {subsubsection}{\numberline {6.9.3.2}actionOpen\_Console}{35}{subsubsection.6.9.3.2}%
+\contentsline {subsubsection}{\numberline {6.9.3.3}actionProject\_Infos}{35}{subsubsection.6.9.3.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.4}actionSave\_Image\_as}{35}{subsubsection.6.9.3.4}%
+\contentsline {subsubsection}{\numberline {6.9.3.5}biningLabel}{35}{subsubsection.6.9.3.5}%
+\contentsline {subsubsection}{\numberline {6.9.3.6}biningValueLineEdit}{36}{subsubsection.6.9.3.6}%
+\contentsline {subsubsection}{\numberline {6.9.3.7}cameraIPLabel}{36}{subsubsection.6.9.3.7}%
+\contentsline {subsubsection}{\numberline {6.9.3.8}cameraIPLineEdit}{36}{subsubsection.6.9.3.8}%
+\contentsline {subsubsection}{\numberline {6.9.3.9}cameraOptions2Layout}{36}{subsubsection.6.9.3.9}%
+\contentsline {subsubsection}{\numberline {6.9.3.10}cameraOptionsLabel}{36}{subsubsection.6.9.3.10}%
+\contentsline {subsubsection}{\numberline {6.9.3.11}cameraOptionsLayout}{36}{subsubsection.6.9.3.11}%
+\contentsline {subsubsection}{\numberline {6.9.3.12}cameraViewHeadlineLabel}{36}{subsubsection.6.9.3.12}%
+\contentsline {subsubsection}{\numberline {6.9.3.13}cameraViewInfoLabel}{36}{subsubsection.6.9.3.13}%
+\contentsline {subsubsection}{\numberline {6.9.3.14}cameraViewTimestampLabel}{37}{subsubsection.6.9.3.14}%
+\contentsline {subsubsection}{\numberline {6.9.3.15}cameraViewVerticalLayout}{37}{subsubsection.6.9.3.15}%
+\contentsline {subsubsection}{\numberline {6.9.3.16}cameraViewWidget}{37}{subsubsection.6.9.3.16}%
+\contentsline {subsubsection}{\numberline {6.9.3.17}consoleWindowDockWidget}{37}{subsubsection.6.9.3.17}%
+\contentsline {subsubsection}{\numberline {6.9.3.18}coordinateLabel}{37}{subsubsection.6.9.3.18}%
+\contentsline {subsubsection}{\numberline {6.9.3.19}coordinatesCheckBox}{37}{subsubsection.6.9.3.19}%
+\contentsline {subsubsection}{\numberline {6.9.3.20}coordinateShowLabel}{37}{subsubsection.6.9.3.20}%
+\contentsline {subsubsection}{\numberline {6.9.3.21}dataSavePathLabel}{37}{subsubsection.6.9.3.21}%
+\contentsline {subsubsection}{\numberline {6.9.3.22}dataSavePathLineEdit}{38}{subsubsection.6.9.3.22}%
+\contentsline {subsubsection}{\numberline {6.9.3.23}dividerCameraOptionsline}{38}{subsubsection.6.9.3.23}%
+\contentsline {subsubsection}{\numberline {6.9.3.24}dockWidgetContents\_2}{38}{subsubsection.6.9.3.24}%
+\contentsline {subsubsection}{\numberline {6.9.3.25}emptyCameraOptionsLabel}{38}{subsubsection.6.9.3.25}%
+\contentsline {subsubsection}{\numberline {6.9.3.26}findCameraButton}{38}{subsubsection.6.9.3.26}%
+\contentsline {subsubsection}{\numberline {6.9.3.27}findCameraLabel}{38}{subsubsection.6.9.3.27}%
+\contentsline {subsubsection}{\numberline {6.9.3.28}folderDialogButton}{38}{subsubsection.6.9.3.28}%
+\contentsline {subsubsection}{\numberline {6.9.3.29}formLayout}{38}{subsubsection.6.9.3.29}%
+\contentsline {subsubsection}{\numberline {6.9.3.30}fpsLiveViewLabel}{39}{subsubsection.6.9.3.30}%
+\contentsline {subsubsection}{\numberline {6.9.3.31}fpsLiveViewLineEdit}{39}{subsubsection.6.9.3.31}%
+\contentsline {subsubsection}{\numberline {6.9.3.32}gainLabel}{39}{subsubsection.6.9.3.32}%
+\contentsline {subsubsection}{\numberline {6.9.3.33}gainValueLineEdit}{39}{subsubsection.6.9.3.33}%
+\contentsline {subsubsection}{\numberline {6.9.3.34}getCoordinatesButton}{39}{subsubsection.6.9.3.34}%
+\contentsline {subsubsection}{\numberline {6.9.3.35}gridLayout\_3}{39}{subsubsection.6.9.3.35}%
+\contentsline {subsubsection}{\numberline {6.9.3.36}gridLayout\_4}{39}{subsubsection.6.9.3.36}%
+\contentsline {subsubsection}{\numberline {6.9.3.37}gridLayout\_5}{39}{subsubsection.6.9.3.37}%
+\contentsline {subsubsection}{\numberline {6.9.3.38}gridLayout\_6}{40}{subsubsection.6.9.3.38}%
+\contentsline {subsubsection}{\numberline {6.9.3.39}horizontalLayout}{40}{subsubsection.6.9.3.39}%
+\contentsline {subsubsection}{\numberline {6.9.3.40}horizontalSpacer}{40}{subsubsection.6.9.3.40}%
+\contentsline {subsubsection}{\numberline {6.9.3.41}horizontalSpacer\_2}{40}{subsubsection.6.9.3.41}%
+\contentsline {subsubsection}{\numberline {6.9.3.42}horizontalSpacer\_4}{40}{subsubsection.6.9.3.42}%
+\contentsline {subsubsection}{\numberline {6.9.3.43}horizontalSpacer\_5}{40}{subsubsection.6.9.3.43}%
+\contentsline {subsubsection}{\numberline {6.9.3.44}infoConsoleTextBrowser}{40}{subsubsection.6.9.3.44}%
+\contentsline {subsubsection}{\numberline {6.9.3.45}line}{40}{subsubsection.6.9.3.45}%
+\contentsline {subsubsection}{\numberline {6.9.3.46}line\_2}{41}{subsubsection.6.9.3.46}%
+\contentsline {subsubsection}{\numberline {6.9.3.47}line\_3}{41}{subsubsection.6.9.3.47}%
+\contentsline {subsubsection}{\numberline {6.9.3.48}line\_4}{41}{subsubsection.6.9.3.48}%
+\contentsline {subsubsection}{\numberline {6.9.3.49}liveCameraViewLabel}{41}{subsubsection.6.9.3.49}%
+\contentsline {subsubsection}{\numberline {6.9.3.50}mainMenuWidget}{41}{subsubsection.6.9.3.50}%
+\contentsline {subsubsection}{\numberline {6.9.3.51}menuAbout}{41}{subsubsection.6.9.3.51}%
+\contentsline {subsubsection}{\numberline {6.9.3.52}menubar}{41}{subsubsection.6.9.3.52}%
+\contentsline {subsubsection}{\numberline {6.9.3.53}menuFile}{41}{subsubsection.6.9.3.53}%
+\contentsline {subsubsection}{\numberline {6.9.3.54}menuView}{42}{subsubsection.6.9.3.54}%
+\contentsline {subsubsection}{\numberline {6.9.3.55}optionsWidget}{42}{subsubsection.6.9.3.55}%
+\contentsline {subsubsection}{\numberline {6.9.3.56}outlinesCheckBox}{42}{subsubsection.6.9.3.56}%
+\contentsline {subsubsection}{\numberline {6.9.3.57}programImageLabel}{42}{subsubsection.6.9.3.57}%
+\contentsline {subsubsection}{\numberline {6.9.3.58}robotIPLabel}{42}{subsubsection.6.9.3.58}%
+\contentsline {subsubsection}{\numberline {6.9.3.59}robotIPLineEdit}{42}{subsubsection.6.9.3.59}%
+\contentsline {subsubsection}{\numberline {6.9.3.60}robotOptionsLabel}{42}{subsubsection.6.9.3.60}%
+\contentsline {subsubsection}{\numberline {6.9.3.61}robotPortLabel}{42}{subsubsection.6.9.3.61}%
+\contentsline {subsubsection}{\numberline {6.9.3.62}robotPortLineEdit}{43}{subsubsection.6.9.3.62}%
+\contentsline {subsubsection}{\numberline {6.9.3.63}saveImageButton}{43}{subsubsection.6.9.3.63}%
+\contentsline {subsubsection}{\numberline {6.9.3.64}start\_ProgramWidget}{43}{subsubsection.6.9.3.64}%
+\contentsline {subsubsection}{\numberline {6.9.3.65}startCameraViewButton}{43}{subsubsection.6.9.3.65}%
+\contentsline {subsubsection}{\numberline {6.9.3.66}startProgramHeadlineLabel}{43}{subsubsection.6.9.3.66}%
+\contentsline {subsubsection}{\numberline {6.9.3.67}startProgramStatusColorLabel}{43}{subsubsection.6.9.3.67}%
+\contentsline {subsubsection}{\numberline {6.9.3.68}startRobotButton}{43}{subsubsection.6.9.3.68}%
+\contentsline {subsubsection}{\numberline {6.9.3.69}statusbar}{43}{subsubsection.6.9.3.69}%
+\contentsline {subsubsection}{\numberline {6.9.3.70}stoppCameraViewButton}{44}{subsubsection.6.9.3.70}%
+\contentsline {subsubsection}{\numberline {6.9.3.71}tabWidget}{44}{subsubsection.6.9.3.71}%
+\contentsline {subsubsection}{\numberline {6.9.3.72}verticalLayout\_2}{44}{subsubsection.6.9.3.72}%
+\contentsline {subsubsection}{\numberline {6.9.3.73}verticalLayout\_4}{44}{subsubsection.6.9.3.73}%
+\contentsline {subsubsection}{\numberline {6.9.3.74}verticalSpacer}{44}{subsubsection.6.9.3.74}%
+\contentsline {subsubsection}{\numberline {6.9.3.75}verticalSpacer\_2}{44}{subsubsection.6.9.3.75}%
+\contentsline {subsubsection}{\numberline {6.9.3.76}verticalSpacer\_3}{44}{subsubsection.6.9.3.76}%
+\contentsline {subsubsection}{\numberline {6.9.3.77}verticalSpacer\_5}{44}{subsubsection.6.9.3.77}%
+\contentsline {subsubsection}{\numberline {6.9.3.78}verticalSpacer\_6}{45}{subsubsection.6.9.3.78}%
+\contentsline {subsubsection}{\numberline {6.9.3.79}workingAreagridLayout}{45}{subsubsection.6.9.3.79}%
+\contentsline {subsubsection}{\numberline {6.9.3.80}workingAreaLabel}{45}{subsubsection.6.9.3.80}%
+\contentsline {subsubsection}{\numberline {6.9.3.81}xmaxLabel}{45}{subsubsection.6.9.3.81}%
+\contentsline {subsubsection}{\numberline {6.9.3.82}xmaxValueLineEdit}{45}{subsubsection.6.9.3.82}%
+\contentsline {subsubsection}{\numberline {6.9.3.83}xminLabel}{45}{subsubsection.6.9.3.83}%
+\contentsline {subsubsection}{\numberline {6.9.3.84}xminValueLineEdit}{45}{subsubsection.6.9.3.84}%
+\contentsline {subsubsection}{\numberline {6.9.3.85}ymaxLabel}{45}{subsubsection.6.9.3.85}%
+\contentsline {subsubsection}{\numberline {6.9.3.86}ymaxValueLineedit}{46}{subsubsection.6.9.3.86}%
+\contentsline {subsubsection}{\numberline {6.9.3.87}yminLabel}{46}{subsubsection.6.9.3.87}%
+\contentsline {subsubsection}{\numberline {6.9.3.88}yminValueLineEdit}{46}{subsubsection.6.9.3.88}%
+\contentsline {subsubsection}{\numberline {6.9.3.89}zmaxLabel}{46}{subsubsection.6.9.3.89}%
+\contentsline {subsubsection}{\numberline {6.9.3.90}zmaxValueLineEdit}{46}{subsubsection.6.9.3.90}%
+\contentsline {subsubsection}{\numberline {6.9.3.91}zminLabel}{46}{subsubsection.6.9.3.91}%
+\contentsline {subsubsection}{\numberline {6.9.3.92}zminValueLineEdit}{46}{subsubsection.6.9.3.92}%
+\contentsline {subsubsection}{\numberline {6.9.3.93}zOffsetFinalLabel}{46}{subsubsection.6.9.3.93}%
+\contentsline {subsubsection}{\numberline {6.9.3.94}zOffsetFinalLineEdit}{47}{subsubsection.6.9.3.94}%
+\contentsline {subsubsection}{\numberline {6.9.3.95}zOffsetLabel}{47}{subsubsection.6.9.3.95}%
+\contentsline {subsubsection}{\numberline {6.9.3.96}zOffsetLneEdit}{47}{subsubsection.6.9.3.96}%
+\contentsline {chapter}{\numberline {7}File Documentation}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}/home/kukavision/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/repo/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Camera\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stream.h File Reference}{49}{section.7.1}%
+\contentsline {section}{\numberline {7.2}/home/kukavision/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/repo/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}EKRLServer.h File Reference}{50}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Macro Definition Documentation}{52}{subsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.1.1}BUFFERSIZE}{52}{subsubsection.7.2.1.1}%
+\contentsline {subsubsection}{\numberline {7.2.1.2}CONNATTEMPTS}{52}{subsubsection.7.2.1.2}%
+\contentsline {subsubsection}{\numberline {7.2.1.3}CONNDELAY}{52}{subsubsection.7.2.1.3}%
+\contentsline {subsection}{\numberline {7.2.2}Function Documentation}{52}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}bufferToFrame()}{52}{subsubsection.7.2.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2.2}bufferToVar()}{53}{subsubsection.7.2.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.3}checkVerificationBuffer()}{53}{subsubsection.7.2.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.2.4}connectSocket()}{53}{subsubsection.7.2.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.2.5}frameToBuffer()}{54}{subsubsection.7.2.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.2.6}receiveBuffer()}{54}{subsubsection.7.2.2.6}%
+\contentsline {subsubsection}{\numberline {7.2.2.7}runERKLSequence()}{55}{subsubsection.7.2.2.7}%
+\contentsline {subsubsection}{\numberline {7.2.2.8}sendBuffer()}{55}{subsubsection.7.2.2.8}%
+\contentsline {subsubsection}{\numberline {7.2.2.9}varToBuffer()}{56}{subsubsection.7.2.2.9}%
+\contentsline {section}{\numberline {7.3}/home/kukavision/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/repo/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Find\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Camera\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dialog.h File Reference}{56}{section.7.3}%
+\contentsline {section}{\numberline {7.4}/home/kukavision/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/repo/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window.h File Reference}{57}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Typedef Documentation}{57}{subsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.1.1}json}{57}{subsubsection.7.4.1.1}%
+\contentsline {section}{\numberline {7.5}/home/kukavision/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/repo/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI.h File Reference}{58}{section.7.5}%
+\contentsline {section}{\numberline {7.6}/home/kukavision/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/repo/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/include/object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}detection.h File Reference}{59}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Function Documentation}{60}{subsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.1.1}coordinateTransform()}{60}{subsubsection.7.6.1.1}%
+\contentsline {subsubsection}{\numberline {7.6.1.2}findAndDrawObjects()}{61}{subsubsection.7.6.1.2}%
+\contentsline {section}{\numberline {7.7}/home/kukavision/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/repo/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kuka\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vision/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Details.h File Reference}{61}{section.7.7}%
+\contentsline {chapter}{Index}{63}{section*.56}%

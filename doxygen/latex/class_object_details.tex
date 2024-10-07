@@ -1,0 +1,197 @@
+\hypertarget{class_object_details}{}\doxysection{Object\+Details Class Reference}
+\label{class_object_details}\index{ObjectDetails@{ObjectDetails}}
+
+
+Details of a detected object. Includes center and corner coordinates and angle.  
+
+
+
+
+{\ttfamily \#include $<$Object\+Details.\+h$>$}
+
+
+
+Collaboration diagram for Object\+Details\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_object_details__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_details_af36d03cc43272cbc98f95ed575dc28c2}{Object\+Details}} ()
+\begin{DoxyCompactList}\small\item\em Constructor; Sets angle to 0 and validity to false. \end{DoxyCompactList}\item 
+cv\+::\+Point2f \mbox{\hyperlink{class_object_details_aa1b8af09f3d68eeb40499f5c78133b67}{get\+Center}} () const
+\begin{DoxyCompactList}\small\item\em Returns center coordinates. \end{DoxyCompactList}\item 
+cv\+::\+Point2f \mbox{\hyperlink{class_object_details_af0f544f3380e672ceee6a79f5d105aa5}{get\+Corner}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns coordinates of the corner with the given index. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_object_details_a7e18248a07f93de5534d5b1ccc60d4a6}{get\+Angle}} () const
+\begin{DoxyCompactList}\small\item\em Returns angle of the object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_object_details_a226a73af992f89e336207848b5b21ec2}{is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Returns Object-\/\+Validity (Currently unused) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_details_a22cd664d1e66fe1214bc9bf77dd53995}{set\+Center}} (const cv\+::\+Point2f \&center)
+\begin{DoxyCompactList}\small\item\em Sets center-\/attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_details_acceb2db74e918b37b425dc0ddec60dab}{set\+Corner}} (int index, const cv\+::\+Point2f \&corner)
+\begin{DoxyCompactList}\small\item\em Sets Corner-\/\+Attribute for given corner-\/index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_details_a004a98eddc8652a3ecdc75355d18de78}{set\+Angle}} (float angle)
+\begin{DoxyCompactList}\small\item\em Sets angle-\/attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_details_a9ea04a9b1c6f60764ecd0e347f8a34cd}{set\+Valid}} (bool valid)
+\begin{DoxyCompactList}\small\item\em Sets Validity-\/\+Attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Details of a detected object. Includes center and corner coordinates and angle. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_object_details_af36d03cc43272cbc98f95ed575dc28c2}\label{class_object_details_af36d03cc43272cbc98f95ed575dc28c2}} 
+\index{ObjectDetails@{ObjectDetails}!ObjectDetails@{ObjectDetails}}
+\index{ObjectDetails@{ObjectDetails}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{ObjectDetails()}{ObjectDetails()}}
+{\footnotesize\ttfamily Object\+Details\+::\+Object\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor; Sets angle to 0 and validity to false. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_object_details_a7e18248a07f93de5534d5b1ccc60d4a6}\label{class_object_details_a7e18248a07f93de5534d5b1ccc60d4a6}} 
+\index{ObjectDetails@{ObjectDetails}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily float Object\+Details\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns angle of the object. 
+
+\begin{DoxyReturn}{Returns}
+float Object-\/\+Angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_details_aa1b8af09f3d68eeb40499f5c78133b67}\label{class_object_details_aa1b8af09f3d68eeb40499f5c78133b67}} 
+\index{ObjectDetails@{ObjectDetails}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily cv\+::\+Point2f Object\+Details\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns center coordinates. 
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Point2f Center-\/\+Coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_details_af0f544f3380e672ceee6a79f5d105aa5}\label{class_object_details_af0f544f3380e672ceee6a79f5d105aa5}} 
+\index{ObjectDetails@{ObjectDetails}!getCorner@{getCorner}}
+\index{getCorner@{getCorner}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{getCorner()}{getCorner()}}
+{\footnotesize\ttfamily cv\+::\+Point2f Object\+Details\+::get\+Corner (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns coordinates of the corner with the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & int Index of the corner. 0 to 3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Point2f Coordinates of the corner 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_details_a226a73af992f89e336207848b5b21ec2}\label{class_object_details_a226a73af992f89e336207848b5b21ec2}} 
+\index{ObjectDetails@{ObjectDetails}!isValid@{isValid}}
+\index{isValid@{isValid}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool Object\+Details\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns Object-\/\+Validity (Currently unused) 
+
+\begin{DoxyReturn}{Returns}
+bool Validity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_details_a004a98eddc8652a3ecdc75355d18de78}\label{class_object_details_a004a98eddc8652a3ecdc75355d18de78}} 
+\index{ObjectDetails@{ObjectDetails}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily void Object\+Details\+::set\+Angle (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+Sets angle-\/attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & float Object-\/\+Angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_details_a22cd664d1e66fe1214bc9bf77dd53995}\label{class_object_details_a22cd664d1e66fe1214bc9bf77dd53995}} 
+\index{ObjectDetails@{ObjectDetails}!setCenter@{setCenter}}
+\index{setCenter@{setCenter}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{setCenter()}{setCenter()}}
+{\footnotesize\ttfamily void Object\+Details\+::set\+Center (\begin{DoxyParamCaption}\item[{const cv\+::\+Point2f \&}]{center }\end{DoxyParamCaption})}
+
+
+
+Sets center-\/attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & const cv\+::\+Point2f\& Center-\/\+Point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_details_acceb2db74e918b37b425dc0ddec60dab}\label{class_object_details_acceb2db74e918b37b425dc0ddec60dab}} 
+\index{ObjectDetails@{ObjectDetails}!setCorner@{setCorner}}
+\index{setCorner@{setCorner}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{setCorner()}{setCorner()}}
+{\footnotesize\ttfamily void Object\+Details\+::set\+Corner (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const cv\+::\+Point2f \&}]{corner }\end{DoxyParamCaption})}
+
+
+
+Sets Corner-\/\+Attribute for given corner-\/index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & int corner-\/index \\
+\hline
+{\em corner} & const cv\+::\+Point2f\& Corner-\/\+Coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_details_a9ea04a9b1c6f60764ecd0e347f8a34cd}\label{class_object_details_a9ea04a9b1c6f60764ecd0e347f8a34cd}} 
+\index{ObjectDetails@{ObjectDetails}!setValid@{setValid}}
+\index{setValid@{setValid}!ObjectDetails@{ObjectDetails}}
+\doxysubsubsection{\texorpdfstring{setValid()}{setValid()}}
+{\footnotesize\ttfamily void Object\+Details\+::set\+Valid (\begin{DoxyParamCaption}\item[{bool}]{valid }\end{DoxyParamCaption})}
+
+
+
+Sets Validity-\/\+Attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valid} & bool Validity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/kukavision/\+Kuka\+Vision/repo/\+Kuka\+Vision/include/\mbox{\hyperlink{_object_details_8h}{Object\+Details.\+h}}\end{DoxyCompactItemize}

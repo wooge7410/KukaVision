@@ -1,0 +1,119 @@
+\hypertarget{class_camera_stream}{}\doxysection{Camera\+Stream Class Reference}
+\label{class_camera_stream}\index{CameraStream@{CameraStream}}
+
+
+Class coordinates the connection to the camera, the object detection and the display of the latest image in a QLabel.  
+
+
+
+
+{\ttfamily \#include $<$Camera\+Stream.\+h$>$}
+
+
+
+Collaboration diagram for Camera\+Stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_camera_stream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_stream_a90267dfa5fa5255f8553031fa4245d8a}{Camera\+Stream}} (string identifier)
+\begin{DoxyCompactList}\small\item\em Constructor sets up the connection the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_stream_a111e50c476a35e54a0d2a7ab1bde8f00}{acquisition\+Loop}} (QLabel $\ast$view, bool $\ast$run, bool outlines, bool coordinates)
+\begin{DoxyCompactList}\small\item\em loop that gets newest image from cam and runs image detection \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Cam \mbox{\hyperlink{class_camera_stream_a17d4ac33bf614bfd451820be644987fe}{camera}} = Cam()
+\item 
+Mat \mbox{\hyperlink{class_camera_stream_ae269b53c1eb8f49fd804a62d2ee9498f}{latest\+Image}}
+\item 
+time\+\_\+t \mbox{\hyperlink{class_camera_stream_a2ca389a039e185cff50482b393f591b3}{latest\+Image\+Timestamp}}
+\item 
+\mbox{\hyperlink{class_object_details}{Object\+Details}} \mbox{\hyperlink{class_camera_stream_a56dba999604cbdc4f37354f7a5f1ffc2}{latest\+Object}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class coordinates the connection to the camera, the object detection and the display of the latest image in a QLabel. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_camera_stream_a90267dfa5fa5255f8553031fa4245d8a}\label{class_camera_stream_a90267dfa5fa5255f8553031fa4245d8a}} 
+\index{CameraStream@{CameraStream}!CameraStream@{CameraStream}}
+\index{CameraStream@{CameraStream}!CameraStream@{CameraStream}}
+\doxysubsubsection{\texorpdfstring{CameraStream()}{CameraStream()}}
+{\footnotesize\ttfamily Camera\+Stream\+::\+Camera\+Stream (\begin{DoxyParamCaption}\item[{string}]{identifier }\end{DoxyParamCaption})}
+
+
+
+Constructor sets up the connection the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identifier} & string IP-\/\+Address of the camera that should be connected \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_stream_a111e50c476a35e54a0d2a7ab1bde8f00}\label{class_camera_stream_a111e50c476a35e54a0d2a7ab1bde8f00}} 
+\index{CameraStream@{CameraStream}!acquisitionLoop@{acquisitionLoop}}
+\index{acquisitionLoop@{acquisitionLoop}!CameraStream@{CameraStream}}
+\doxysubsubsection{\texorpdfstring{acquisitionLoop()}{acquisitionLoop()}}
+{\footnotesize\ttfamily void Camera\+Stream\+::acquisition\+Loop (\begin{DoxyParamCaption}\item[{QLabel $\ast$}]{view,  }\item[{bool $\ast$}]{run,  }\item[{bool}]{outlines,  }\item[{bool}]{coordinates }\end{DoxyParamCaption})}
+
+
+
+loop that gets newest image from cam and runs image detection 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & QLabel$\ast$ Label that is used for displaying the image \\
+\hline
+{\em run} & bool$\ast$ stops the loop \\
+\hline
+{\em outlines} & bool if true, the outline of the detected object is displayed in the QLabel \\
+\hline
+{\em coordinates} & bool if true, the center-\/coordinates are displayed in the QLabel (Not implemented) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_stream_a17d4ac33bf614bfd451820be644987fe}\label{class_camera_stream_a17d4ac33bf614bfd451820be644987fe}} 
+\index{CameraStream@{CameraStream}!camera@{camera}}
+\index{camera@{camera}!CameraStream@{CameraStream}}
+\doxysubsubsection{\texorpdfstring{camera}{camera}}
+{\footnotesize\ttfamily Cam Camera\+Stream\+::camera = Cam()}
+
+Neo\+API Camera Object \mbox{\Hypertarget{class_camera_stream_ae269b53c1eb8f49fd804a62d2ee9498f}\label{class_camera_stream_ae269b53c1eb8f49fd804a62d2ee9498f}} 
+\index{CameraStream@{CameraStream}!latestImage@{latestImage}}
+\index{latestImage@{latestImage}!CameraStream@{CameraStream}}
+\doxysubsubsection{\texorpdfstring{latestImage}{latestImage}}
+{\footnotesize\ttfamily Mat Camera\+Stream\+::latest\+Image}
+
+Stores the latest Image received from the camera \mbox{\Hypertarget{class_camera_stream_a2ca389a039e185cff50482b393f591b3}\label{class_camera_stream_a2ca389a039e185cff50482b393f591b3}} 
+\index{CameraStream@{CameraStream}!latestImageTimestamp@{latestImageTimestamp}}
+\index{latestImageTimestamp@{latestImageTimestamp}!CameraStream@{CameraStream}}
+\doxysubsubsection{\texorpdfstring{latestImageTimestamp}{latestImageTimestamp}}
+{\footnotesize\ttfamily time\+\_\+t Camera\+Stream\+::latest\+Image\+Timestamp}
+
+Timestamp of the last received image \mbox{\Hypertarget{class_camera_stream_a56dba999604cbdc4f37354f7a5f1ffc2}\label{class_camera_stream_a56dba999604cbdc4f37354f7a5f1ffc2}} 
+\index{CameraStream@{CameraStream}!latestObject@{latestObject}}
+\index{latestObject@{latestObject}!CameraStream@{CameraStream}}
+\doxysubsubsection{\texorpdfstring{latestObject}{latestObject}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object_details}{Object\+Details}} Camera\+Stream\+::latest\+Object}
+
+Object Details(Coordinates, angle, etc.) of the latest received object 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/kukavision/\+Kuka\+Vision/repo/\+Kuka\+Vision/include/\mbox{\hyperlink{_camera_stream_8h}{Camera\+Stream.\+h}}\end{DoxyCompactItemize}

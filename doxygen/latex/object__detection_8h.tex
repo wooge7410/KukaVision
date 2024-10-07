@@ -1,0 +1,76 @@
+\hypertarget{object__detection_8h}{}\doxysection{/home/kukavision/\+Kuka\+Vision/repo/\+Kuka\+Vision/include/object\+\_\+detection.h File Reference}
+\label{object__detection_8h}\index{/home/kukavision/KukaVision/repo/KukaVision/include/object\_detection.h@{/home/kukavision/KukaVision/repo/KukaVision/include/object\_detection.h}}
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}Object\+Details.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for object\+\_\+detection.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{object__detection_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{object__detection_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{object__detection_8h_a6cf506561625bd7512c61aedad155364}{find\+And\+Draw\+Objects}} (const cv\+::\+Mat \&base, const cv\+::\+Mat \&test, \mbox{\hyperlink{class_object_details}{Object\+Details}} \&object\+Details)
+\begin{DoxyCompactList}\small\item\em Detect objects in test-\/\+Image and marks them in Image. \end{DoxyCompactList}\item 
+cv\+::\+Point2f \mbox{\hyperlink{object__detection_8h_ad9b9fa4172a6363bd2a4340f29324c6f}{coordinate\+Transform}} (float angle, cv\+::\+Point2f VA, cv\+::\+Point2f PB)
+\begin{DoxyCompactList}\small\item\em Transform point in coordinate system to another system that is shifted and rotated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{object__detection_8h_ad9b9fa4172a6363bd2a4340f29324c6f}\label{object__detection_8h_ad9b9fa4172a6363bd2a4340f29324c6f}} 
+\index{object\_detection.h@{object\_detection.h}!coordinateTransform@{coordinateTransform}}
+\index{coordinateTransform@{coordinateTransform}!object\_detection.h@{object\_detection.h}}
+\doxysubsubsection{\texorpdfstring{coordinateTransform()}{coordinateTransform()}}
+{\footnotesize\ttfamily cv\+::\+Point2f coordinate\+Transform (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{cv\+::\+Point2f}]{VA,  }\item[{cv\+::\+Point2f}]{PB }\end{DoxyParamCaption})}
+
+
+
+Transform point in coordinate system to another system that is shifted and rotated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & float Angle between the two coordinate systems \\
+\hline
+{\em VA} & cv\+::\+Point2f Vector from the origin of the second coordinate system to the origin of the first \\
+\hline
+{\em PB} & cv\+::\+Point2f Point that should be transformed into second coordinate system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Point2f Transformed point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object__detection_8h_a6cf506561625bd7512c61aedad155364}\label{object__detection_8h_a6cf506561625bd7512c61aedad155364}} 
+\index{object\_detection.h@{object\_detection.h}!findAndDrawObjects@{findAndDrawObjects}}
+\index{findAndDrawObjects@{findAndDrawObjects}!object\_detection.h@{object\_detection.h}}
+\doxysubsubsection{\texorpdfstring{findAndDrawObjects()}{findAndDrawObjects()}}
+{\footnotesize\ttfamily cv\+::\+Mat find\+And\+Draw\+Objects (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{base,  }\item[{const cv\+::\+Mat \&}]{test,  }\item[{\mbox{\hyperlink{class_object_details}{Object\+Details}} \&}]{object\+Details }\end{DoxyParamCaption})}
+
+
+
+Detect objects in test-\/\+Image and marks them in Image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & const cv\+::\+Mat\& Reference image of the workarea without any objects \\
+\hline
+{\em test} & const cv\+::\+Mat\& Image in which the objects should be detected \\
+\hline
+{\em object\+Details} & \mbox{\hyperlink{class_object_details}{Object\+Details}}\& Information about last detected object. Includes the coordinate and angle of the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat Test-\/\+Image with marked detected objects 
+\end{DoxyReturn}
